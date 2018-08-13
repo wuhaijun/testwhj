@@ -1,0 +1,14 @@
+<view class="search-label">
+  <text class="label">{{ label }}:</text>
+  <view class="search-label-unit">
+      <block wx:key="key" wx:for="{{ showItems }}">
+        <navigator url='{{ url }}{{ item }}' hover-class='none'><text class="search-label-txt">{{ item }}</text></navigator>
+      </block>
+  </view>
+  <block wx:if="{{ expand }}">
+    <image bindtap='onChange' src="/public/icons/arrow-up.svg"></image>
+  </block>
+  <block wx:if="{{ !expand && items.length > showTagCount }}">
+    <image bindtap='onChange' src="/public/icons/arrow-down.svg"></image>
+  </block>
+</view>

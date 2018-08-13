@@ -1,0 +1,14 @@
+.DS_Store
+.idea/
+*.iml
+.env
+config/
+test.js
+node_modules/
+public/build/
+public/vendor/
+npm-debug.log
+example/node_modules/
+example/public/build/
+example/public/vendor/
+example/npm-debug.log

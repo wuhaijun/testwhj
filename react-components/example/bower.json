@@ -1,0 +1,23 @@
+{
+  "name": "react-components-example",
+  "description": "react-components example.",
+  "main": "Example.jsx",
+  "authors": [
+    "Boyce"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zhangboyce/react-components",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "clipboard": "^1.7.1"
+  }
+}

@@ -1,0 +1,16 @@
+nohup.out
+npm-debug.log
+.DS_Store
+.idea/
+*.iml
+nodemon.json
+node_modules/
+out/
+common/actions/
+.env
+public/app/
+/test.js
+/config/default.json
+/public/temp/
+package-lock.json
+public/doc/

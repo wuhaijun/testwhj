@@ -1,0 +1,44 @@
+<block>
+    <view class="search">
+        <view class="search-input">
+            <image class="search-img" src="{{search_icon}}" />
+            <input type="Text" placeholder="搜索主题或者关键字" value="{{keyword}}" bindconfirm="onHandleConfirm"
+            focus="{{true}}" confirm-type="完成" adjust-position="false" />
+        </view>
+        <block wx:if="{{!search}}">
+            <view class="search-history-box">
+                <view class="search-history">
+                    <text>历史搜索记录</text>
+                    <text bindtap="onHandleClear">清空</text>
+                </view>
+                <view class="record">
+                    <block>
+                        <view wx:key="{{index}}" bindtap="onHandleConfirm" data-keyword="{{item}}"
+                        class="history-list" wx:for="{{keywords}}" wx:for-item="item" wx:for-index="index">{{item}}</view>
+                    </block>
+                </view>
+            </view>
+        </block>
+        <block>
+            <block wx:if="{{searchList.length == 0 && !loading && search}}">
+                <view>
+                    <view class="search-empty-view">
+                        <image class="search-empty" src="{{search_empty}}" />
+                    </view>
+                    <text class="search-empty-text">抱歉，没有找到相关内容</text>
+                </view>
+            </block>
+            <block wx:else>
+                <view>
+                    <article-simple-cards projectList="{{searchList}}" __triggerObserer="{{ _triggerObserer }}"
+                    themeMapping="{{themeMapping}}"></article-simple-cards>
+                    <block wx:if="{{loading}}">
+                        <view class="load-content">
+                            <image class="loading-svg" src="{{loading_icon}}" />
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </block>
+    </view>
+</block>

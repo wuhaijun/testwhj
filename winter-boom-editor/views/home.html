@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="baidu-site-verification" content="6LO2QUvVCC"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>脑洞编辑器 【优秀便捷的微信公众号图文排版编辑器】</title>
+    <meta name="title" content="脑洞编辑器">
+    <meta name="keywords" content="微信编辑器,微信在线编辑,微信编辑软件,微信内容编辑器,公众号编辑器,公众号排版,脑洞编辑器,脑洞,编辑器,微信图文编辑器,图文编辑器,微信排版,微信图文排版,排版,排版编辑器，图文排版,脑洞微信编辑器,脑洞微信图文编辑器,一键同步,微信排版工具,微信公众号内容编辑,微信公众平台编辑器">
+    <meta name="description" content="脑洞微信编辑器是一款界面简洁、样式精美、排版快速、一键同步至微信后台的微信排版工具,支持样式快速换色、玩转各类动态样式，实现全文编辑、无缝插入多长图片拼接长图文、实时预览、以及快速组合多图文并一键同步后台的微信图文编辑器。">
+    {% if !account %}
+    <script src="{{ config['SSO_SERVER'] }}/script/checklogin.js"></script>
+    {% endif %}
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/static/style/home/home.css">
+    <link rel="stylesheet" href="/static/style/home/animate.css">
+</head>
+<body>
+<section class="page">
+    <header class="headroom">
+        <div class="login">
+        {% if account %}
+       <!--  <div class="tools">
+            <a class="ripple tools-tool" href="javascript:;" aria-expanded="false">
+                    <span class="img-wrap">
+                        <img class="avatar" src="http://boom-static.static.cceato.com/boom/imgs/avatars/{{account.avatar|| '01.png'}}"/>
+                    </span>
+                </a>
+                <ul class="tools-div">
+                    <li>
+                        <a role="menuitem" class="dropdown-menu-list" href="{{config['SSO_SERVER']}}/userCenter/info" target="_blank">
+                            <i class="fa icon-users"></i>
+                            个人设置
+                        </a>
+                    </li>
+
+                    <li>
+                        <a role="menuitem" class="dropdown-menu-list" href="{{config['SSO_SERVER']}}/userCenter/account"
+                            target="_blank">
+                            <i class="fa fa-gear"></i>
+                            修改密码
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a role="menuitem" class="dropdown-menu-list" onclick="javascript:;window.location.href='{{config['SSO_SERVER']}}/api/user/logout'">
+                            <i class="fa icon-logout"></i>
+                            退出
+                        </a>
+                    </li>
+                </ul>
+        </div> -->
+        {% endif %}
+        {% if !account %}
+        <!-- <a href="{{config['SSO_SERVER']}}/user/register">注册</a>  -->
+        <!-- <button class="page-nav-btn" onclick="javascript:;window.location.href='{{config['SSO_SERVER']}}/user/login?auth_callback={{config['SSO_CLIENT']}}/api/getToken'">登录</button> -->
+        {% endif %}
+
+
+        </div>
+        <div class="page-nav-box" title="微信编辑器">
+            <a title="脑洞编辑器" href="/"><img class="page-nav-logo" src="/static/images/logo.jpg" alt=""></a>
+            <div class="page-nav-div">
+                <ul>
+                    <li class="page-nav-div-li">
+                        <a title="微信编辑器" href="/editor" target="_blank">编辑器</a>
+                        <span class="page-nav-div-li-span"></span>
+                    </li>
+                    <li class="page-nav-div-li">
+                        <a title="微信编辑器样式中心" href="/styles" target="_blank">样式中心</a>
+                        <span></span>
+                    </li>
+                    <li class="tools">
+                        <div class="tools-tool">
+                            <a href="javascript:;">工具</a>
+                            <span></span>
+                        </div>
+                        <div class="tools-div">
+                            <ul>
+                                <li><a title="脑洞资讯" href="http://boom.brainboom.cn/" target="_blank">脑洞资讯</a></li>
+                                <li><a title="营销日历" href="http://calendar.brainboom.cn/" target="_blank">营销日历</a></li>
+                                <li><a title="热点中心" href="http://hothub.brainboom.cn/" target="_blank">热点中心</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="editor">
+        <img title="脑洞在线编辑器" class="editor-img" src="/static/images/home/home_banner_editor.png" alt="">
+        <p class="editor-p-big">脑洞编辑器</p>
+        <p class="editor-p-small">想要与众不同，必须创造不同</p>
+        <div class="editor-btn"><a href="/editor" target="_blank">立即体验</a></div>
+    </div>
+    <div class="teletext magnanimity">
+        <div class="teletex-img">
+            <img src="/static/images/home/home_banner_styles.png" alt="">
+        </div>
+        <div class="teletex-p" title="脑洞海量样式标签_微信编辑器">
+            <p class="editor-p-big">你想要的，我们这里都有</p>
+            <p class="editor-p-small">海量样式智能化标签搜索</p>
+        </div>
+    </div>
+    <div class="teletext exclusive">
+        <div class="teletex-p" title="脑洞设计师专栏样式_微信编辑器">
+            <p class="editor-p-big">量身打造属于你的风格</p>
+            <p class="editor-p-small">设计师专栏样式</p>
+        </div>
+        <div class="teletex-img">
+            <img src="/static/images/home/home_banner_designer.png" alt="">
+        </div>
+    </div>
+    <div class="teletext afflatus">
+        <div class="teletex-img">
+            <img src="/static/images/home/home_banner_content.png" alt="">
+        </div>
+        <div class="teletex-p">
+            <p class="editor-p-big">灵感源泉，创意的来源</p>
+            <p class="editor-p-small">精选文章定向推送</p>
+        </div>
+    </div>
+    <div class="origin">
+        <div>
+            <p class="origin-p">灵感来源</p>
+        </div>
+        <div class="origin-card">
+            <a href="http://boom.brainboom.cn/home" class="origin-card-div">
+                <img class="origin-card-img" src="/static/images/home/tool_content.png" alt="">
+                <p class="origin-card-div-cy">创意资讯</p>
+                <p class="origin-card-div-con">一站式订阅多平台内容</p>
+            </a>
+            <a href="http://calendar.brainboom.cn/" class="origin-card-div">
+                <img class="origin-card-img" src="/static/images/home/tool_calendar.png" alt="">
+                <p class="origin-card-div-yx">营销日历</p>
+                <p class="origin-card-div-con">基于时间线的内容营销工具</p>
+            </a>
+            <a href="http://hothub.brainboom.cn/" class="origin-card-div">
+                <img class="origin-card-img" src="/static/images/home/tool_hot.png" alt="">
+                <p class="origin-card-div-rd">热点中心</p>
+                <p class="origin-card-div-con">大数据计算预知微博热点</p>
+            </a>
+        </div>
+    </div>
+    <div class="cooperate" style="padding-bottom: 100px">
+        <p class="cooperate-p">我们的客户</p>
+        <div class="cooperate-div">
+            <div>
+                <img data-move="/static/images/home/consumer_auntiebig_hover.jpg"
+                     data-leave="/static/images/home/consumer_auntiebig.jpg"
+                     src="/static/images/home/consumer_auntiebig.jpg" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_loreal_hover.png"
+                     data-leave="/static/images/home/consumer_loreal.png"
+                     src="/static/images/home/consumer_loreal.png" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_maybelline_hover.png"
+                     data-leave="/static/images/home/consumer_maybelline.png"
+                     src="/static/images/home/consumer_maybelline.png" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_disnep_hover.png"
+                     data-leave="/static/images/home/consumer_disnep.png"
+                     src="/static/images/home/consumer_disnep.png" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_fresh_hover.png"
+                     data-leave="/static/images/home/consumer_fresh.png"
+                     src="/static/images/home/consumer_fresh.png" alt="">
+            </div>
+        </div>
+        <div class="cooperate-div" style="margin-top: 10px">
+            <div>
+                <img data-move="/static/images/home/consumer_KFC_hover.png"
+                     data-leave="/static/images/home/consumer_KFC.png"
+                     src="/static/images/home/consumer_KFC.png" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_nike_hover.png"
+                     data-leave="/static/images/home/consumer_nike.png"
+                     src="/static/images/home/consumer_nike.png" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_philips_hover.png"
+                     data-leave="/static/images/home/consumer_philips.png"
+                     src="/static/images/home/consumer_philips.png" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_sulwhasoo_hover.png"
+                     data-leave="/static/images/home/consumer_sulwhasoo.png"
+                     src="/static/images/home/consumer_sulwhasoo.png" alt="">
+            </div>
+            <div>
+                <img data-move="/static/images/home/consumer_UNIQLO_hover.png"
+                     data-leave="/static/images/home/consumer_UNIQLO.png"
+                     src="/static/images/home/consumer_UNIQLO.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-box">
+            <div class="footer-box-txt">
+                <p class="footer-box-txt-big">关于我们</p>
+                <p class="footer-box-txt-small">
+                    脑洞坐标上海，是一个凝聚创意价值的平台。我们发现创意，制造创意，传播创意。在脑洞大开的世界里，让灵感互相激荡，让创意如幸运流水般，发挥它的价值。这里没有规则，只有奇思妙想，不拘一格。</p>
+            </div>
+            <div class="footer-box-img">
+                <img src="/static/images/home/qr_code.png" alt="">
+            </div>
+        </div>
+        <p class="footer-p">Copyright © 2017 Brainboom 沪ICP备10021551号-7</p>
+    </footer>
+</section>
+<script name="baidu-koubei-verification" src="//ikoubei.baidu.com/embed/cfca0f7ee6624d44ae60cbe021339268"></script>
+<script src="http://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<script src="/static/js/rem.js"></script>
+<script src="/static/js/room.js"></script>
+<script src="/static/js/home.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    config = {% autoescape false %} {{ config|json }} {% endautoescape %};
+    account = {% autoescape false %} {{ account|json }} {% endautoescape %};
+    modules = {% autoescape false %} {{ modules|json }} {% endautoescape %};
+    SAS =  {% autoescape false %} {{ styleAccountStat|json }} {% endautoescape %};
+</script>

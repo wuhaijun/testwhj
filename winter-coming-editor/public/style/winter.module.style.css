@@ -1,0 +1,89 @@
+ul.winter-style-sidebar {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+ul.winter-style-sidebar > li {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px dashed rgb(238, 239, 240);
+}
+
+ul.winter-style-sidebar > li > a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+
+ul.winter-style-sidebar > li > a:hover{
+    color: #ffffff;
+    background-color: #5c64bd;
+}
+
+ul.winter-style-sidebar > li > ul.winter-style-sub{
+    list-style: none;
+    position: absolute;
+    width: auto;
+
+    top: 0;
+    left: 97%;
+    padding: 0;
+    z-index: 5;
+    max-height: 0;
+
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+ul.winter-style-sidebar > li.showSub > ul.winter-style-sub{
+    max-height: 500px;
+    border: 1px solid rgb(238, 239, 240);
+}
+
+ul.winter-style-sidebar > li > ul.winter-style-sub > li > a{
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+ul.winter-style-sidebar > li > ul.winter-style-sub > li {
+    border-bottom: 1px dashed rgb(218, 219, 210);
+}
+ul.winter-style-sidebar > li > ul.winter-style-sub > li:last-child {
+    border-bottom: none;
+}
+
+ul.winter-style-sidebar > li > ul.winter-style-sub > li > a:hover{
+    background-color: #5c64bd;
+    color: #ffffff;
+}
+
+ul.winter-style-sidebar > li > ul.winter-style-sub > li > a > span{
+    display: inline-block;
+}
+
+
+ul.winter-style-content {
+    list-style: none;
+    padding: 0;
+}
+
+ul.winter-style-content li{
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px dashed #e5e5e5;
+    color: #666;
+    cursor: pointer;
+    line-height: 1.321;
+    list-style: outside none none;
+    margin: 0 0 10px;
+    opacity: 1;
+    overflow: hidden;
+    padding: 20px 10px;
+    position: relative;
+}
+
+ul.winter-style-content li:hover{
+    opacity: 0.7;
+}

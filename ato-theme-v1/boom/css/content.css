@@ -1,0 +1,271 @@
+/* PC */
+div.project-modal-dialog {
+    width: 83%;
+    /*margin: 4% 0 0 15%;*/
+    /*margin: 3.438rem 0 0 12.5rem;*/
+    /*margin-top: 55px;*/
+    /*margin-left: 200px;*/
+}
+
+div.boom-content {
+    padding: 25px 80px;
+    height: 100%;
+}
+
+div.boom-content-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+div.boom-content-header div.title-box div.title {
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    height: 28px;
+}
+
+div.boom-content-header div.title-box div.extend a{
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 15px;
+    color: #d1d1d1;
+}
+
+div.boom-content-header div.title-box div.extend {
+    float: left;
+    margin-right: 10px;
+}
+
+div.boom-content-header div.title-box div.extend span.origin {
+    margin-left: 15px;
+    color: #d1d1d1;
+    font-size: 12px;
+}
+
+div.boom-content-header div.title-box div.extend span.origin a {
+    margin-left: 5px;
+}
+
+div.boom-content-header div.title-box div.extend span.origin a:hover{
+    color: #a1a1a1;
+}
+
+div.boom-content-header div.views-box {
+    height: 100%;
+}
+
+div.boom-content-header div.views {
+    height: 100%;
+    border-left: 1px solid black;
+    text-align: center;
+}
+
+div.boom-content-header div.views span.number {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+div.boom-content-tags {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.boom-content-tags button.btn {
+    margin-right: 4px;
+}
+
+div.boom-content-tags button.tag {
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.04);
+    margin: 2px;
+    padding: 0 8px 0 8px;
+}
+
+div.boom-content-tags button.selected {
+    color: #59595A;
+    background-color: #c9c9c9;
+    border-color: rgba(0, 0, 0, 0.04);
+    margin: 2px;
+    padding: 0 8px 0 8px;
+}
+
+div.boom-content-tags button.tag:hover {
+    color: #59595A;
+    background-color: #c9c9c9;
+}
+
+div.boom-content-text {
+    margin-top: 10px;
+}
+
+div.boom-content-text p, div.boom-content-text img {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+div.boom-content-text img {
+    max-width: 100%;
+}
+
+div.boom-content-like-collect {
+    text-align: center;
+}
+
+div.boom-content-collect,
+div.boom-content-like {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+div.boom-content-btn{
+    /*width:80%;*/
+}
+div.boom-content-all{
+    /*width:20%;*/
+}
+
+div.boom-content-collect a,
+div.boom-content-like a {
+    display: block;
+    margin: auto;
+    width: 39px;
+}
+
+div.boom-content-collect a span,
+div.boom-content-like a span {
+    display: block;
+    margin-top: 3px;
+    color: #7C7C7C;
+}
+
+div.boom-content-like a i.fa-heart {
+    color: red;
+}
+
+div.boom-content-collect {
+    position: relative;
+}
+
+.collect-tags {
+    background-color: white;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.38);
+    border-radius: .2rem;
+    z-index: 506;
+    top: 82px;
+    left: -75px;
+    max-width: 500px;
+    min-width: 200px;
+    min-height: 80px;
+}
+
+.boom-content-all .boom-content-like,
+.boom-content-all .boom-content-collect {
+    margin:0;
+}
+
+.collect-tags .tags {
+    margin: 10px;
+    text-align: left;
+}
+
+.collect-tags .tags .tag {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 2px 5px;
+    padding:0px 8px;
+    border: 1px dashed rgb(166, 166, 166);
+}
+
+.collect-tags .tags .selected {
+    background-color: #4347ac;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #4347ac;
+    margin: 2px 5px;
+}
+
+.collect-tags .caret-up {
+    position: absolute;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    top: -24px;
+    margin-left: 0;
+    background-color: #fff;
+    left: 91px;
+}
+
+.collect-tags .caret-up:after {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    top: 16px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.38);
+}
+
+.collect-tags .tag-input {
+    margin: 10px 0;
+}
+
+.collect-tags .tag-input input {
+    width: 90%;
+    margin-top: 4px;
+    height: 24px;
+    border: 1px solid #ccc;
+}
+
+.collect-tags .tag-val span,
+.collect-tags .tag-val label,
+.collect-tags .tag-input div {
+    color: #aaa;
+}
+
+.collect-tags .tags button.btn-success {
+    float: right;
+    margin: 6px;
+    border-radius: 6px;
+}
+
+
+
+div.boom-content-suggest div.list {
+    margin-top: 10px;
+}
+
+a.show-index-btn {
+    display: block;
+    position: fixed;
+    top: 50%;
+}
+
+a.show-prev {
+    left: 20px;
+}
+
+a.show-next {
+    right: 20px;
+}
+
+@media (min-width: 768px) {
+    div.shareOptions {
+        width: 150px;
+        height: 25px;
+        margin: 0 0 1px auto;
+        position: relative;
+        top: 10px;
+    }
+}

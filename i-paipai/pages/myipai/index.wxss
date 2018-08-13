@@ -1,0 +1,21 @@
+.myipai {
+  text-align: center;
+}
+.logo-image{
+   width: 200rpx;
+   height: 100rpx;
+   margin-top: 70rpx;
+}
+.myipai-title {
+  font-size: 30rpx;
+  color: #666;
+  margin-top:27rpx;
+  margin-bottom:60rpx;
+}
+.myipai-txt {
+  color: #999;
+  font-size:28rpx;
+  padding: 0 20rpx;
+  text-align: left;
+  margin-bottom: 15rpx;
+}

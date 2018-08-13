@@ -1,0 +1,137 @@
+#home {
+    padding:0 10%;
+}
+
+#home hr {
+    margin: 0 0 15px;
+}
+
+#home .clear-fix {
+    clear: both;
+}
+
+#home .home-search {
+    margin-top: 20px;
+    text-align: center
+}
+
+#home .home-search > div {
+    width: 90%;
+    margin:  0 auto;
+    display: flex;
+}
+
+#home .home-search > div:first-child > div:first-child {
+    width: 70%;
+}
+
+#home .home-search > div:first-child > div:last-child {
+    padding: 4px 8px;
+    width: 30%;
+}
+
+#home .home-search > div:first-child > div:last-child a {
+    width: 45%;
+    height: 42px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    line-height: 40px;
+}
+
+#home .home-search > div:first-child > div:last-child a:first-child {
+    color: white;
+    background-color: #5659ba;
+}
+
+#home .home-search > div:first-child > div:last-child a:last-child {
+    border: 1px solid #5659ba;
+    color: #5659ba;
+}
+
+#home .home-slider {
+    height: 383px;
+    margin-top: 10px;
+}
+
+#home .home-list {
+    margin-top: 50px;
+}
+
+#home .home-list span.title {
+    font-size: 22px;
+    margin-right: 10px;
+    color: #191a1a;
+}
+
+#home .home-list a.more {
+    font-size: 12px;
+    color: rgb(194, 194, 194);
+}
+
+#home .home-list a.more:hover {
+    color: rgb(94, 94, 94);
+}
+
+#home .home-load-more,#home .home-end-tip {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#home .home-list .content-list {
+    margin: auto 0;
+}
+
+/*首页结束提示语,.home-load-more貌似没用了*/
+
+#home .home-end-tip > div {
+    font-size: 14px;
+    height: 33px;
+    line-height: 31px;
+    color: rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#home .m-y-lg {
+    margin-top: 20px!important;
+}
+
+#home .home-load-more a {
+    width: 107px;
+    height: 33px;
+    line-height: 31px;
+    font-size: 14px;
+    color: rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204);
+    display: inline-block;
+    border-radius: 3px;
+}
+
+#home .home-load-more a:hover {
+    color: rgb(114, 118, 195);
+    border: 1px solid rgb(114, 118, 195);
+}
+
+#home .exchange {
+    height: 30px;
+    margin: 4px;
+}
+
+#home .exchange span {
+    cursor: pointer;
+    color: rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 12px;
+    padding: 4px;
+    float: right;
+    border-radius: 3px;
+}
+
+#home .exchange span:hover {
+    color: rgb(114, 118, 195);
+    border: 1px solid rgb(114, 118, 195);
+}
+
+

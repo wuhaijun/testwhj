@@ -1,0 +1,22 @@
+<scroll-view scroll-y style='height: 100%;box-sizing: border-box;margin: 0 32rpx;'>
+  <view class="theme" wx:for="{{ messageList }}" wx:for-item="item" wx:key="key">
+    <navigator class="theme-nav" hover-class="none" url='/pages/theme/detail/index?title={{ item.name }}&desc={{ item.desc }}&isCollect={{ item.isCollect }}&_id={{ item._id }}&count={{ item.count }}'>
+      <view class="theme-each">
+        <image class="theme-img" src="{{ imageHost }}theme/{{ item._id }}_m.jpg"></image>
+        <view class="theme-txt">
+          <text>{{ item.name }}</text>
+          <text class="theme-count">{{ item.count }}人订阅</text>
+        </view>
+      </view>
+    </navigator>
+    <view data-index="{{ index }}" data-id="{{ item._id }}" class="subscribe {{item.isCollect ? 'no' : ''}}" bindtap="onSubscribe">
+      <block wx:if="{{ !item.isCollect }}">
+        <image src="/public/icon/icon_follow.png"></image>
+        <text>订阅</text>
+      </block>
+      <block wx:else>
+        <text>已订阅</text>
+      </block>
+    </view>
+  </view>
+</scroll-view>

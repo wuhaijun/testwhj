@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/public/css/navigation.css" />
+</head>
+
+<body>
+    <div style="position: relative;top: 100px;">
+        <ul class="box-wrapper">
+            <li>
+                <div class="box">
+                    <a href="http://boom.brainboom.cn/home">
+                        <div class="point-wrapper"></div>
+                        <div class="image">
+                            <img src="/public/images/navigation/n_boom.png" alt="">
+                        </div>
+                        <h3>脑洞</h3>
+                        <p>创意资讯平台，一站式订阅多平台内容</p>
+                    </a>
+                </div>
+
+            </li>
+
+            <li>
+                <div class="box">
+                    <a href="http://editor.brainboom.cn">
+                        <div class="point-wrapper"></div>
+                        <div class="image">
+                            <img src="/public/images/navigation/n_editor.png" alt="">
+                        </div>
+                        <h3>编辑器</h3>
+                        <p>快速排版，实时预览，一键同步</p>
+                    </a>
+                </div>
+
+            </li>
+            <li>
+                <div class="box">
+                    <a href="http://calendar.brainboom.cn">
+                        <div class="point-wrapper"></div>
+                        <div class="image">
+                            <img src="/public/images/navigation/n_calendar.png" alt="">
+                        </div>
+                        <h3>营销日历</h3>
+                        <p>基于时间线的内容营销工具</p>
+                    </a>
+                </div>
+
+            </li>
+        </ul>
+        <ul class="box-wrapper">
+            <li>
+                <div class="box">
+                    <a href="http://hothub.brainboom.cn">
+                        <div class="point-wrapper"></div>
+                        <div class="image">
+                            <img src="/public/images/navigation/n_hot.png" alt="">
+                        </div>
+                        <h3>热点中心</h3>
+                        <p>大数据计算预知微博爆点</p>
+                    </a>
+                </div>
+
+            </li>
+            <li>
+                <div class="box">
+                    <a href="http://schedule.brainboom.cn">
+                        <div class="point-wrapper"></div>
+                        <div class="image">
+                            <img src="/public/images/navigation/n_schedule.png" alt="">
+                        </div>
+                        <h3>排期工具</h3>
+                        <p>高效管理微信图文排期</p>
+                    </a>
+                </div>
+
+            </li>
+            <li>
+                <div class="box">
+                    <div class="point-wrapper"></div>
+                    <div class="image">
+                        <img src="/public/images/navigation/n_other.png" alt="">
+                    </div>
+                    <h3>更多工具</h3>
+                    <p>研发中</p>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="http://boom-static.static.cceato.com/vendor/jquery/dist/jquery.js"></script>
+<script>
+
+    jQuery.extend(jQuery.easing,
+        {
+            easeOutExpo: function (x, t, b, c, d) {
+                return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
+            },
+            easeOutBounce: function (x, t, b, c, d) {
+                if ((t /= d) < (1 / 2.75)) {
+                    return c * (7.5625 * t * t) + b;
+                } else if (t < (2 / 2.75)) {
+                    return c * (7.5625 * (t -= (1.5 / 2.75)) * t + .75) + b;
+                } else if (t < (2.5 / 2.75)) {
+                    return c * (7.5625 * (t -= (2.25 / 2.75)) * t + .9375) + b;
+                } else {
+                    return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
+                }
+            },
+            easeOutBack: function (x, t, b, c, d, s) {
+                if (s == undefined) s = 1.70158;
+                return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+            },
+            easeInBack: function (x, t, b, c, d, s) {
+                if (s == undefined) s = 1.70158;
+                return c * (t /= d) * t * ((s + 1) * t - s) + b;
+            }
+        });
+    $(".box").mouseover(function () {
+        $this = $(this);
+        $pointWrapper = $this.find(".point-wrapper");
+        if ($this.find(".point-wrapper li").length == 0) {
+            for (var i = 1; i <= 6; i++) {
+                switch (i) {
+                    case 1: $pointWrapper.append('<li class="ball1 ball"></li>'); break;
+                    case 2: $pointWrapper.append('<li class="ball2 ball"></li>'); break;
+                    case 3: $pointWrapper.append('<li class="ball3 ball"></li>'); break;
+                    case 4: $pointWrapper.append('<li class="ball4"></li>'); break;
+                    case 5: $pointWrapper.append('<li class="ball5 ball"></li>'); break;
+                    case 6: $pointWrapper.append('<li class="ball6 ball"></li>'); break;
+                }
+            }
+        }
+
+        $ball1 = $pointWrapper.find('.ball1');
+        $ball2 = $pointWrapper.find('.ball2');
+        $ball3 = $pointWrapper.find('.ball3');
+        $ball4 = $pointWrapper.find('.ball4');
+        $ball5 = $pointWrapper.find('.ball5');
+        $ball6 = $pointWrapper.find('.ball6');
+
+        $ball1.animate({ left: '-40px', top: '-7px' }, 500, "easeOutBack");
+        $ball2.animate({ left: '21px', top: '-19px' }, 500, "easeOutBack");
+        $ball3.animate({ left: '-59px', top: '86px' }, 500, "easeOutBack");
+        $ball4.animate({ left: '-85px', top: '23px' }, 500, "easeOutBack");
+        $ball5.animate({ left: '36px', top: '7px' }, 500, "easeOutBack");
+        $ball6.animate({ left: '54px', top: '57px' }, 500, "easeOutBack");
+
+        var b1float, b2float, b3float, b4float, b5float, b6float = { top: '+=3px' };
+        startFloat();
+        function startFloat() {
+            $ball1.animate({ top: '-=3px' }, 800); $ball1.animate({ top: '+=3px' }, 1000);
+            $ball2.animate({ top: '+=7px' }, 800); $ball2.animate({ top: '-=7px' }, 1600);
+            $ball3.animate({ top: '-=2px' }, 800); $ball3.animate({ top: '+=2px' }, 1000);
+            $ball4.animate({ top: '+=8px' }, 800); $ball4.animate({ top: '-=8px' }, 1500);
+            $ball5.animate({ top: '-=5px' }, 800); $ball5.animate({ top: '+=5px' }, 800);
+            $ball6.animate({ top: '+=3px' }, 800); $ball6.animate({ top: '-=3px' }, 800, startFloat);
+        }
+        return false;
+    });
+
+
+    $(".box").mouseleave(function () {
+        $this = $(this);
+        // $this.find(".point-wrapper li").stop();
+        // $this.find(".point-wrapper li").animate({
+        //     left: '0', top: '5px'
+        // }, 500, "easeInBack");
+        $this.find(".point-wrapper li").remove();
+    });
+</script>

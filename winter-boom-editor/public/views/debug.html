@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>脑洞编辑器 【优秀便捷的微信公众号图文排版编辑器】</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="title" content="脑洞编辑器_微信编辑器">
+    <meta name="keywords" content="微信编辑器,公众号编辑器,公众号排版,脑洞编辑器,脑洞,编辑器,微信图文编辑器,图文编辑器,微信排版,微信图文排版,排版,排版编辑器，图文排版,脑洞微信编辑器,脑洞微信图文编辑器,一键同步,微信排版工具,微信公众号内容编辑,微信公众平台编辑器">
+    <meta name="description" content="脑洞微信编辑器是一款界面简洁、样式精美、排版快速、一键同步至微信后台的微信排版工具,支持样式快速换色、玩转各类动态样式，实现全文编辑、无缝插入多长图片拼接长图文、实时预览、以及快速组合多图文并一键同步后台的微信图文编辑器。">
+
+    {% if !account %}
+    <script src="{{ config['SSO_SERVER'] }}/script/checklogin.js"></script>
+    {% endif %}
+
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/webfont.css"/>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/app.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/fonts/climacons-font.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/fonts/sli.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/boom/css/content.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/summernote_editor/summernote.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/colorpicker/spectrum.css"/>
+
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-105658469-3');
+    </script>
+</head>
+<body>
+    <div id="mobile-message" class="visible-xs" style="padding: 30px">
+        <p>脑洞编辑暂时不支持在移动设备中使用，请见谅。</p>
+        <p>请使用PC浏览器访问 <b>http://editor.brainboom.cn</b> 访问，谢谢。</p>
+        <p>您也可以：</p>
+        <p><a href="http://boom.brainboom.cn"><b style="color: #098ddf">访问脑洞订阅</b></a></p>
+        <p><a href="http://calendar.brainboom.cn"><b style="color: #098ddf">访问营销日历</b></a></p>
+    </div>
+    <div id="winter-boom-editor" class="hidden-xs"></div>
+
+    <div class="modal fade" id="login-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 40%;border-radius: 5px;">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    功能需要 <a style="color: #098ddf" href="/login">登录</a> 后使用，
+                    请 <a style="color: #098ddf" href="/login">登录</a> 后重新操作。
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    config = {% autoescape false %} {{ config|json }} {% endautoescape %};
+    account = {% autoescape false %} {{ account|json }} {% endautoescape %};
+    modules = {% autoescape false %} {{ modules|json }} {% endautoescape %};
+    SAS =  {% autoescape false %} {{ styleAccountStat|json }} {% endautoescape %};
+</script>
+<script src="http://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!--<script src="http://boom-static.static.cceato.com/vendor/summernote_editor/summernote_20180131.js"></script>-->
+<script src="http://boom-static.static.cceato.com/vendor/colorpicker/spectrum.js"></script>
+<script src="http://boom-static.static.cceato.com/vendor/clipboardjs/clipboard.min.js"></script>
+
+<script src="http://boom-static.static.cceato.com/editor/build/main-55626103ca.min.js"></script>
+
+<script type="text/javascript">
+    setTimeout(function () {
+        var o = 'script';
+        var a = document.createElement(o);
+        var m = document.getElementsByTagName(o)[0];
+        a.async=1;
+        a.src='https://www.googletagmanager.com/gtag/js?id=UA-105658469-3';
+        m.parentNode.insertBefore(a,m);
+
+        $('#qq-btn').popover({
+            trigger: 'hover',
+            html: true
+        });
+    }, 0);
+</script>

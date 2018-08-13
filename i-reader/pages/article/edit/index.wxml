@@ -1,0 +1,14 @@
+<view class="editor-title">
+  <view class="text-area">
+    <textarea maxlength="{{ limitLength }}"  bindinput="onChangeText" class="content" show-confirm-bar="false" value="{{ text }}" auto-focus />
+    <view class="count">
+          <text>{{ textCountLength }}</text><span>/</span><text>{{ limitLength }}</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view catchtap="onCancel" class="cancel common-btn" plain="true">取消</view>
+    <view wx:if="{{ !disabled }}" catchtap="onSave" class="save common-btn">保存</view>
+    <view wx:if="{{ disabled }}" class="save common-btn miss">保存</view>
+  </view>
+</view>

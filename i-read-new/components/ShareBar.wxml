@@ -1,0 +1,18 @@
+<block>
+    <view>
+        <view class="share-bar">
+            <view class="li-bar-share" bindtap="onMadePoster">
+                <view class="image-wrap">
+                    <image src="{{icon_haibao}}" />
+                </view>
+                <p __triggerObserer="{{ _triggerObserer }}">生成海报</p>
+            </view>
+            <view class="li-bar-share">
+                <button class="share-button" plain="true" open-type="share">
+                    <view class="image-wrap">
+                        <image src="{{icon_wechat}}" />
+                    </view>发送给朋友</button>
+            </view>
+        </view>
+    </view>
+</block>

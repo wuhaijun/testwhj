@@ -1,0 +1,12 @@
+.idea/
+*.iml
+node_modules/
+.DS_Store
+/.qshell/
+/build/
+/upload.log
+/views/
+fonts/login-fonts.common.min.css
+fonts/main-fonts.min.css
+static/login.common.min.js
+static/main.min.js

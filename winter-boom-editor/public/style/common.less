@@ -1,0 +1,129 @@
+//reset css
+
+body {
+  padding: 0px;
+  margin: 0;
+  font-family:sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ol, ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin:0;
+  padding:0;
+}
+@color: #292828;
+
+a,
+button,
+input,
+select,
+textarea {
+  outline:none;
+}
+
+blockquote{
+  border-left: 3px solid #dbdbdb;
+}
+
+@header-height: 30px;
+@editor-width: 810px;
+
+// common color
+@purple: #6348FF;
+@green-wechat: #2ECF64;
+@white: #ffffff;
+@black: #000000;
+@grey: #999999;
+@light-grey: #B9B9B9;
+@dark-grey: #464646;
+@lighter-grey:#EAEAEA;
+@wx-bg-grey:#f4f5f9;
+
+@success-color: #00a854;
+@info-color: #108ee9;
+@warn-color: #ffbf00;
+@error-color: #f04134;
+
+@sync-bg-grey:#f7f7f7;
+@sync-border-grey:#e6e6e6;
+
+@mask: rgba(0,0,0,0.2);
+@operator: rgba(0,0,0,0.5);
+@mask-image: rgba(0,0,0,0.3);
+
+// transition
+.transition(@ts) {
+  transition: @ts;
+  -moz-transition: @ts;	/* Firefox 4 */
+  -webkit-transition: @ts;	/* Safari 和 Chrome */
+  -o-transition: @ts;
+}
+
+// input placeholder color
+@input-placeholder-color: #b6b6b6;
+::-webkit-input-placeholder {
+  color:@input-placeholder-color;
+}
+::-webkit-input-placeholder {
+  color:@input-placeholder-color;
+}
+:-moz-placeholder {
+  color:@input-placeholder-color;
+  opacity:  1;
+}
+::-moz-placeholder {
+  color:@input-placeholder-color;
+  opacity:  1;
+}
+:-ms-input-placeholder {
+  color:@input-placeholder-color;
+}
+:-ms-input-placeholder {
+  color:@input-placeholder-color;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+

@@ -1,0 +1,27 @@
+<!--pages/home/index/index.wxml-->
+<view class="mlog">
+  <block wx:if="{{ isShow }}">
+    <view class="greatest">
+      <text>我的主题站</text>
+    </view>
+    <view class="greatest-scroll">
+      <scroll-view class="my-greatest" scroll-x="true" style="width: 100%;margin:0">
+        <view class="my-greatest-view" wx:for="{{ collecteds }}" wx:for-item="item" wx:key="key">
+          <navigator class="theme-nav" 
+          hover-class="none"  
+          url='/pages/theme/detail/index?title={{ item.name }}&desc={{ item.desc }}&isCollect={{ item.isCollect }}&_id={{ item._id }}&count={{ item.count }}'>
+            <view class="subscription-bgimage" style="background-image: url({{ imageHost }}theme/{{ item._id }}_m.jpg)">
+              <view class="mytheme">
+                <text>{{ item.name }}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </block>
+  <view class="greatest">
+    <text>主题站精选</text>
+  </view>
+  <theme-cards id="theme-cards" url='/api/theme/list' bindtogglecollect='onToggleCollect' bind:getThemes='onGetThemes'/>
+</view>

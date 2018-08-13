@@ -1,0 +1,22 @@
+{
+  "host": "localhost:7777",
+  "port": "7777",
+  "mongo": "mongodb://192.168.100.83:27017/boom",
+  "es": "192.168.100.83:9200",
+  "sso": {
+    "server": "http://192.168.100.83:8888",
+    "api_server": "http://192.168.100.83:8888",
+    "client": "http://localhost:7777"
+  },
+  "email": {
+    "host": "",
+    "port": 25,
+    "secure": false,
+    "auth": {
+      "user": "",
+      "pass": ""
+    },
+    "tls": { "rejectUnauthorized": false }
+  },
+  "feedback_email": "xx.oo@ccegroup.cn"
+}

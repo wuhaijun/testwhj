@@ -1,0 +1,73 @@
+<scroll-view scroll-y style="height:{{ scrollHeight }}rpx" bindscroll="scroll" bindscrolltoupper="upper">
+  <view class="home">
+    <view class="home-banner">
+      <image src="/public/images/banner.jpg" mode='center'></image>
+      <view>
+        <text class="home-banner-text">我的相册</text>
+        <text class="home-banner-time">{{ firstDate }}  -  {{ lastDate }}</text>
+      </view>
+    </view>
+
+    <view class="home-sub-bar {{ hasFixed ? 'active' : '' }}">
+      <block wx:if="{{ dateTab }}">
+        <label catchtap="showDateTab">
+          <image class="icon-date" src='/public/icons/time-checked.svg'></image>
+          <text class="text-date active">时间轴</text>
+        </label>
+
+        <label catchtap="showCategoryTab">
+          <image class="icon-category" src='/public/icons/category.svg'></image>
+          <text class="text-category" catchtap="showCategoryTab">分类</text>
+        </label>
+
+      </block>
+      <block wx:else>
+        <label catchtap="showDateTab">
+          <image class="icon-date" src='/public/icons/time.svg'></image>
+          <text class="text-date">时间轴</text>
+        </label>
+
+        <label catchtap="showCategoryTab">
+          <image class="icon-category" src='/public/icons/category-checked.svg'></image>
+          <text class="text-category active">分类</text>
+
+        </label>
+
+
+      </block>
+      <navigator url='/pages/search/index' hover-class='none' class='nav'>
+        <image class="icon-search" src="/public/icons/search.png"></image>
+      </navigator>
+    </view>
+
+    <view wx:if="{{ dateTab }}" style="padding-bottom:100rpx;">
+      <photo-list />
+    </view>
+
+    <!-- 分类 -->
+    <view wx:else>
+      <view class="home-classify">
+        <view wx:if="{{ categories.listByLocation.length == 0 && categories.listByTag.length ==0 }}" class="no-content">
+          <image src="/public/icons/no-picture.png"></image>
+          <text>暂无照片</text>
+        </view>
+
+        <view class="home-classify-all" wx:if="{{ categories.listByLocation.length != 0 }}" wx:for="{{ categories.listByLocation }}" wx:key="key">
+          <navigator url='/pages/locations/index' hover-class='none'>
+            <image src="{{ item.data[0] }}?imageView2/1/w/300/h/300/q/75" lazy-load="true" mode="widthFix"></image>
+            <text class="home-classify-unit-txt">地点</text>
+          </navigator>
+        </view>
+          
+        <view class="home-classify-all" wx:for="{{ categories.listByTag }}" wx:key="key">
+          <navigator url='/pages/photos/index?tag={{ item.tag === "未分类" ? "": item.tag }}' hover-class='none'>
+            <image src="{{ item.data[0] }}?imageView2/1/w/300/h/300/q/75" lazy-load="true" mode="widthFix"></image>
+            <text>{{ item.tag }}</text>
+          </navigator>
+        </view>
+    
+      </view>
+    </view>
+    <footer-bar />
+  </view>
+</scroll-view>

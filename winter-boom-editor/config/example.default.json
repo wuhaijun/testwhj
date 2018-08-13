@@ -1,0 +1,20 @@
+{
+  "mongo": {
+    "editor": "mongodb://localhost:27017/winter",
+    "boom": "mongodb://localhost:27017/boom"
+  },
+  "sso": {
+    "server": "http://localhost:8888",
+    "server_api": "http://localhost:8888",
+    "client": "http://localhost:8877"
+  },
+  "editor_api": "http://192.168.60.178:10002",
+  "port":"8877",
+  "qiniu": {
+    "accessKey": "MVz2eQWtSQ5yF1_oAei2va3afgZgFfCt367um5jP",
+    "secretKey": "8S4dykpoNJSh0f4C6SYK3XpUkD2cyNoYeS6cbmQg",
+    "bucket": "boyce",
+    "zone": "Zone_z0",
+    "outLink": "http://oxrcvtr6x.bkt.clouddn.com/"
+  }
+}

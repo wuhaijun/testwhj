@@ -1,0 +1,41 @@
+@import "../../public/css/main.less";
+.react-component-search {
+    padding: 4px 8px;
+    position: relative;
+}
+
+.react-component-search > i {
+    position: absolute;
+    top: 17px;
+    right: 18px;
+    font-size: 16px;
+    color: @gray;
+}
+
+.react-component-search > i.fa-times:hover {
+    cursor: pointer;
+}
+
+.react-component-search > input {
+    height: 42px;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: @black;
+    background-color: @white;
+    border: 1px solid @light-gray;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    outline:none;
+}
+
+.react-component-search > input:focus {
+    border: 1px solid @light-purple;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}

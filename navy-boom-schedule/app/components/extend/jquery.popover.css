@@ -1,0 +1,37 @@
+.pop-confirm {
+    /*padding: 5px 10px;*/
+}
+
+.popover-confirm-content {
+    margin-bottom: 10px
+}
+
+.popover-confirm-operator span.btn {
+    border-radius: 4px;
+    height: 32px;
+}
+
+.popover-confirm-operator-cancel {
+    border: 1px solid #eaeaea;
+    color: #59595a;
+    margin-right: 6px;
+}
+
+.popover-confirm-operator-cancel:hover {
+    border-color: #6066be;
+    color: #6066be;
+    transition: color 1s;
+    -moz-transition: color 1s;	/* Firefox 4 */
+    -webkit-transition: color 1s;	/* Safari 和 Chrome */
+    -o-transition: color 1s;
+}
+
+.popover-confirm-operator-confirm {
+    color: #ffffff;
+    background-color: #6066be;
+}
+
+.popover-confirm-operator-confirm:hover {
+    color: #ffffff;
+    background-color: #5056ae;
+}

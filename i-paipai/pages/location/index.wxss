@@ -1,0 +1,44 @@
+.around-list ul li {
+  float: left;
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eaeaea;
+  margin-left: 30rpx;
+  position: relative;
+}
+
+.text {
+  color: #333;
+  font-size: 28rpx;
+}
+
+.title-text {
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+}
+
+.address-text {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.checked {
+  display: none;
+}
+
+.around-list ul li.active .checked {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 80rpx;
+  top: 20rpx;
+}
+
+.no-result {
+  font-size: 28rpx;
+  text-align: center;
+  display: block;
+  padding: 20rpx 0;
+}

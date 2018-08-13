@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "article-simple-cards": "../../../components/article-simple-cards/index"
+  },
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#F7F7F7",
+      "navigationBarTitleText": "搜索",
+      "navigationBarTextStyle": "black",
+      "onReachBottomDistance": 100
+}

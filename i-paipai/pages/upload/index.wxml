@@ -1,0 +1,49 @@
+<view class="photo-warp">
+  <ul>
+    <block wx:for="{{ uploadImageList }}" wx:for-item="imageItem" wx:key="key">
+      <li>
+        <block wx:if="{{ uploadProgress[index] != 100 }}">
+          <image catchtap="deleteImage" data-index="{{ index }}" class="close" src='/public/icons/close.png'></image>
+        </block>
+        <block wx:if="{{ uploadProgress[index] }}">
+          <progress percent="{{ uploadProgress[index] }}" color='#8cc252'></progress>
+        </block>
+        <image catchtap="imgPreview" mode="scaleToFill" data-src="{{ imageItem }}" class="image" src="{{ imageItem }}"></image>
+      </li>
+    </block>
+  </ul>
+
+  <view class="add-warp" catchtap='showPhoto' wx:if="{{ uploadImageList.length < 9 }}" >
+    <span class="add-btn"> </span>
+  </view>
+  <view style='clear:both;'>
+  </view>
+
+  <view class="upload-location" catchtap='toLocation'>
+    <image class="icon-location" src='/public/icons/location.png'> </image>
+    <text class="text-loaction">{{ checkedLocation.title }}</text>
+    <image class="icon-choose" src='/public/icons/arrow-right.png'> </image>
+  </view>
+
+  <view class="upload-tag">
+    <block wx:for="{{ showTagList }}" wx:for-item="tagItem" wx:key="key">
+      <span catchtap="onClickTag" data-name="{{ tagItem.name }}" class="tag {{ tagItem.selected ?'active':''}}"> {{ tagItem.name }}</span>
+    </block>
+    <block wx:if="{{ tagExpand || tagList.length <= showTagCount }}">
+      <modal title="添加标签" show="{{ showAddTagModal }}" bindcancel="onCancelAddTagModal" bindconfirm="onConfirmAddTagModal">
+        <view class="text-tips">请输入你想添加的标签</view>
+        <view class="text-tips">最多10个字符</view>
+        <view class="modal-input">
+          <input cursor-spacing="10" maxlength="10" bindinput="onInputTag" placeholder="标签" value='{{ newTag }}' class='input' focus="{{ false }}" bindconfirm="onConfirmAddTagModal" />
+        </view>
+      </modal>
+      <span catchtap="onAddTag" class="tag">＋新标签</span>
+    </block>
+    <image catchtap='onChangeTagExpand' wx:if="{{ !tagExpand && tagList.length > showTagCount }}" class="icon-open" src='/public/icons/arrow-svg.png'></image>
+    <image catchtap='onChangeTagExpand' wx:if="{{ tagExpand }}" class="icon-open" src='/public/icons/arrow-up.svg'></image>
+  </view>
+
+  <view catchtap="onUpload" class="submit-btn">上传</view>
+</view>
+
+<!-- focus="{{ showAddTagModal }}" -->

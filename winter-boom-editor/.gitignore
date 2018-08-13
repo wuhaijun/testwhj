@@ -1,0 +1,12 @@
+.idea/
+node_modules/
+*.iml
+/public/bundle/
+.env
+test.js
+/config/default.json
+npm-debug.log
+.DS_Store
+/.env
+/public/build/
+package-lock.json

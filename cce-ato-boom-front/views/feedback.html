@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>脑洞 Brain BOOOOOM!</title>
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon" />
+    <style type="text/css">
+        body, div, li, h1, h2, h3, h4, h5, h6, form, input, textarea, p {
+            padding: 0;
+            margin: 0;
+            font-family: "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+        }
+
+        a {
+            text-decoration:none;
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgb(200, 200, 200);
+        }
+        :-moz-placeholder {
+            color: rgb(200, 200, 200);
+            opacity:  1;
+        }
+        ::-moz-placeholder {
+            color: rgb(200, 200, 200);
+            opacity:  1;
+        }
+        :-ms-input-placeholder {
+            color: rgb(200, 200, 200);
+        }
+
+
+        #header {
+            position: fixed;
+            top:0;
+            left:0;
+            height: 60px;
+            z-index: 70;
+            width: 100%;
+            padding: 6px;
+            margin:0;
+            background: white;
+        }
+        #header .logo {
+            display: inline-block;
+            height: 100%;
+            margin-left: 20px;
+        }
+
+        #header .logo img {
+            height: 100%;
+        }
+
+        #main {
+            margin: 100px 25% 20px;
+            padding: 20px;
+        }
+
+        #main p {
+            padding: 10px 0;
+        }
+
+        #main .tip {
+            color: rgb(120, 120, 120);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        #main .tip em {
+            color: rgb(255, 0, 0);
+            font-style: normal;
+        }
+
+        #main textarea,
+        #main input {
+            width: 100%;
+            outline: none;
+            border: 1px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            padding-left: 6px;
+        }
+
+        #main textarea {
+            height: 230px;
+        }
+
+        #main select,
+        #main button,
+        #main input {
+            height: 30px;
+        }
+
+        #main select {
+            margin-right: 4px
+        }
+
+        #main button {
+            background-color: rgb(116, 127, 200);
+            color: white;
+            outline: none;
+            width: 100px;
+            font-size: 14px;
+            border: transparent;
+            margin-left: 6px;
+            cursor: pointer;
+        }
+
+        #main button.disabled {
+            background-color: rgb(120, 120, 120);
+            cursor: default;
+        }
+
+        #main button:hover {
+            background-color: rgb(86, 97, 170);
+        }
+
+        .logo-plus {
+            display: inline;
+            position: relative;
+            top: -40px;
+            font-size: 12px;
+            color: lightgrey;
+            left: -20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="logo">
+                <img src="http://boom-static.static.cceato.com/boom/imgs/index/logo.jpg">
+                <p class="logo-plus">beta 2.0</p>
+            </div>
+        </div>
+        <div id="main">
+            <p class="tip">您对脑洞平台的建议<em>(*必填)</em></p>
+            <p><textarea name="content" placeholder="欢迎提出您在使用过程中遇到的问题或宝贵建议(400字以内), 衷心感谢您对脑洞的支持。"></textarea></p>
+            <p>
+                <select name="module">
+                    <option value="内容订阅">内容订阅</option>
+                    <option value="编辑排版">编辑排版</option>
+                </select>
+                <span class="tip">请选择对应的产品模块</span>
+            </p>
+            <p><input name="email" type="text" placeholder="请留下您的邮箱, 便于我们及时回复您" required /></p>
+            <p style="text-align: center"><button id="submit" type="button">提交反馈</button></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    ACCOUNT = {% autoescape false %} {{ account|json }} {% endautoescape %};
+    MODULE = {% autoescape false %} {{ module|json }} {% endautoescape %};
+</script>
+<script type="text/javascript" src="http://boom-static.static.cceato.com/vendor/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('input[name="email"]').val(ACCOUNT && ACCOUNT.username || '');
+        $(`select[name="module"] > option[value=${ MODULE == 'brainboom'? '内容订阅': '编辑排版' }]`).attr('selected', true);
+
+        $('#submit').click(function(e) {
+            var content = $('textarea[name="content"]').val();
+            var module = $('select[name="module"]').val();
+            var email = $('input[name="email"]').val();
+
+            if (!content || !content.trim()) {
+                alert('请填写您对脑洞平台的宝贵建议,谢谢!');
+                return false;
+            }
+
+            if (content.length > 400) {
+                alert('不好意思,建议内容不要超过400个字。');
+                return false;
+            }
+
+            if (!email || !email.trim()) {
+                alert('请留下您的邮箱, 便于我们及时回复您,谢谢!');
+                return false;
+            }
+
+            $.post('/api/feedback/add', { email: email, content: content, module: module }, function(json) {
+                if (json.status == 'ok') {
+                    alert('谢谢您的宝贵建议,我们会尽快回复您!');
+                    window.close();
+                } else {
+                    alert('实在抱歉, 系统内部错误, 请联系平台管理员!');
+                }
+            });
+
+            var $this = $(this).attr('disabled', true).addClass('disabled');
+            setTimeout(function() {
+                $this.attr('disabled', false).removeClass('disabled');
+            }, 5000);
+        });
+    });
+</script>

@@ -1,0 +1,26 @@
+<view>
+  <view class="search-input">
+    <image class="search-img" src="/public/icons/search.png"></image>
+    <input type='text' value="{{ inputValue }}" bindinput="inputTyping" auto-focus  bindconfirm="confirmTyping"></input>
+  </view>
+
+  <block wx:if="{{ inputValue.length==0 }}">
+    <search items="{{ tags }}" label="标签" url="/pages/photos/index?tag=" />
+    <search items="{{ locations }}" label="地点" url="/pages/photos/index?location=" />
+  </block>
+
+  <view class="suggest-warp" wx:if="{{ inputValue.length>0 }}">
+    <block wx:key="key" wx:for="{{ suggests }}">
+      <navigator hover-class="none" url='/pages/photos/index?keyword={{ item }}'>
+        <view class="suggest-list">
+          <image class="suggest-img" src="/public/icons/time.svg"></image>
+          <text class="suggest-text">
+                <text>{{ item }}</text>
+          </text>
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+  <footer-bar />
+</view>

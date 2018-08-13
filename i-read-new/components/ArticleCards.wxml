@@ -1,0 +1,43 @@
+<block>
+    <view>
+        <view class="information-article">
+            <view>
+                <view wx:key="{{index}}" wx:for="{{projectList}}" wx:for-item="item" wx:for-index="index">
+                    <view class="information-article-each">
+                        <view class="information-img" data-article-id="{{ item._id }}" bindtap="onHandleDeatils">
+                            <view class="information-bgimg" style="background-Image: url({{ item.coverImg.url }})"></view>
+                        </view>
+                        <view class="information-title" bindtap="onHandleDeatils">{{item.title}}</view>
+                        <view class="information-box">
+                            <view class="information-headline">
+                                <block>
+                                    <block wx:if="{{isClick}}">
+                                        <text bindtap="onHandleTotheme" data-id="{{item.themeId}}" class="information-name">{{themeMapping[item.themeId].name}}</text>
+                                    </block>
+                                    <block wx:else>
+                                        <text class="information-name information-name-un">{{themeMapping[item.themeId].name}}</text>
+                                    </block>
+                                </block>
+                                <text class="information-time">{{item.datePublished}}</text>
+                            </view>
+                            <view class="information-icon">
+                                <image src="{{item.isCollected ? collect : collected}}" data-id="{{item._id}}"
+                                bindtap="onHandleCollect" />
+                                <text>{{item.collectCount}}</text>
+                                <image src="{{share}}" data-id="{{item._id}}"
+                                data-title="{{item.title}}" data-url="{{item.coverImg.url}}" bindtap="onHandleShare"
+                                />
+                                <text>{{item.shareCount}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <block wx:if="{{loading}}">
+            <view class="load-content">
+                <image class="loading-svg" src="{{loadingsvg}}" />
+            </view>
+        </block>
+    </view>
+</block>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "theme-cards": "../../../components/theme-cards/index",
+    "article-simple-cards":"../../../components/article-simple-cards/index",
+    "poster-card": "../../../components/poster-card/index",
+    "share-bar": "../../../components/share-bar/index"
+  },
+  "disableScroll": true
+}

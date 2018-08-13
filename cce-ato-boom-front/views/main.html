@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>脑洞 Brain BOOOOOM!</title>
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- plugin -->
+    <link rel="stylesheet" href="http://boom-static-dev/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="http://boom-static-dev/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="http://boom-static-dev/vendor/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="http://boom-static-dev/vendor/chosen_v1.6.2/chosen.min.css">
+    <!-- end plugin -->
+
+    <!-- build:css(.) ../styles/main-styles.min.css -->
+    <link rel="stylesheet" href="http://boom-static-dev/styles/webfont.css">
+    <link rel="stylesheet" href="http://boom-static-dev/styles/animate.css">
+    <link rel="stylesheet" href="http://boom-static-dev/styles/app.css">
+    <link rel="stylesheet" href="http://boom-static-dev/styles/app.skins.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="http://boom-static-dev/styles/font-awesome/4.6.3-2/css/font-awesome.min.css"/>
+
+    <!-- build:css(.) ../fonts/main-fonts.min.css -->
+    <link rel="stylesheet" href="http://boom-static-dev/fonts/climacons-font.css">
+    <link rel="stylesheet" href="http://boom-static-dev/fonts/card.css">
+    <link rel="stylesheet" href="http://boom-static-dev/fonts/sli.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.) ../boom/main-boom.min.css -->
+    <link rel="stylesheet" href="http://boom-static-dev/boom/css/boom.css">
+    <link rel="stylesheet" href="http://boom-static-dev/boom/css/channel.css">
+    <link rel="stylesheet" href="http://boom-static-dev/boom/css/content.css">
+    <link rel="stylesheet" href="http://boom-static-dev/boom/css/subscribe.css">
+    <link rel="stylesheet" href="http://boom-static-dev/boom/css/home.css">
+    <link rel="stylesheet" href="http://boom-static-dev/boom/css/topic.css">
+    <link rel="stylesheet" href="http://boom-static-dev/boom/css/icon.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" class="tmp" href="/static/mobile.css">
+    <link rel="stylesheet" class="tmp" href="/static/guide.css">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-105658469-1', {'userId': '{{ accountId }}'});
+    </script>
+    <!-- End Google Analytics -->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body class="page-loading">
+<!-- page loading spinner -->
+<div class="pageload">
+    <div class="pageload-inner">
+        <div class="sk-rotating-plane"></div>
+    </div>
+</div>
+
+<div id="app" class="app layout-fixed-header">
+    {% autoescape false %} {{ html }} {% endautoescape %}
+</div>
+
+<!-- init data -->
+<script type="text/javascript">
+    BOOM_INIT_DATA = {% autoescape false %} {{ initData|json }} {% endautoescape %};
+    BOOM_INIT_CONFIG = {% autoescape false %} {{ initConfig|json }} {% endautoescape %};
+    BOOM_INIT_MODULES = {% autoescape false %} {{ modulesConfig|json }} {% endautoescape %};
+    BOOM_INIT_CLIENT_AUTH = {% autoescape false %} {{ clientAuthConfig|json }} {% endautoescape %};
+    STATIC_SERVER = 'http://boom-static-dev';
+</script>
+
+<!-- build:js(.) ../static/main.min.js -->
+<script src="http://boom-static-dev/scripts/helpers/modernizr.js"></script>
+<script src="http://boom-static-dev/vendor/jquery/dist/jquery.js"></script>
+<script src="http://boom-static-dev/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="http://boom-static-dev/vendor/fastclick/lib/fastclick.js"></script>
+<script src="http://boom-static-dev/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+<script src="http://boom-static-dev/vendor/sweetalert/dist/sweetalert.min.js"></script>
+<script src="http://boom-static-dev/scripts/helpers/smartresize.js"></script>
+<script src="http://boom-static-dev/scripts/constants.js"></script>
+
+<script src="http://boom-static-dev/vendor/jquery.ui/ui/core.js"></script>
+<script src="http://boom-static-dev/vendor/jquery.ui/ui/widget.js"></script>
+<script src="http://boom-static-dev/vendor/jquery.ui/ui/mouse.js"></script>
+<script src="http://boom-static-dev/vendor/jquery.ui/ui/draggable.js"></script>
+<script src="http://boom-static-dev/vendor/jquery.ui/ui/droppable.js"></script>
+<script src="http://boom-static-dev/vendor/jquery-lazyload/jquery.lazyload.js"></script>
+<script src="http://boom-static-dev/vendor/chosen_v1.6.2/chosen.jquery.min.js"></script>
+<script src="http://boom-static-dev/scripts/ui/jquery.highlight.js"></script>
+
+<script src="/static/app/bundle.min.js"></script>
+
+<script src="http://boom-static-dev/scripts/main.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>
+<script>
+    setTimeout(function () {
+        var o = 'script';
+        var a = document.createElement(o);
+        var m = document.getElementsByTagName(o)[0];
+        a.async=1;
+        a.src='https://www.google-analytics.com/analytics.js';
+        m.parentNode.insertBefore(a,m);
+    }, 0);
+</script>

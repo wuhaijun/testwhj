@@ -1,0 +1,138 @@
+<block>
+    <view>
+        <block>
+            <block wx:if="{{hasUserInfo}}">
+                <view class="empower">
+                    <image class="empower-img" src="{{uesrImage}}" />
+                    <view class="empower-txt">登录之后就能看到个人了哦</view>
+                    <button class="empower-btn" open-type="getUserInfo"
+                    bindgetuserinfo="onHandleGetUserInfo">登录</button>
+                </view>
+            </block>
+            <block wx:else>
+                <block>
+                    <view class="userinfo">
+                        <image class="userinfo-avatar" src="{{userInfoImage.avatarUrl}}" background-size="cover"
+                        />
+                        <text class="userinfo-nickname">{{userInfoImage.nickName}}</text>
+                    </view>
+                    <view class="swiper-scroll">
+                        <view class="swiper-tab">
+                            <view class="{{currentTab == 0 ? ' swiper-tab-list on' : 'swiper-tab-list'}}"
+                            data-current="0" bindtap="onHandleToggle">收藏
+                                <text data-current="0" bindtap="onHandleToggle">{{userInfo.projectCollectCount}}</text>
+                                <text class="{{currentTab == 0 ? 'collect-txt none' : 'collect-txt'}}"></text>
+                            </view>
+                            <view class="{{currentTab == 1 ? 'swiper-tab-list on' : 'swiper-tab-list'}}"
+                            data-current="1" bindtap="onHandleToggle">笔记
+                                <text data-current="1" bindtap="onHandleToggle">{{userInfo.projectNoteCount}}</text>
+                                <text class="{{currentTab == 1 ? 'collect-txt none' : 'collect-txt'}}"></text>
+                            </view>
+                            <view class="{{currentTab == 2 ? 'swiper-tab-list on' : 'swiper-tab-list'}}"
+                            data-current="2" bindtap="onHandleToggle">订阅
+                                <text data-current="2" bindtap="onHandleToggle">{{userInfo.themeCollectCount}}</text>
+                                <text class="{{currentTab == 2 ? 'collect-txt none' : 'collect-txt'}}"></text>
+                            </view>
+                        </view>
+                        <view class="swiper-toggle">
+                            <swiper current="{{currentTab}}" style="100%" class="swiper-box" bindchange="onHandleChange">
+                                <swiper-item>
+                                    <block>
+                                        <block wx:if="{{collectLength != 0}}">
+                                            <article-simple-cards bindoncollectscrolltolower="onCollectScrolltolower"
+                                            __triggerObserer="{{ _triggerObserer }}" bindonhandlelongpress="onHandleLongPress"
+                                            projectList="{{userCollect.projectList}}" themeMapping="{{themeMapping}}"
+                                            __fn_onCollectScrolltolower="{{true}}" __fn_onHandleLongPress="{{true}}"></article-simple-cards>
+                                        </block>
+                                        <block wx:else>
+                                            <view else="{{true}}" class="empty-view">
+                                                <image class="empty-view-img" src="{{empty}}" />
+                                                <text>你还没有相关记录哦</text>
+                                            </view>
+                                        </block>
+                                    </block>
+                                </swiper-item>
+                                <swiper-item>
+                                    <block>
+                                        <block wx:if="{{userNote.length != 0}}">
+                                            <scroll-view scroll-y="{{true}}" style="height: 100%;box-sizing: border-box;maigin:0 32rpx;width: auto"
+                                            bindscrolltolower="onScrolltolower">
+                                                <view class="note" wx:key="{{index}}" wx:for="{{userNote || []}}" wx:for-item="item"
+                                                wx:for-index="index">
+                                                    <view class="note-book">{{item.note}}</view>
+                                                    <view class="note-title">{{item.Text}}</view>
+                                                    <view class="article-title">---引自
+                                                        <text class="note-text">{{item.projectTitle}}</text>
+                                                    </view>
+                                                    <view class="note-time">
+                                                        <text>{{item.notedDate}}</text>
+                                                        <image data-note="{{item.note}}" data-Text="{{item.Text}}"
+                                                        data-id="{{item.pid}}" bindtap="onShareBox" src="{{share}}" />
+                                                    </view>
+                                                </view>
+                                            </scroll-view>
+                                        </block>
+                                        <block wx:else>
+                                            <view else="{{true}}" class="empty-view">
+                                                <image class="empty-view-img" src="{{empty}}" />
+                                                <text>你还没有相关记录哦</text>
+                                            </view>
+                                        </block>
+                                    </block>
+                                </swiper-item>
+                                <swiper-item>
+                                    <block>
+                                        <block wx:if="{{themeCollectList != 0}}">
+                                            <theme-card themeList="{{themeCollectList}}" __triggerObserer="{{ _triggerObserer }}"
+                                            userInfo="{{userInfo}}" bindonhandledelettheme="onHandleDeletTheme" __fn_onHandleDeletTheme="{{true}}"></theme-card>
+                                        </block>
+                                        <block wx:else>
+                                            <view else="{{true}}" class="empty-view">
+                                                <image class="empty-view-img" src="{{empty}}" />
+                                                <text>你还没有相关记录哦</text>
+                                            </view>
+                                        </block>
+                                    </block>
+                                </swiper-item>
+                            </swiper>
+                        </view>
+                    </view>
+                </block>
+            </block>
+        </block>
+        <block wx:if="{{iscancel}}">
+            <view class="showmodal">
+                <view class="modal">
+                    <view catchtap="onHandleCancel">取消</view>
+                    <view bindtap="onHandleDelete" data-e-onHandleDelete-so="this">删除</view>
+                </view>
+            </view>
+        </block>
+        <view>
+            <block>
+                <block wx:if="{{isClickShare}}">
+                    <share-bar bindonmadeposter="onMadePoster" __triggerObserer="{{ _triggerObserer }}"
+                    __fn_onMadePoster="{{true}}"></share-bar>
+                </block>
+            </block>
+            <block>
+                <block wx:if="{{isClickShare}}">
+                    <view class="mask" bindtap="onClickMask"></view>
+                </block>
+            </block>
+            <block>
+                <block wx:if="{{showPosterMask}}">
+                    <view class="mask" bindtap="onHidePoster"></view>
+                </block>
+            </block>
+        </view>
+        <view>
+            <block>
+                <block wx:if="{{showPosterMask}}">
+                    <poster-card bindonhandhide="onHandHide" __triggerObserer="{{ _triggerObserer }}"
+                    shareArticleId="{{shareArticleId}}" title="{{shareContent}}" __fn_onHandHide="{{true}}"></poster-card>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>

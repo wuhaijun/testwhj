@@ -1,0 +1,53 @@
+<block>
+    <view class="information">
+        <view class="information-news">
+            <block>
+                <block wx:if="{{asSubscribed.length == 0}}">
+                    <view class="myinformation-block">
+                        <view data-type="information" bindtap="onHandleToggleSub" class="information-featured information-w">资讯站精选</view>
+                    </view>
+                </block>
+                <view class="myinformation-block" wx:else>
+                    <view data-type="information" bindtap="onHandleToggleSub" class="{{isSubscribed ? 'information-featured' : 'information-featured information-w'}}">资讯站精选</view>
+                    <view data-type="myinformation" bindtap="onHandleToggleRec"
+                    class="{{isRecommended ? 'information-featured' : 'information-featured information-w'}}">我订阅的</view>
+                </view>
+            </block>
+            <navigator class="theme-nav" hover-class="none" url="/pages/projects/search">
+                <view class="search-input">
+                    <image class="search-img" src="{{search}}" />
+                </view>
+            </navigator>
+        </view>
+        <article-cards isClick="{{true}}" __triggerObserer="{{ _triggerObserer }}"
+        bindonhandleshare="onHandleShare" projectList="{{projectList}}" themeMapping="{{themeMapping}}"
+        __fn_onHandleShare="{{true}}"></article-cards>
+        <view>
+            <block>
+                <block wx:if="{{isClickShare}}">
+                    <share-bar bindonmadeposter="onMadePoster" __triggerObserer="{{ _triggerObserer }}"
+                    __fn_onMadePoster="{{true}}"></share-bar>
+                </block>
+            </block>
+            <block>
+                <block wx:if="{{isClickShare}}">
+                    <view class="mask" bindtap="onClickMask"></view>
+                </block>
+            </block>
+            <block>
+                <block wx:if="{{showPosterMask}}">
+                    <view class="mask" bindtap="onHidePoster"></view>
+                </block>
+            </block>
+        </view>
+        <view>
+            <block>
+                <block wx:if="{{showPosterMask}}">
+                    <poster-card bindonhandhide="onHandHide" __triggerObserer="{{ _triggerObserer }}"
+                    coverImage="{{shareImg}}" shareArticleId="{{shareArticleId}}" title="{{shareContent}}"
+                    __fn_onHandHide="{{true}}"></poster-card>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>

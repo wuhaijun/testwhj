@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-parse": "./index",
+    "custom-parse-video":"../wxParseVideo/index",
+    "custom-parse-img": "../wxParseImg/index",
+    "custom-emoji-view": "../wxEmojiView/index",
+    "custom-parse-br": "../wxParseBr/index"
+  }
+}

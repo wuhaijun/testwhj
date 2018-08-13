@@ -1,0 +1,218 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script type="text/javascript">
+	function play(name) {
+        var socket = io('http://192.168.60.143:8008');
+        socket.on('connect', function () {
+            console.log('connect');
+            socket.emit('register', name, function (data) {
+                console.log("data:"+data);
+            });
+            let angle = (Math.random() * 2) * Math.PI;
+            socket.on('info', function (info) {
+            	console.log("info:"+info);
+                angle += (Math.random() * 0.05) * Math.PI;
+                socket.emit('move', angle);
+                socket.emit('shoot', (Math.random() * 2) * Math.PI);
+            });
+        });
+    };
+    play('whj');
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+wdw
+<body>
+<div id="area" style="height:700px;width:700px;background-color:grey;"></div>
+</body>
+
+</html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+    function play(name) {
+         var socket = io('http://192.168.60.143:8008');
+       // var socket = io('http://192.168.60.211:8008');
+       // var socket = io('http://192.168.60.49:8008');
+        socket.on('connect', function () {
+            socket.emit('register', name, function (data) {
+                //console.log("data:"+data);
+
+            });
+
+            let angle = (Math.random() * 2) * Math.PI;
+            socket.on('info', function (info) {
+
+              //  console.log("info.area:startX"+info.area.startX);
+              //  console.log("info.area:startY"+info.area.startY);
+              //  console.log("info.area:endX"+info.area.endX);
+               // console.log("info.area:endY"+info.area.endY);
+                //   $('#area').width(info.area.endX - info.area.startX);
+                //   $('#area').height(info.area.endY - info.area.startY);
+                // angle += (Math.random() * 0.05) * Math.PI;
+                // socket.emit('move', angle);
+                // socket.emit('shoot', (Math.random() * 2) * Math.PI);
+            });
+        });
+        $(document).keydown(function (event) {
+            console.log("event.keyCode:"+event.keyCode);
+            let a0 = 0;
+            let a90 = 0.5*Math.PI;
+            let a180 = Math.PI;
+            let a270 = 1.5*Math.PI;
+
+            let a1 = 0.2*Math.PI;
+            let a2 = 0.3*Math.PI;
+            let a3 = 0.4*Math.PI;
+
+            let a4 = 0.6*Math.PI;
+            let a5 = 0.7*Math.PI;
+            let a6 = 0.8*Math.PI;
+
+            let a7 = 1.1*Math.PI;
+            let a8 = 1.2*Math.PI;
+            let a9 = 1.3*Math.PI;
+
+            let a00 = 1.7*Math.PI;
+            let a11= 1.8*Math.PI;
+            let a22 = 1.9*Math.PI;
+
+
+            //up  w
+            if (event.keyCode == 87) {
+                socket.emit('move', a0);
+                socket.emit('shoot', a0);
+            }
+            //down s
+            if (event.keyCode == 83) {
+                socket.emit('move', a180);
+                socket.emit('shoot', a180);
+            }
+            //left a
+            if (event.keyCode == 65) {
+                socket.emit('move', a270);
+                socket.emit('shoot', a270);
+            }
+            //right d
+            if (event.keyCode == 68) {
+                socket.emit('move', a90);
+                socket.emit('shoot', a90);
+            }
+
+
+
+            if (event.keyCode == 81) {
+                socket.emit('move', a2);
+            }
+
+            if (event.keyCode == 69) {
+                socket.emit('move', a4);
+            }
+
+            if (event.keyCode == 90) {
+                socket.emit('move', a7);
+            }
+
+            if (event.keyCode == 67) {
+                socket.emit('move', a00);
+            }
+
+
+
+            if (event.keyCode == 38) {
+                socket.emit('shoot', a0);
+                socket.emit('shoot', a2);
+                socket.emit('shoot', a3);
+                socket.emit('shoot', a4);
+                socket.emit('shoot', a5);
+            }
+
+            if (event.keyCode == 39) {
+                socket.emit('shoot', a90);
+            }
+
+            if (event.keyCode == 40) {
+                socket.emit('shoot', a180);
+            }
+
+            if (event.keyCode == 37) {
+                socket.emit('shoot', a270);
+            }
+
+
+
+
+            if (event.keyCode == 49) {
+                socket.emit('shoot', a1);
+            }
+
+            if (event.keyCode == 50) {
+                socket.emit('shoot', a2);
+            }
+
+            if (event.keyCode == 51) {
+                socket.emit('shoot', a3);
+            }
+
+
+            if (event.keyCode == 52) {
+                socket.emit('shoot', a4);
+            }
+
+            if (event.keyCode == 53) {
+                socket.emit('shoot', a5);
+            }
+
+            if (event.keyCode == 54) {
+                socket.emit('shoot', a6);
+            }
+
+
+            if (event.keyCode == 55) {
+                socket.emit('shoot', a7);
+            }
+
+            if (event.keyCode == 56) {
+                socket.emit('shoot', a8);
+            }
+
+            if (event.keyCode == 57) {
+                socket.emit('shoot', a9);
+            }
+
+
+
+            if (event.keyCode == 48) {
+                socket.emit('shoot', a00);
+            }
+
+            if (event.keyCode == 189) {
+                socket.emit('shoot', a11);
+            }
+
+            if (event.keyCode == 187) {
+                socket.emit('shoot', a22);
+            }
+
+
+
+        });
+    };
+    play('whj');
+</script>
+

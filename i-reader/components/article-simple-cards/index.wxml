@@ -1,0 +1,16 @@
+<scroll-view scroll-y style='height: 100%;box-sizing: border-box;margin: 0 32rpx;width: auto' bindscrolltolower="scrolltolower">
+  <view class="theme theme-nav" wx:for="{{ relatedArticleList }}" wx:for-item="item" wx:key="key" catchtap="onArticleTap" data-article-id="{{ item._id }}" bind:longpress="longpress">
+    <view class="theme-each">
+      <view class="theme-img" style="background-image: url({{ item.coverImg.url }})"></view>
+      <view class="theme-name">
+        <view class="theme-txt">
+          <text>{{ item.title }}</text>
+        </view>
+        <view class="theme-title">
+          <view data-theme-list="{{themeList}}" data-theme="{{item.themeId}}" catchtap='navigateTotheme'>{{ themeList[item.themeId].name }}</view>
+          <view>{{ item.datePublished }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

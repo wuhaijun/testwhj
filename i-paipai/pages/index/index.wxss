@@ -1,0 +1,153 @@
+.home {
+  height: 100%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0; 
+}
+
+.home-banner {
+  position: relative;
+}
+
+.home-banner image {
+  width: 100%;
+  height: 234rpx;
+}
+
+.home-banner-text {
+  position: absolute;
+  bottom: 14px;
+  left: 20rpx;
+  font-size: 32rpx;
+  color: #ccc;
+}
+.home-banner-time {
+  position: absolute;
+  bottom: 14px;
+  left: 200rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.home-sub-bar{
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+}
+.home-sub-bar label{
+  /* padding: 0 0 20rpx; */
+}
+.home-sub-bar.active{
+  position: fixed;
+  top:0;
+  z-index: 9;
+  background-color: #fff;
+  padding:20rpx 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.home-sub-bar image {
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: -4rpx;
+}
+
+.home-sub-bar .icon-date {
+  margin-left: 20rpx;
+}
+.text-date{
+   display: inline-block;
+   padding: 0 14rpx;
+}
+.text-category{
+   display: inline-block;
+   padding: 0 14rpx;
+}
+
+.home-sub-bar .icon-category {
+  margin-left: 50rpx;
+}
+
+.home-sub-bar .icon-search {
+  float: right;
+  margin-right: 40rpx;
+  margin-top: 24rpx;
+}
+
+.home-sub-bar text {
+  font-size: 28rpx;
+  color: #bfbfbf;
+}
+
+.home-sub-bar .active {
+  color: #000;
+}
+
+/*  分类项  */
+.home-classify {
+  margin-top: 65rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 80rpx;
+}
+.home-classify-all {
+  float: left;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3rpx;
+  position: relative;
+  padding: 0 0 0 3rpx;
+
+}
+
+.home-classify image {
+  height: 200rpx;
+  width: 100%;
+  vertical-align: middle;
+}
+.home-classify text {
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-left: 18rpx;
+  margin-top: 5rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.home .nav {
+  display: inline-block;
+  float: right;
+  height:100%;
+  padding-left:30rpx;
+}
+
+
+.no-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -70rpx;
+  width: 100%;
+}
+
+.no-content image {
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 160rpx;
+}
+
+.no-content text {
+  font-size: 28rpx;
+  color: #b5acaa;
+  margin-top: 10rpx;
+}

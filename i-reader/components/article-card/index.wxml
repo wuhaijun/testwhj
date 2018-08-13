@@ -1,0 +1,22 @@
+<view class="information-article-each">
+  <view class="information-img" catchtap="onArticleTap" data-article-id="{{ article._id }}">
+    <view class="information-bgimg" style="background-image: url({{ article.coverImg.url }})"></view>
+  </view>
+  <view class='information-title' catchtap="onArticleTap" data-article-id="{{ article._id }}">{{ article.title }}
+  </view>
+  <view class="information-box">
+    <view class="information-headline">
+      <text wx:if="{{ isClick }}" catchtap='navigateTotheme' class='information-name'>{{ themeList[article.themeId].name }}</text>
+      <text wx:if="{{ !isClick }}" class='information-name information-name-un'>{{ themeList[article.themeId].name }}</text>
+      <text class='information-time'>{{ article.datePublished }}</text>
+    </view>
+    <view class="information-icon">
+      <image src="{{ article.isCollected?'/public/icon/icon_collect_pre.png':'/public/icon/icon_collect_nor.png' }}" catchtap='onToggleCollect'></image>
+      <text>{{ article.collectCount }}</text>
+      <image data-value='{{ article }}' catchtap='onShareBox' src="/public/icon/icon_share_nor.png"></image>
+      <text>{{ article.shareCount }}</text>
+    </view>
+  </view>
+</view>
+
+

@@ -1,0 +1,11 @@
+<view class="home-bar-warp">
+  <view class="home-bar-width" catchtap="toHome">
+    <image class="bar-bottom-image" src="{{ checked =='index' ? '/public/icons/home.svg' : '/public/icons/home.svg '}}"></image>
+  </view>
+  <view class="home-bar-width" catchtap='showPhoto'>
+    <image class="bar-bottom-image icon-home-photo" src="/public/icons/camera.svg"></image>
+  </view>
+  <view class="home-bar-width" catchtap="toMine">
+    <image class="bar-bottom-image" src="{{ checked =='user' ? '/public/icons/user.svg' : '/public/icons/user.svg '}}"></image>
+  </view>
+</view> 

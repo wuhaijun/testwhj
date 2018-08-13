@@ -1,0 +1,195 @@
+.icon-create {
+    background-color: #fff;
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    width: 19px;
+    height: 19px;
+    position: relative;
+    top:0;
+    left:0;
+}
+
+.icon-create::before {
+    background-color: rgb(167,168,169);
+    width: 1px;
+    height: 19px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top:0;
+    left: 9px;
+    content:"";
+}
+
+.icon-create::after {
+    background-color: rgb(167,168,169);
+    width: 19px;
+    height: 1px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top:9px;
+    left: 0;
+    content:"";
+}
+
+.icon-delete {
+    position: relative;
+    width: 19px;
+    height: 19px;
+}
+
+.icon-delete::before {
+    background-color: rgb(167,168,169);
+    width: 1px;
+    height: 19px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top:0;
+    left: 9px;
+    content:"";
+    transform: rotate(45deg);
+}
+
+.icon-delete::after {
+    background-color: rgb(167,168,169);
+    width: 19px;
+    height: 1px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top:9px;
+    left: 0;
+    content:"";
+    transform: rotate(45deg);
+}
+
+.icon-completed {
+    width:20px;
+    height:20px;
+    margin:0 auto;
+}
+.icon-completed::after {
+    content: '';
+    display:block;
+    width: 15px;
+    height: 8px;
+    border: 1px solid rgb(167,168,169);
+    border-top: none;
+    border-right: none;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.icon-edit {
+    border: 1px solid rgb(167,168,169);
+    border-bottom: transparent;
+    height: 15px;
+    width: 8px;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+    position: relative;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.icon-edit::before {
+    position: absolute;
+    width: 7px;
+    height: 3px;
+    content: '';
+    border: 1px solid rgb(167,168,169);
+    top: 4px;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.icon-edit::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-left: 4px solid rgb(167,168,169);
+    border-bottom: 4px solid transparent;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(90deg);
+    top: 12px;
+    left: 1px;
+}
+
+.icon-warn {
+    width: 0;
+    height: 0;
+    border-top: 20px solid rgb(221, 103, 119);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom-left-radius: 0;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icon-warn::before {
+    background-color: #ef6d6d;
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top: 3px;
+    left: -4px;
+    content: "";
+}
+
+i.fa-weixin {
+    color: rgb(81, 173, 85);
+}
+
+i.icon-feed,
+i.fa-feed {
+    color: rgb(227, 113, 46);
+}
+
+i.fa-instagram {
+    color: rgb(127, 55, 168);
+}
+
+i.fa-internet-explorer {
+    color: rgb(0, 73, 122);
+}
+
+i.icon-social-twitter,
+i.fa-twitter {
+    color: rgb(26, 178, 232);
+}
+
+i.icon-social-facebook,
+i.fa-facebook {
+    color: rgb(59, 89, 152);
+}
+
+i.fa-minus,
+i.fa-check,
+i.fa-plus,
+i.fa-times {
+    color: rgb(216, 216, 216);
+}
+
+i.fa-minus:hover,
+i.fa-plus:hover,
+i.fa-times:hover {
+    color: rgb(0, 0, 0);
+}

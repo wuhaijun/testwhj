@@ -1,0 +1,316 @@
+html,
+body,
+body>div {
+    font-family: Verdana, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+    min-height: 100%;
+    height: 100%;
+}
+
+#header {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(96, 102, 190);
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+#header img.avatar {
+    width: 30px;
+    height: 30px;
+}
+
+#header .nav {
+    padding: 0;
+    margin-right: 10px;
+}
+
+#header .nav>li>a {
+    padding: 0;
+    margin: 5px;
+}
+
+#header .dropdown-menu {
+    background-color: rgb(96, 102, 190);
+}
+
+#header .dropdown-menu>li>a {
+    color: rgb(254, 254, 254);
+}
+
+#header .dropdown-menu>li>a:hover {
+    color: rgb(1, 1, 1);
+}
+
+.home .category-list {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    text-decoration-line: underline;
+    color: blue;
+}
+
+.footer {
+    margin: 36px -14px 0 -14px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+
+.footer img {
+    width: 120px;
+}
+
+.footer em {
+    font-size: 14px;
+}
+
+.nav ul.sub-menu {
+    -webkit-padding-start: 15px;
+    list-style-type: none;
+}
+
+.nav ul.sub-menu>li {
+    padding: 2px 0;
+}
+
+.nav ul.sub-menu>li a:focus,
+.nav ul.sub-menu>li a:hover {
+    background-color: rgb(97, 100, 193);
+    color: rgb(254, 254, 254);
+}
+
+.nav li i {
+    margin-right: 8px;
+}
+
+.container-fluid,
+.container-fluid>.row,
+.container-fluid>.row>div {
+    height: 100%;
+}
+
+.container-fluid>.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.style-type .nav ul.sub-menu>li a,
+.style-type .nav>li>a {
+    padding: 2px 2px;
+    margin: 5px 10px;
+}
+
+.style-type {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    overflow: scroll;
+    width: 130px !important;
+}
+
+.style-list {
+    background-color: rgb(247, 246, 242);
+    border-right: 1px solid rgb(204, 204, 204);
+    overflow: scroll;
+    height: 100%;
+}
+
+.style-editor {
+    background-color: rgb(247, 246, 242);
+    overflow: scroll;
+    height: 100%;
+}
+
+.style-list>.row.operator,
+.style-list>.row.styles {
+    margin: 10px 0;
+}
+
+.style-list>.row.styles {
+    padding: 4px;
+    cursor: pointer;
+    border: 1px dashed rgb(204, 204, 204);
+}
+
+.style-list>.row.styles p {
+    margin: 0;
+}
+
+.style-list>.row.styles.none-border {
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.style-list>.row.styles .operator a {
+    padding: 4px;
+}
+
+.style-list>.row.styles .operator>span {
+    font-size: 10px;
+    color: rgb(196, 196, 196);
+}
+
+.style-list>.row.styles .operator i {
+    color: rgb(196, 196, 196);
+}
+
+.style-list>.row.styles .operator i:hover {
+    color: rgb(96, 96, 96);
+}
+
+.style-list>.row.operator>div {
+    text-align: center;
+}
+
+.style-editor a,
+.style-list>.row.operator>div>a {
+    color: rgb(196, 196, 196);
+}
+
+.style-list>.row.operator>div>a:last-child {
+    float: right;
+    margin-right: 24px;
+}
+
+.style-editor a:hover,
+.style-list>.row.operator>div>a:hover,
+.style-list>.row.operator>div>a:focus {
+    color: rgb(96, 96, 96);
+}
+
+.style-editor {
+    padding-top: 26px;
+    margin-left: 30px;
+}
+
+.style-editor .btn-toolbar {
+    float: right;
+}
+
+/* 压缩按钮样式 */
+
+.style-editor .btn-compress {
+    border-radius: 5px;
+    background-color: rgba(96, 96, 96, 0.3);
+    margin-left: 10px;
+    color: white;
+}
+
+.style-editor .row.editor {
+    height: 80%;
+}
+
+.style-editor .row.editor>div,
+.style-editor .row.editor>div>textarea {
+    height: 100%;
+}
+
+#editor_style {
+    border: 1px solid #ccc;
+    overflow: auto;
+    padding: 0;
+}
+
+.style-editor textarea {
+    width: 100%;
+}
+
+.style-editor .row.saver {
+    margin-top: 10px;
+}
+
+.style-editor .row.saver>div {
+    text-align: center;
+}
+
+.style-editor .row.saver>div>div {
+    display: inline-block;
+}
+
+.modal .modal-body button {
+    margin: 2px;
+    border-radius: 4px;
+    background-color: rgb(234, 234, 234);
+    border-color: rgb(234, 234, 234);
+    color: rgb(128, 128, 128);
+}
+
+.modal .modal-body button:hover,
+.modal .modal-body button:focus {
+    background-color: rgb(184, 184, 184);
+    color: rgb(254, 254, 254);
+}
+
+.modal .modal-body button.current {
+    border: 2px dashed red;
+}
+
+.modal .modal-header .close {
+    font-size: 32px;
+}
+
+.template-style {
+    cursor: pointer;
+}
+
+.template-style.active >div {
+    border: 1px solid #555BB6;
+}
+
+.template-style > div {
+    padding: 4px;
+    border: 1px dashed #ccc;
+    margin: 4px;
+}
+
+
+.modal .modal-body button:hover, .modal .modal-body button:focus {
+    background-color:#555BB6;
+    color: #fff;
+}
+.template-type-choose{
+    display: inline-block;
+}
+.template-type-choose button.active{
+    border: 2px solid #555BB6;
+    color: #fff;
+    background-color:#555BB6 ;
+}
+
+
+
+ul li{
+    list-style: none;
+}
+
+.article-list{
+    margin:30px auto;
+}
+.article-total{
+    text-align: center;
+}
+
+ul.article-list li{
+    width: 22%;
+    height: 600px;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    float:left;
+    overflow: hidden;
+    padding:15px;
+    cursor: pointer;
+}
+ul.article-list li:hover{
+    border: 1px solid #333;
+}
+ul.article-list li img{
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 200px;
+}
+ul.article-list li a > div{
+    margin-bottom: 20px;
+    border-bottom:1px dotted #999;
+}
+
+

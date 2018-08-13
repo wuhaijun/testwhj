@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/photos/index",
+    "pages/locations/index",
+    "pages/search/index",
+    "pages/upload/index",
+    "pages/location/index",
+    "pages/myipai/index",
+    "pages/user/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F7F7F7",
+    "navigationBarTitleText": "脑洞随手拍",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true
+}

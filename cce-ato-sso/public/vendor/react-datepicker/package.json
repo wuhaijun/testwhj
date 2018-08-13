@@ -1,0 +1,168 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-datepicker@^0.37.0",
+        "scope": null,
+        "escapedName": "react-datepicker",
+        "name": "react-datepicker",
+        "rawSpec": "^0.37.0",
+        "spec": ">=0.37.0 <0.38.0",
+        "type": "range"
+      },
+      "/Users/Boyce/IdeaProjects/cce-ato-report"
+    ]
+  ],
+  "_from": "react-datepicker@>=0.37.0 <0.38.0",
+  "_id": "react-datepicker@0.37.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/react-datepicker",
+  "_nodeVersion": "5.2.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/react-datepicker-0.37.0.tgz_1480670620788_0.4485327545553446"
+  },
+  "_npmUser": {
+    "name": "mrusschen",
+    "email": "mrusschen@gmail.com"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-datepicker@^0.37.0",
+    "scope": null,
+    "escapedName": "react-datepicker",
+    "name": "react-datepicker",
+    "rawSpec": "^0.37.0",
+    "spec": ">=0.37.0 <0.38.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-datepicker/-/react-datepicker-0.37.0.tgz",
+  "_shasum": "94eef12ae508d733c74fbf9e0f996609a9dd9b89",
+  "_shrinkwrap": null,
+  "_spec": "react-datepicker@^0.37.0",
+  "_where": "/Users/Boyce/IdeaProjects/cce-ato-report",
+  "author": {
+    "name": "HackerOne"
+  },
+  "bugs": {
+    "url": "https://github.com/Hacker0x01/react-datepicker/issues"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "moment": "^2.13.0",
+    "react-onclickoutside": "^5.7.1",
+    "tether": "^1.3.2"
+  },
+  "description": "A simple and reusable datepicker component for React",
+  "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-airbnb": "^2.0.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "codecov.io": "^0.1.6",
+    "css-loader": "^0.25.0",
+    "enzyme": "^2.4.0",
+    "eslint": "^3.8.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-react": "^6.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "grunt": "1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "1.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-karma": "^2.0.0",
+    "grunt-scss-lint": "^0.5.0",
+    "grunt-webpack": "^1.0.11",
+    "highlight.js": "^9.0.0",
+    "isparta-loader": "^2.0.0",
+    "karma": "^1.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^1.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.0.1",
+    "karma-sinon": "^1.0.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "lodash": "^4.3.0",
+    "mocha": "^3.0.2",
+    "node-sass": "^3.10.1",
+    "react": "^15.0.0",
+    "react-addons-test-utils": "^15.0.0",
+    "react-docgen": "^2.7.0",
+    "react-dom": "^15.0.0",
+    "react-transform-hmr": "^1.0.4",
+    "sass-loader": "^4.0.0",
+    "sinon": "^1.15.4",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.0",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "94eef12ae508d733c74fbf9e0f996609a9dd9b89",
+    "tarball": "https://registry.npmjs.org/react-datepicker/-/react-datepicker-0.37.0.tgz"
+  },
+  "files": [
+    "*.md",
+    "dist",
+    "lib"
+  ],
+  "gitHead": "f15963328c246cec041cfd78c9c7db152efc20ce",
+  "homepage": "https://github.com/Hacker0x01/react-datepicker",
+  "keywords": [
+    "react",
+    "datepicker",
+    "calendar",
+    "date",
+    "react-component"
+  ],
+  "license": "MIT",
+  "main": "dist/react-datepicker.min.js",
+  "maintainers": [
+    {
+      "name": "rso",
+      "email": "r.s.oldenbeuving@gmail.com"
+    },
+    {
+      "name": "mrusschen",
+      "email": "mrusschen@gmail.com"
+    }
+  ],
+  "name": "react-datepicker",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Hacker0x01/react-datepicker.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production grunt build",
+    "codecov": "cat coverage/*/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
+    "eslint": "eslint **/*.jsx",
+    "prepublish": "npm run build",
+    "start": "node server.js",
+    "test": "NODE_ENV=test grunt travis"
+  },
+  "style": "dist/react-datepicker.min.css",
+  "version": "0.37.0"
+}

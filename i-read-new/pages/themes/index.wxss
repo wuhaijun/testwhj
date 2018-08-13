@@ -1,0 +1,63 @@
+/* pages/thmems/index */
+.greatest {
+  padding: 0 36rpx;
+  font-size: 40rpx;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 6rpx;
+}
+.themehome {
+  padding: 36rpx 0;
+}
+.themelist {
+  padding: 0 36rpx;
+}
+/* 我的主题站  */
+.subscription-bgimage {
+  width: 192rpx;
+  height: 192rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  line-height: 192rpx;
+  text-align: center;
+  display: inline-block;
+  margin-right: 24rpx;
+}
+.subscription-bgimage text {
+  color: #fff;
+  font-size: 30rpx;
+}
+.greatest-scroll {
+  height: 192rpx;
+  margin-bottom: 80rpx;
+}
+.my-greatest {
+  height: 192rpx;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 130rpx;
+}
+scroll-view .my-greatest-view:nth-child(1) {
+  padding-left: 32rpx;
+}
+.my-greatest-view {
+  display: inline-block;
+}
+.theme-nav {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
+  display: inline-block;
+}
+.mytheme {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}

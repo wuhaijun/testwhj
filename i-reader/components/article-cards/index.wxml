@@ -1,0 +1,8 @@
+<view class="information-article">
+    <block wx:for="{{ articleList }}" wx:for-item="item" wx:key="key" wx:for-index="idx">
+      <article-card id="_{{ item._id }}" article="{{ item }}" themeList="{{themeList}}" page="{{idx/24 + 1}}" bind:setPageClicked="setPageClicked" isClick="{{ isClick }}"/>
+    </block>
+    <view class="load-content" wx:if="{{ loading }}">
+       <image class="loading-svg" src="/public/icon/loading.svg"></image>
+    </view>
+</view>

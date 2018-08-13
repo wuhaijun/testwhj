@@ -1,0 +1,843 @@
+body {
+    background-color: rgb(255,255,255);
+    height:100%;
+}
+
+.main {
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 -15px;
+    font-size: 56px;
+    text-shadow: -5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.footer {
+    margin: 36px -14px 0 -14px ;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+
+.footer img {
+    width: 120px;
+}
+
+.footer em {
+    font-size: 14px;
+}
+
+.user-container {
+    text-align: center;
+}
+
+.user-container .row > div {
+    display: inline-block;
+    float: none;
+}
+
+.user-container .row.logo {
+    margin-bottom: 50px;
+}
+
+.user-container .row.email,
+.user-container .row.password,
+.user-container .row.rePassword {
+    margin-bottom: 20px;
+}
+
+.user-container .row.submit button {
+    background-color: rgb(51, 122, 183);
+    /* width: 100%; */
+}
+
+.user-container .login-container {
+    position: relative;
+}
+
+.user-container .forget-password {
+    position: absolute;
+    font-size: 12px;
+    right: 38vw;
+    top: 69px;
+}
+
+@media (max-width: 575px) {
+    .user-container .forget-password {
+        right: 32vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .user-container .forget-password {
+        right: 29vw;
+    }
+}
+
+.user-container .forget-password a {
+    color: rgb(169, 166, 163);
+}
+
+.user-container .forget-password a:hover {
+    color: rgb(107, 107, 107);
+    text-decoration: none;
+}
+
+.user-container .row.register span {
+    font-size: 14px;
+    color: rgb(169, 166, 163);
+}
+
+.user-container .row.register span:first-child {
+    font-size: 12px;
+}
+
+.user-container .row {
+    position: relative;
+}
+
+.user-container .row span.msg {
+    position: absolute;
+    left: 62%;
+    top: 10px;
+    font-size: 12px;
+    color: rgb(244, 92, 66);
+}
+
+.user-container .row span.msg i {
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.user-container .row span.msg i.fa-check-circle {
+    color: rgb(63, 189, 148);
+}
+
+.user-container .row span.msg i.fa-times-circle {
+    color: rgb(244, 92, 66);
+}
+
+.user-container .row.progress-bar > div {
+    float: inherit;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.user-container .row.register-ok p {
+    color: rgb(244, 92, 66);
+}
+
+.user-container .row.register-ok p i {
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+ .register-ok {
+    font-style: inherit;
+    color: rgb(168, 168, 168);   
+}
+
+.user-container .row.register-ok h4 i {
+    font-style: inherit;
+    color: rgb(168, 168, 168);
+}
+
+.user-container .row.divider div {
+    border-top: .0625rem solid #e4e4e4;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 0;
+}
+
+.user-container .row.divider span {
+    display: inline-block;
+    position: relative;
+    padding: 0 .75rem;
+    top: -10px;
+    background: #fff;
+}
+
+.user-container .row.desc {
+    margin-top: 60px;
+}
+
+
+.border {
+    border: 1px solid rgb(205,206,229);
+}
+
+.user-center-content{
+    margin-top: 60px;
+    margin-left: 25%;
+    display: flex;
+}
+
+.user-center-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.user-center-container .menus a {
+    color: #5659ba;
+}
+
+.user-center-container .menus a .border:hover {
+    color: white;
+    background-color: #5659ba;
+}
+
+.user-center-container a:hover{
+    text-decoration: none;
+}
+
+.user-center-container .navbar{
+    border-radius: 0;
+    line-height: 25px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -40px;
+}
+
+.user-center-container .navbar-brand{
+    font-size: 20px;
+}
+
+.user-center-container .logo{
+    height: 60px;
+    width: 96px;
+    float: left;
+    margin-right: 30px;
+}
+
+.user-center-content h4,p{
+    margin: 0!important;
+    padding: 0;
+    font-weight: normal;
+}
+
+.user-center-content h4{
+    font-size: 18px;
+}
+
+.user-center-content .emailaddress{
+    font-size: 14px;
+}
+
+.user-center-content .des {
+    font-size: 12px;
+    color: rgb(219,219,219);
+}
+
+.user-center-content .main_right > .info-group > .row:first-child {
+    margin-top: 30px;
+}
+
+.user-center-content .main_left{
+    width: 27%;
+    margin-top: 40px;
+}
+
+.user-center-content .main_left .head{
+    text-align: center;
+}
+
+.user-center-content .main_left .head p {
+    color: rgb(219,219,219);
+    margin-top: 10px!important;
+}
+
+.user-center-content .main_left .head h4 {
+    font-size: 25px;
+}
+
+.user-center-content .menus>section.border{
+    margin-top: 50px;
+}
+
+.user-center-content .img_1 {
+    width: 135px;height: 135px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 50%;
+}
+
+.user-center-content .img_2 {
+    height: 60px;
+    width: 60px;
+    margin-right: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-center-content label{
+    color: rgb(219,219,219);
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.user-center-content .head{
+
+}
+
+.user-center-content .border{
+    text-align: center;
+    height: 42px;
+    font-size: 15px;
+    line-height: 42px;
+    margin-top: 15px;
+}
+
+
+.user-center-content .main_right{
+    padding: 20px 30px;
+    width: 45%;
+    margin-left: 4%;
+    margin-top: 40px;
+    border-left: 1px solid rgb(200,200,200);
+}
+
+.user-center-content .main_right .btn-classname {
+    width: 100px;
+    margin-left: 30%;
+}
+
+.user-center-content .main_right .btn-classname button {
+    background-color: white;
+    color: #5659ba;
+    border: 1px solid rgb(205,206,229);
+    height: 32px;
+    font-size: 13px;
+    line-height: 12px;
+}
+
+.user-center-content .main_right .btn-classname button:hover {
+    background-color: #5659ba;
+    color: white;
+}
+
+.user-center-content li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-center-content .perinfo{
+    margin-bottom: 30px!important;
+}
+
+.user-center-content .control-label{
+    text-align: left!important;
+}
+
+.user-center-content .form-control{
+    height: 35px!important;
+    font-size: 12px;
+}
+
+.user-center-container .row span.msg {
+    position: absolute;
+    left:94%;
+    top: 9px;
+    font-size: 12px;
+    color: rgb(244, 92, 66);
+    white-space: nowrap;
+    width: 250px;
+    text-align: left;
+}
+
+@media (min-width: 768px){
+    .user-center-content .main_right .form-group .avatar-label {
+        padding-top: 25px;
+    }
+    .user-center-content .info-group .col-sm-8 {
+        width: 70%;
+        margin-left: -4%;
+    }
+    .user-center-content .btn, .user-center-content input {
+        /* max-width: 284px; */
+    }
+    .user-center-content .info-group .col-sm-3 {
+        width: 30%;
+    }
+    .user-center-content .form-horizontal .control-label {
+        padding-top: 9px;
+        margin-bottom: 0;
+        /*可有可无?*/
+        text-align: right;
+    }
+    .user-center-content .info-group .col-sm-offset-2 {
+        margin-left: 26%;
+    }
+    .user-center-content .submit>.col-sm-8 {
+        margin-left: 26%;
+    }
+}
+
+@media (max-width: 964px){
+    .user-center-content label{
+        font-size: 14px;
+    }
+}
+@media (max-width: 922px){
+    .user-center-content label{
+        font-size: 13px;
+    }
+}
+@media (max-width: 880px){
+    .user-center-content label{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #sso-nav .personinfo {
+         margin-right: 0!important;
+    }
+
+    #sso-nav .menu-information {
+        left: auto!important;
+        right: 0!important;
+    }
+
+    .user-center-content {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .user-center-content .img_1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .user-center-content .main_left {
+        margin-top: 0;
+    }
+    .user-center-content .main_right {
+        width:70%;
+        margin-top: 0;
+        padding: 0 10px;
+    }
+    .user-center-content .main_left .head h4 {
+        font-size: 14px;
+    }
+    .user-center-content .main_left .head p {
+        display: none;
+    }
+
+    .user-center-content .border {
+        height: auto;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .user-center-content input, .user-center-content .btn {
+        /* max-width: 250px; */
+    }
+    .user-center-content .main_right .form-group .avatar-label {
+        padding-top: 25px;
+    }
+    .user-center-content .form-horizontal .control-label {
+        padding-top: 7px;
+        margin-bottom: 0;
+        text-align: right;
+    }
+    .user-center-content .info-group .col-sm-offset-2 {
+        margin-left: 30%;
+    }
+    .user-center-content .info-group .col-sm-3 {
+        width: 30%;
+    }
+    .user-center-content label{
+        font-size: 15px;
+    }
+    .user-center-content .submit>.col-sm-8 {
+        margin-left: 30%;
+    }
+}
+@media (max-width: 575px){
+    .user-center-content .info-group .col-sm-offset-2 {
+        margin-left: 0;
+    }
+    .user-center-content .info-group .col-sm-offset-2 {
+        width:100%;
+    }
+    .user-center-content .submit>.col-sm-8 {
+        margin-left: 0;
+    }
+    .user-center-container .row span.msg {
+        position: absolute;
+        right: 28%;
+        top: 70px;
+        font-size: 12px;
+        color: rgb(244, 92, 66);
+        width: 150px;
+        white-space: nowrap;
+    }
+    .user-center-container .info-group .col-sm-3 {
+        width: 193px;
+    }
+    .user-center-content .row span.msg .fa {
+        position: absolute;
+        left: 145%;
+        top: -32px;
+    }
+    .user-btn-register {
+        width: 193px;
+    }
+    .msg {
+        font-size: 14px;
+        margin-top: 30px;
+        margin-left: -15px;
+    }
+    .user-container .row span.msg i {
+        font-size: 14px;
+    }
+    .user-container .row span.msg i.fa-check-circle {
+        margin-left: 75px;
+        float: right;
+        margin-top: -28px;
+    }
+    .divider {
+        margin-top: 20px;
+    }
+    .form-control {
+        /* width: 193px; */
+    }
+    .user-center-content .main_right .btn-classname button {
+        width: 100px;
+    }
+    .user-center-content .form-control {
+        width: 100%;
+    }
+}
+
+ 
+.user-center-content .submit>.col-sm-8>.btn {
+    height: 35px;
+}
+
+.user-center-content .btn-lg {
+    min-width: 120px;
+    padding: 9px 16px;
+}
+
+.user-center-content p.loginaccount{
+    font-size: 14px;
+}
+
+
+.user-center-content ul li{
+    position: relative;
+}
+
+.user-center-content .btn-primary {
+    background-color: rgb(51,122,183);
+}
+
+.user-center-content .row {
+    margin-bottom: 15px;
+}
+.user-center-content .row {
+    position: relative;
+}
+
+.user-center-content .row span.msg i {
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.user-center-content .row span.msg i.fa-check-circle {
+    color: rgb(63, 189, 148);
+}
+
+.user-center-content .row span.msg i.fa-times-circle {
+    color: rgb(244, 92, 66);
+}
+
+.user-center-content .modal-body img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 34px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.user-center-content .modal-body img:hover {
+    -moz-box-shadow: 1px 2px 40px 1px #d3d3d3;
+    -webkit-box-shadow: 1px 2px 40px 1px #d3d3d3;
+    box-shadow: 1px 2px 40px 1px #d3d3d3;
+}
+
+.user-center-content .modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/*sso导航*/
+#sso-nav {
+    height:45px;
+    background-color: #5659ba;
+}
+
+#sso-nav .nav {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+#sso-nav .nav li a span img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#sso-nav .personinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#sso-nav .menu-information {
+    width: 150px;
+    padding-bottom: 10px;
+    background-color: rgb(96, 102, 190);
+    font-size: 14px;
+    color: white;
+    left: 85%;
+    text-align: left;
+    top: 94%;
+    border-radius: 0;
+}
+
+#sso-nav .dropdown-menu li {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#sso-nav .dropdown-menu li .dropdown-menu-list {
+    color: white;
+    height: 35px;
+    line-height: 30px;
+}
+
+#sso-nav .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+#sso-nav .dropdown-menu li i {
+    margin-right: 10px;
+}
+
+#sso-nav .dropdown-menu li .dropdown-menu-list:hover {
+    color: rgb(22, 21, 37);
+    background-color: white;
+}
+
+#sso-nav .dropdown-menu li.divider {
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 1px;
+    background-color: white;
+}
+
+/*授权页面*/
+
+.user-center-content .main_right .bind-third {
+    margin-top: 20px!important;
+}
+
+.user-center-content .main_right .new-wechat {
+    background-color: rgb(37,201,35);
+    color: white;
+    height: 45px;
+    line-height: 45px;
+    font-size: 13px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.user-center-content .main_right .new-wechat:hover {
+    background-color: rgb(20,181,15);
+}
+
+.user-center-content .main_right .new-wechat i {
+    margin-right: 5px;
+}
+
+.user-center-content .main_right .wechat-content div:first-child {
+    padding-top: 0;
+}
+
+.user-center-content .main_right .wechat-content div:first-child i {
+    top: 13px;
+}
+
+.user-center-content .main_right .wechat-content div {
+    border-bottom: 1px solid rgb(230,230,230);
+    padding: 16px 0;
+    position: relative;
+}
+
+.user-center-content .main_right .wechat-content div img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-center-content .main_right .wechat-content {
+    height: 336px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.user-center-content .wechat-main {
+
+}
+
+.user-center-content .main_right .wechat-content div span {
+    color: rgb(219,219,219);
+    font-size: 13px;
+}
+
+.user-center-content .main_right .wechat-content div i {
+    position: absolute;
+    right: 20px;
+    top: 29px;
+    color: rgb(219,219,219);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.user-center-content .main_right .wechat-content div i:hover {
+    color: rgb(89,89,90);
+}
+
+input::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+input::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+
+.user-center-valid-email {
+    position: absolute;
+    top: 7px;
+    right: -140px;
+    font-size: 12px;
+}
+
+.user-center-valid-btn {
+    position: absolute;
+    top: 7px;
+    left: 140px;
+    font-size: 12px;
+}
+
+.user-center-valid-btn button {
+    width: 70px;
+    color: rgb(86, 98, 182);
+    border: 1px solid rgb(236, 238, 239);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.user-center-valid-email span {
+    color: rgb(153, 153, 153);
+    margin-right: 20px;
+}
+
+.user-center-valid-email button {
+    color: rgb(86, 98, 182);
+    border: 1px solid rgb(236, 238, 239);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.user-center-valid-email button:focus {
+    outline: none;
+}
+
+.user-center-valid-email button:hover {
+    border: 1px solid rgb(206, 208, 209);
+    color: rgb(66, 78, 162);;
+}
+
+/* 职位和地区 */
+
+.user-select-dropdown {
+    height:35px;
+    font-size:12px;
+    display: block;
+    width: 100%;
+    line-height: 1.25;
+    background-color: #fff;
+    padding:0 10px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: rgba(0,0,0,0);
+    text-shadow: 0 0 0 rgba(0,0,0,.8);
+    outline: none;
+}
+.uesr-pos{
+    position: relative;
+}
+.user-triangle {
+    content: " ";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-top: solid 6px #000;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+    position: absolute;
+    top:16px;
+    right:30px;
+}
+/* 用户协议 */
+.uesr-register-argee {
+    margin-bottom: 10px;
+}
+.uesr-register-argee-div {
+    text-align: left;
+}
+.uesr-register-argee-p {
+    display: inline-block;
+    font-size: .75rem;
+    color: rgb(169, 166, 163);
+    margin-left: 10px !important;
+
+}
+.uesr-register-argee-span {
+    color:#0275d8;
+}

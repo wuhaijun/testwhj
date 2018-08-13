@@ -1,0 +1,58 @@
+@import "common.less";
+@menu-width: 31px;
+@menu-height: 30px;
+@menu-icon-fontSize: 32px;
+
+.editor-menus {
+  width: 50px;
+  height: 100%;
+  padding-top: 4px;
+  border-right: 1px solid @lighter-grey;
+  text-align: center;
+  background-color: @white;
+}
+
+.editor-menus .menu {
+  display: inline-block;
+  width: max-content;
+  height: @menu-height;
+  padding-top: @menu-height;
+  margin-top: 48px;
+  font-size: 14px;
+  color: @dark-grey;
+  vertical-align: middle;
+  cursor: pointer;
+
+}
+.editor-menus .menu i{
+  display: block;
+  font-size: @menu-icon-fontSize;
+}
+
+.editor-menus .menu:hover {
+  color: @purple;
+}
+
+.editor-menus .menu.active {
+  color: @purple;
+}
+
+.editor-menus .menu.active .icon-boom-ys-nor:before {
+    content: "\e923";
+}
+
+.editor-menus .menu.active .icon-boom-mb-nor:before {
+  content: "\e918";
+}
+
+.editor-menus .menu.active .icon-boom-collection-nor:before {
+  content: "\e90d";
+}
+.editor-menus .menu.active .icon-boom-picture-nor:before {
+  content: "\e91a";
+}
+.editor-menus .menu.active .icon-boom-article-nor:before {
+  content: "\e909";
+}
+
+

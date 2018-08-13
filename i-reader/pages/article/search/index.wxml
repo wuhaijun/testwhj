@@ -1,0 +1,28 @@
+<!--pages/subscribe/search/index.wxml-->
+<view class="search">
+  <view class="search-input">
+    <image class="search-img" src="/public/icon/icon_search.png"></image>
+    <input type='text' placeholder="搜索主题或者关键字" value="{{ keyword }}" bindconfirm="confirm" focus="true" confirm-type="完成" adjust-position="false"></input>
+  </view>
+  <view class="search-history-box" wx:if="{{ searchList.length && search }}">
+    <view class="search-history">
+      <text>历史搜索记录</text>
+      <text bindtap="clear">清空</text>
+    </view>
+    <view class="record">
+      <block wx:for="{{ searchList }}" wx:for-item="keyword" wx:key="key">
+        <view bindtap='confirm' data-keyword="{{ keyword }}" class="history-list">{{ keyword }}</view>
+      </block>
+    </view>
+  </view>
+  <view wx:if="{{ !contentList.length && transition }}">
+    <view class="search-empty-view"><image class="search-empty" src="/public/icon/icon_search_empty.png"></image></view>
+    <text class="search-empty-text">抱歉，没有找到相关内容</text>
+  </view>
+  <view wx:else>
+      <article-simple-cards id="article-simple-cards" relatedArticleList="{{ contentList }}" themeList="{{ themeList }}"/>
+       <view class="load-content" wx:if="{{ loading }}">
+        <image class="loading-svg" src="/public/icon/loading.svg"></image>
+      </view> 
+  </view>
+</view>

@@ -1,0 +1,12 @@
+  <view class="WxEmojiView wxParse-inline" style="{{item.styleStr}}">
+    <block wx:for="{{item.textArray}}" wx:key="" wx:for-item="textArrayItem">
+      <block class="{{textArrayItem.text == '\\n' ? 'wxParse-hide':''}}" wx:if="{{textArrayItem.node == 'text'}}">
+        <text data-value='{{item}}' 
+              style="background-color:{{notes[item.index]?'#ffda72':'none'}}" 
+              bind:longpress="onMark">{{textArrayItem.text}}</text>
+      </block>
+      <block wx:elif="{{textArrayItem.node == 'element'}}">
+        <image class="wxEmoji" src="{{textArrayItem.baseSrc}}{{textArrayItem.text}}" />
+      </block>
+    </block>
+  </view> 

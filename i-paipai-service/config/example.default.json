@@ -1,0 +1,21 @@
+{
+  "port": 2018,
+  "mongo": {
+    "paipai":"mongodb://192.168.100.83:27017/paipai"
+  },
+  "redis": {
+    "host":"192.168.100.83",
+    "port":6379
+  },
+  "weixin": {
+    "appId": "appId",
+    "appSecret": "appSecret"
+  },
+  "qiniu": {
+    "accessKey": "accessKey",
+    "secretKey": "secretKey",
+    "bucket": "i-paipai",
+    "zone": "Zone_z0",
+    "outLink": "outLink"
+  }
+}

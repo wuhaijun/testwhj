@@ -1,0 +1,90 @@
+<!--pages/mine/index/index.wxml-->
+<!--index.wxml-->
+<view>
+  <view class="empower" wx:if="{{hasUserInfo}}">
+    <image class="empower-img" src="/public/images/userInfo.png"></image>
+    <view class="empower-txt">登录之后就能看到个人了哦</view>
+    <button class="empower-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"> 登录 </button>
+  </view>
+  <block wx:else>
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <!--index.wxml-->
+    <view class="swiper-scroll">
+      <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="toggle">
+          收藏
+          <text data-current="0" bindtap="toggle">{{ user.projectCollectCount }}</text>
+          <text class="collect-txt {{currentTab==0 ? 'none' : ''}}"></text>
+        </view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="toggle">
+          笔记
+          <text data-current="1" bindtap="toggle">{{ user.projectNoteCount }}</text>
+          <text class="collect-txt {{currentTab==1 ? 'none' : ''}}"></text>
+        </view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="toggle">
+          订阅
+          <text data-current="2" bindtap="toggle">{{ user.themeCollectCount }}</text>
+          <text class="collect-txt {{currentTab==2 ? 'none' : ''}}"></text>
+        </view>
+      </view>
+      <view class="swiper-toggle">
+        <swiper current="{{currentTab}}" style="100%" class="swiper-box" bindchange="bindChange">
+          <swiper-item>
+            <article-simple-cards wx:if="{{ collectList.length !=0 }}" bind:__scrolltolower="__scrolltolower" bind:__longpress="longpress" themeList ="{{ themeList }}" relatedArticleList="{{ collectList }}"/>
+            <view else class="empty-view">
+              <image class="empty-view-img" src="/public/icon/icon_empty.png"></image>
+              <text>你还没有相关记录哦</text>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view wx:if="{{ noteList.length !=0 }}" scroll-y style='height: 100%;box-sizing: border-box;maigin:0 32rpx;width: auto' bindscrolltolower="scrolltolower">
+              <view class="note" wx:for="{{ noteList }}" wx:for-item="item" wx:key="key">
+                <view class="note-book">{{ item.note }}</view>
+                <view class="note-title">“ {{ item.text }} ”</view>
+                <view class="article-title">---引自<text class="note-text">{{ item.projectTitle }}</text></view>
+                <view class="note-time">
+                  <text>{{ item.notedDate }}</text>
+                  <image data-note="{{ item.note }}" data-text="{{ item.text }}" data-id="{{ item.pid }}" catchtap='onShareBox' src="/public/icon/icon_share_nor.png"></image>
+                </view>
+              </view>
+            </scroll-view>
+            <view else class="empty-view">
+              <image class="empty-view-img" src="/public/icon/icon_empty.png"></image>
+              <text>你还没有相关记录哦</text>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <theme-cards wx:if="{{ user.themeCollectCount !=0 }}" id="theme-cards" url="/api/themeCollect/list" bindthemecollect="themecollect" />
+            <view else class="empty-view">
+              <image class="empty-view-img" src="/public/icon/icon_empty.png"></image>
+              <text>你还没有相关记录哦</text>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:if="{{ iscancel }}" class="showmodal" catchtap="cancel">
+  <view class="modal">
+    <view catchtap="cancel">取消</view>
+    <view catchtap="__delete">删除</view>
+  </view>
+</view>
+
+
+<view class="mask" wx:if="{{ showShareBar }}" catchtap='onClickMask'>
+</view>
+<view wx:if="{{ showShareBar }}">
+  <share-bar bind:madePoster="onMadePoster" />
+</view>
+
+
+<view class="mask" wx:if="{{ showPosterMask }}" catchtap='hidePoster'>
+</view>
+<view wx:if="{{ showPosterMask }}">
+  <poster-card bind:saveSuccessPoster="saveSuccessPoster"  shareArticleId="{{ shareArticleId }}" title="{{ shareContent }}"/>
+</view>

@@ -1,0 +1,179 @@
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.poster-mask {
+  position: fixed;
+  z-index: 9999;
+  background: none;
+  left: 60rpx;
+  right: 60rpx;
+  bottom: 24rpx;
+  top: 24rpx;
+}
+
+.modal-poster {
+  height: 88%;
+  background: #fff;
+  position: relative;
+}
+
+.modal-body-poster {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 82%;
+  box-sizing: border-box;
+  margin: 32rpx 36rpx 0;
+}
+
+.modal-footer-poster {
+  height: 12%;
+  width: 100%;
+  background-color: #f1f1f1;
+  position: absolute;
+  bottom: 0;
+}
+
+.header {
+  height: 70rpx;
+}
+
+.box-date {
+  height: 70rpx;
+  width: 70rpx;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 12rpx;
+  position: relative;
+}
+
+.day {
+  font-size: 24rpx;
+  position: absolute;
+  left: 2rpx;
+  top: 2rpx;
+}
+
+.month {
+  font-size: 24rpx;
+  position: absolute;
+  right: 2rpx;
+  bottom: 2rpx;
+}
+
+.line {
+  border-top: 1rpx solid #8a8a8a;
+  transform: rotate(-45deg) translateY(32rpx);
+  height: 64rpx;
+  margin-top: 0rpx;
+  overflow: hidden;
+}
+
+.date-time {
+  font-size: 20rpx;
+  color: #8a8a8a;
+}
+
+.header-text {
+  line-height: 18rpx;
+  margin-top: 16rpx;
+}
+
+.nickname {
+  font-size: 20rpx;
+  margin-right: 12rpx;
+}
+
+.read-from {
+  color: #8a8a8a;
+  font-size: 20rpx;
+}
+
+.cover-image {
+  margin-top: 54rpx;
+  margin-bottom: 60rpx;
+}
+
+.title-content {
+  font-size: 40rpx;
+  color: #000;
+  text-align: left;
+  height: 230rpx;
+  overflow: hidden;
+}
+
+.lunar-calendar {
+  font-size: 20rpx;
+  color: #8a8a8a;
+  text-align: right;
+  margin-right: 42rpx;
+}
+
+.cover-image image {
+  width: 100%;
+  height: 360rpx;
+}
+
+.modal-footer-poster .qrcode-image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 12rpx;
+  margin-left: 36rpx;
+  float: left;
+  padding-right: 36rpx;
+}
+
+.modal-footer-poster text {
+  font-size: 20rpx;
+  display: block;
+  margin-top: 12rpx;
+  line-height: 24rpx;
+}
+
+.from {
+  color: #8a8a8a;
+}
+
+.modal-save {
+  margin-top: 32rpx;
+  position: fixed;
+  left: 60rpx;
+  right: 60rpx;
+}
+
+.save-btn {
+  font-size: 32rpx;
+  color: #000;
+  background-color: #fed467;
+  height: 74rpx;
+  width: 100%;
+  border-radius:0;
+}
+.note-content {
+  font-size: 40rpx;
+  color: #000;
+  margin: 120rpx 0;
+}
+
+
+canvas{
+  position: fixed;
+  top: 0;
+  left:900px;
+  width: 370px;
+  height: 590px;
+  background-color: #fff;
+  border: 1px solid #fff;
+}

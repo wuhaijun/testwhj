@@ -1,0 +1,12 @@
+<view>
+  <view class="myipai">
+    <image class="logo-image" src="/public/icons/logo.jpg"></image>
+    <view class="myipai-title"><text>{{title}}</text></view>
+    <view class="myipai-txt">
+      <text>随手拍是由脑洞平台开发的一款智能标签化管理照片的工具，从时间、地点、标签三个维度智能化管理您的照片。</text> 
+    </view>
+    <view class="myipai-txt">
+      <text>您也可以登陆随手拍PC端 <text style="color:#C3CCF7">editor.brainboom.cn</text>在我的相册中对上传的照片进行管理。</text>
+    </view>
+  </view>
+</view>

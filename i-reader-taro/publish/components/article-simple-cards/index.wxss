@@ -1,0 +1,56 @@
+ 
+.theme-each {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.theme-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 24rpx;
+}
+.theme-title view:nth-child(1) {
+  padding: 4rpx;
+  border: 1px solid #aaa;
+  margin-right: 48rpx;
+}
+.theme-title view {
+  font-size: 20rpx;
+  color: #aaa;
+}
+.theme {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 24rpx;
+  margin: 1px;
+  margin-bottom: 24rpx;
+}
+.theme-img {
+  width: 156rpx;
+  height: 156rpx;
+  margin-right: 12rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.theme-txt {
+  flex: 1;
+  font-size: 30rpx;
+  color: #000;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+             display: -webkit-box;
+            overflow: hidden;
+}
+.theme-name {
+  flex: 1;
+}
+scroll-view {
+  width: auto;
+}
+scroll-view .theme:nth-child(1){
+  margin-top: 36rpx;
+}
+

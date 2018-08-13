@@ -1,0 +1,8 @@
+<view>
+  <block wx:for="{{wxParseData}}" wx:key="">
+    <custom-parse item="{{item}}" 
+    notes="{{notes}}" 
+    bind:onMark="onMark"
+    bind:unMark="unMark"></custom-parse>  
+  </block>
+</view>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div>授权失败,请重试</div>
+</body>
+</html>
+<script type="text/javascript">
+    alert("系统故障。{{ errormsg }}");
+    //location.href = "/userCenter";
+
+
+    setTimeout(function(){
+        window.top.document.getElementById('closeBtn').click();
+    },1800)
+
+    setTimeout(function(){
+        parent.window.location.href="/userCenter/bindWeChat";
+    },1500)
+
+
+
+</script>

@@ -1,0 +1,11 @@
+{
+  "port": 18877,
+  "mongo": {
+    "editor": "mongodb://localhost:27017/winter",
+    "onlineEditor":"mongodb://localhost:27017/winter"
+  },
+  "sso": {
+    "server": "http://localhost:8888",
+    "client": "http://localhost:18877"
+  }
+}

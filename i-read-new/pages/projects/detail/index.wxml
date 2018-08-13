@@ -1,0 +1,65 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view wx:if="{{ hasContent }}">
+
+<view class="article-detail" catch:tap="cancelMark">
+  <view class="title">
+    <popup id="popup" 
+    notes="{{notes}}" 
+    bind:unMark="unMark"
+    bind:callbackSaveNote="callbackSaveNote" 
+    bind:callbackCancelNote="callbackCancelNote"
+    bind:onShare="onShare"
+    ></popup>
+    <text selectable="true">{{ editorTitle }}</text>
+  </view>
+  <text class="from">{{ article.biz_name }}.{{ article.datePublished }}</text>
+
+  <view class="article-content">
+    <view class="load-content" wx:if="{{ loading }}">
+      <image class="loading-svg" src="/public/icon/loading.svg"></image>
+    </view>
+    <block wx:else>
+        <html-view id="htmlView" wxParseData="{{nodes}}"
+          notes="{{notes}}"
+          bind:onMark="onMark" 
+          bind:unMark="unMark"
+          bind:wxParseImgTap="wxParseImgTap" bind:wxParseImgLoad="wxParseImgLoad" ></html-view>
+    </block>
+  </view>
+  <view wx:if="{{ !loading }}" class="footer-bar {{ showFooter ? ' show': ' hidden' }}">
+    <view class="li-bar" catchtap='onToggleCollect'>
+      <image src="{{ article.isCollected ? '/public/icon/icon_collect_pre.png': '/public/icon/icon_collect_nor.png' }}"></image>
+    </view>
+    <view class="li-bar" catchtap='onSharebar'>
+      <image src="/public/icon/icon_share_nor.png"></image>
+    </view>
+  </view>
+</view>
+<view wx:if="{{ !loading }}" class="declare">声明：本文由脑洞平台采取应用内搜索技术自动抓取，未编辑文章原始内容。如若阅读原文请至该公众号关注。</view>
+<view class="related-article" wx:if="{{ !loading }}">
+  <text class="text-head">大家都在看</text>
+  <article-simple-cards themeList="{{themeList}}" relatedArticleList="{{ relatedArticleList }}" />
+</view>
+
+<view class="mask" wx:if="{{ showShareBar }}" catchtap='onClickMask'>
+</view>
+<view wx:if="{{ showShareBar }}">
+  <share-bar bind:madePoster="onMadePoster" />
+</view>
+
+<view class="mask" wx:if="{{ showPosterMask }}" catchtap='hidePoster'>
+</view>
+<view wx:if="{{ showPosterMask }}">
+  <poster-card bind:saveSuccessPoster="saveSuccessPoster" coverImage="{{ shareImg }}" title="{{ shareContent }}" shareArticleId="{{ shareArticleId }}" bind:hidePoster="hidePoster"/>
+</view>
+
+</view>
+<view class="no-content" wx:if="{{ !hasContent }}">
+  文章内容已删除
+</view>
+
+<view wx:if="{{ showBackHome }}"> 
+    <view  class="back-home-btn" catchtap='backHomePage'>返回首页</view>
+</view>
+ <view class="showBackHomeSmall" wx:if="{{ showBackHomeSmall }}" catchtap='changebackHomeBtn'></view>
+

@@ -1,0 +1,324 @@
+.subscribe-search-bar {
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+}
+
+.subscribe-search-bar .card-block {
+    text-align: center;
+    margin-top: 0;
+    padding: 0 0 20px;
+    /*border-bottom: 1px solid rgb(234, 234, 234);*/
+}
+
+.subscribe-search-bar .card-block > p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.subscribe-search-bar .card-block .row {
+    width: 75%;
+    text-align: center;
+    display: inline-flex;
+}
+
+.subscribe-search-bar .card-block .row .col-select,
+.subscribe-search-bar .card-block .row .col-input {
+    float: none;
+}
+
+.subscribe-search-bar .card-block .row .col-input {
+    position: relative;
+}
+
+.subscribe-search-bar .card-block .row .col-input .fa-search,
+.subscribe-search-bar .card-block .row .col-input .fa-times {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+.subscribe-search-bar .card-block .row .col-select select {
+    width: 80%;
+}
+
+.subscribe-search-bar .card-block .row .col-input input {
+    width: 100%;
+}
+
+/*删除了左右padding*/
+.subscribes-container .subscribes .content-list {
+    height: 100%;
+}
+
+.subscribes-container .subscribes .content-list .subscribe-sm {
+    margin: 0;
+}
+
+.subscribes-container .subscribes .content-list .subscribe-card {
+    height: 100px;
+    padding: 2px 4px;
+}
+
+.subscribes-container .subscribes .content-list .subscribe-sm .card:hover {
+    /*border:0.0625rem solid #6164C1;*/
+    /*border-radius:0;*/
+    webkit-box-shadow: 0px 0px 2px 1px rgb(166, 166, 166);
+    box-shadow: 0 0 2px 1px rgb(166, 166, 166);
+}
+
+/*订阅样式*/
+.subscribe-card .subscribe-operator a, .subscribes-container .subscribe-card .subscribe-operator .unSubscribe {
+    width: 70px;
+    height: 20px;
+    color: #5659ba;
+    border: 1px solid #7276c3;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.subscribe-card .subscribe-operator a {
+    color: #5659ba;
+    border: 1px solid #7276c3;
+}
+
+.subscribe-card .subscribe-operator .unSubscribe {
+    color: rgb(194, 194, 194);
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.subscribe-card  div.subscribe-content {
+    cursor: pointer;
+    width: 70%;
+    left: 16%;
+    top: 30%;
+}
+
+.subscribe-card > div {
+    display: inline-block;
+    position: absolute;
+}
+
+.subscribe-card  div.subscribe-img {
+    width: 10%;
+    left: 4%;
+    top: 35%;
+}
+
+.subscribe-card  div.subscribe-operator {
+    right: 2%;
+    top: 35%;
+}
+
+.subscribe-card .subscribe-operator div.subscribe-tips {
+    width: 100px;
+    position: absolute;
+    right: -21%;
+    bottom: -100%;
+    font-size: 0.8em;
+    color: rgb(164,164,164);
+}
+
+.subscribe-card-block  div.subscribe-content .subscribe-name,
+.subscribe-card  div.subscribe-content .subscribe-name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.subscribe-card  div.subscribe-content .subscribe-type {
+    margin-left: 20px;
+    display: inline-block;
+    border:1px solid rgb(158, 159, 160);
+    padding: 0 5px;
+    border-radius: 10px;
+    color: rgb(158, 159, 160) ;
+}
+
+.subscribe-card-block  div.subscribe-content .subscribe-desc,
+.subscribe-card  div.subscribe-content .subscribe-desc {
+    font-size: 12px;
+    color: rgb(158, 159, 160) ;
+    margin-top: 4px
+}
+
+.subscribe-card  div.subscribe-img > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.subscribe-card-block > div {
+    display: inline-block;
+}
+
+.subscribe-card-block .subscribe-img {
+    margin-right: 4px;
+}
+
+.subscribe-card-block .subscribe-content {
+    margin-top: 4px;
+}
+
+.subscribe-topic-bar-dialog div.modal-content {
+    background-color: rgb(238, 239, 240);
+    webkit-box-shadow: 0px 0px 15px 5px #333;
+    box-shadow: 0 0 15px 5px #333;
+    border-radius: 4px;
+    border: none;
+    height: auto;
+}
+/* PC */
+
+div.subscribe-topic-bar-dialog {
+    width: 350px;
+}
+
+.subscribe-topic-bar-dialog > div {
+    width: 100%;
+}
+
+.subscribe-topic-bar-dialog .modal-body {
+    padding-top: 0 ;
+}
+
+.subscribe-dialog-content > p {
+    font-size: 12px;
+    color: rgb(158, 159, 160) ;
+    margin-left: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+
+.subscribe-dialog-topics {
+    margin: 0 -1px;
+}
+
+.subscribe-dialog-topics > button {
+    background-color: rgb(254, 255, 255);
+}
+
+.subscribe-dialog-topics > button:hover {
+    background-color: rgb(238, 239, 240);
+}
+
+.subscribe-dialog-topics > button > i {
+    padding-right: 10px;
+}
+
+.subscribe-dialog-create {
+    margin-top: 10px;
+}
+
+.subscribe-dialog-close {
+    padding: 10px;
+}
+
+.subscribe-dialog-close i {
+    float: right;
+}
+
+#edit-topics li.ui-draggable-dragging{
+    z-index: 1;
+}
+
+
+#viewProjectModal .modal-dialog{
+    height: 80%;
+    width: 80%;
+}
+
+#viewProjectModal .modal-content {
+    min-height: 50%;
+    overflow-y: visible;
+    height: auto;
+    border-radius: 6px;
+}
+
+#viewProjectModal .modal-header i{
+    cursor: pointer;
+}
+
+.view-project-modal > div {
+    cursor: pointer;
+}
+
+.preview-feed-detail {
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+}
+
+.preview-feed-detail .subscribe-card {
+    height: 100%;
+    width: 100%;
+    box-shadow: 1px 2px 10px 1px #d3d3d3;
+}
+
+.preview-feed-detail .subscribe-card .subscribe-content {
+    cursor: default;
+}
+
+.preview-project-dialog .modal-body {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.preview-project-list {
+    height: 100%;
+    padding-top: 20px;
+}
+
+.to-subscribes i.fa,
+.subscribe-operator i.fa {
+    color: rgb(216, 216, 216);
+}
+
+.to-subscribes i.fa:hover,
+.subscribe-operator i.fa:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+.subscribes-container {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.subscribes-container-wrapper {
+    width: 200%;
+    position: relative;
+    transition-property: all;
+    transition-duration: 800ms;
+    transition-timing-function: ease;
+    transition-delay: 10ms;
+}
+
+.subscribes-container .subscribes {
+    width: 100%;
+    height: 100%;
+}
+
+.subscribes-container .feeds-container {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.subscribes-container .feeds {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.to-subscribes {
+    position: fixed;
+    top: 20%;
+    right: 2%;
+}

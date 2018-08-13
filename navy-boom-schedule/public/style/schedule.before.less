@@ -1,0 +1,219 @@
+@import "common.less";
+
+
+/*.main {
+  background-color: @white;
+  padding-top: 50px !important;
+  height: 100%;
+  position: relative;
+}
+
+.main > .col {
+  height: 100%;
+  border-left: 1px solid darken(@light-grey, 5%);
+}*/
+
+.row , .col{
+  padding:0;
+  margin:0;
+}
+
+.editor-message > i {
+  margin-right: 10px;
+}
+
+.editor-message.success > i {
+  color: @success-color;
+}
+
+.editor-message.info > i {
+  color: @info-color;
+}
+
+.editor-message.warn > i {
+  color: @warn-color;
+}
+
+.editor-message.error > i {
+  color: @error-color;
+}
+
+.editor-message {
+  background-color: @white;
+  position: fixed;
+  left: 50%;
+  padding: 16px;
+  border-radius: 4px;
+  color: @grey;
+  font-size: 12px;
+  overflow: hidden;
+  z-index:99999;
+  opacity: 0;
+  .editor-message-box-shadow(@dark-grey)
+}
+
+.editor-message-box-shadow(@color) {
+  -moz-box-shadow: 0 2px 8px fade(@color, 20%);
+  -webkit-box-shadow: 0 2px 8px fade(@color, 20%);
+  box-shadow: 0 2px 8px fade(@color, 20%);
+}
+
+
+
+
+
+
+
+
+#collectionArticleModal .modal-dialog {
+  width: 900px;
+}
+
+#confirmModal .modal-dialog {
+  width: 400px;
+  margin-top: 100px;
+}
+
+#confirmModal .modal-body {
+  padding: 30px;
+}
+
+#confirmModal .modal-content {
+  border-radius: 4px;
+}
+
+#confirmModal .title {
+  font-weight: bold;
+  font-size: 14px;
+  color: @dark-grey;
+}
+
+#confirmModal .title > div {
+  width: 90%;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: -6px;
+}
+
+#confirmModal .title > i {
+  color: @warn-color;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+#confirmModal .footer {
+  margin-top: 30px;
+  text-align: right;
+}
+
+#confirmModal .footer > .btn {
+  border-radius: 4px;
+}
+
+#confirmModal .footer > .cancel {
+  border: 1px solid @light-grey;
+  color: @dark-grey;
+  margin-right: 6px;
+}
+
+#confirmModal .footer > .cancel:hover {
+  border-color: @purple;
+  color: @purple;
+  .transition('color 1s');
+}
+
+#confirmModal .footer > .ok {
+  color: @white;
+  background-color: @purple;
+}
+
+#confirmModal .footer > .ok:hover {
+  background-color: darken(@purple, 10%);
+}
+
+
+
+
+
+.popover {
+  position: fixed;
+}
+
+.modal-header {
+  background-color: #f4f5f9;
+  padding: 0 15px;
+}
+
+.modal-header .close {
+  margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+.edit-popover-warp {
+  padding: 10px;
+}
+
+.edit-input {
+  width: 170px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  border: 1px solid #e7e7eb;
+  outline: none;
+}
+
+.popover-bar {
+  margin-top: 10px;
+}
+
+.popover-bar .js-canncel-btn {
+  float: right;
+}
+
+.popover-bar a.btn {
+  border-radius: 5px;
+}
+
+.edit-radio-label {
+  display: inline-block;
+  text-align: left;
+  cursor: pointer;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-right: 15px;
+}
+
+.js-canncel-btn {
+  width: 75px;
+  height: 28px;
+  line-height: 14px;
+  margin-bottom: 10px;
+}
+
+.js-commitb-btn {
+  margin-right: 10px;
+  width: 75px;
+  height: 28px;
+  line-height: 14px;
+  margin-bottom: 10px;
+}
+
+.create-category-input,
+.item-name-input {
+  outline: none;
+  padding: 5px 2px;
+  width: 100%;
+}
+
+#category-radios {
+  width: 150px;
+}
+
+

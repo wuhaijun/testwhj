@@ -1,0 +1,14 @@
+{
+    "name": "cce-boom-server", 
+    "version": "1.0.0", 
+    "description": "脑洞资讯平台接口文档", 
+    "title": "CCE-BOOM-SERVER API",  
+    "url" : "http://192.168.100.83:2013",
+    "sampleUrl": "http://192.168.100.83:2013",
+    "forceLanguage":"zh-cn",
+    "template": {
+      "withCompare": true,
+      "withGenerator": true
+    }
+  
+  }

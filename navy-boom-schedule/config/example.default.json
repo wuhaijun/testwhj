@@ -1,0 +1,15 @@
+{
+  "mongo": {
+    "editor": "mongodb://localhost:27017/winter",
+    "boom": "mongodb://localhost:27017/boom",
+    "schedule": "mongodb://localhost:27017/schedule"
+  },
+  "sso": {
+    "server": "http://localhost:8888",
+    "server_api": "http://localhost:8888",
+    "client": "http://localhost:8787"
+  },
+  "editor": "http://localhost:8877",
+  "editor_api": "http://localhost:10002",
+  "port":"8787"
+}

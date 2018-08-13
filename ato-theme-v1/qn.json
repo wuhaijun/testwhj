@@ -1,0 +1,21 @@
+{
+  "src_dir"            :   "/Users/n-189/boom/ato/ato-theme-v1",
+  "bucket"             :   "static-boom",
+  "file_list"          :   "boom,fonts,images,scripts,static,styles,vendor",
+  "key_prefix"         :   "",
+  "up_host"            :   "",
+  "ignore_dir"         :   false,
+  "overwrite"          :   false,
+  "check_exists"       :   false,
+  "check_hash"         :   false,
+  "check_size"         :   false,
+  "rescan_local"       :   true,
+  "skip_file_prefixes" :   "",
+  "skip_path_prefixes" :   "",
+  "skip_fixed_strings" :   ".svn,.git,.idea,.qshell,build,node_modules,static/app",
+  "skip_suffixes"      :   ".DS_Store,.exe,.gitignore,.iml",
+  "log_file"           :   "upload.log",
+  "log_level"          :   "info",
+  "log_rotate"         :   1,
+  "log_stdout"         :   false
+}

@@ -1,0 +1,16 @@
+<block>
+    <view class="editor-title">
+        <view class="text-area">{{textxxx}}
+            <textarea maxlength="{{limitLength}}" value="{{textContent}}"
+            bindinput="onChangeText" class="content" show-confirm-bar="false" auto-focus="{{true}}"></textarea>
+            <view class="count">
+                <text>{{textCountLength}}</text><span __triggerObserer="{{ _triggerObserer }}">/</span>
+                <text>{{limitLength}}</text>
+            </view>
+        </view>
+        <view class="footer">
+            <view bindtap="onCancel" class="cancel common-btn" plain="true">取消</view>
+            <view bindtap="onSave" class="save common-btn">保存</view>
+        </view>
+    </view>
+</block>

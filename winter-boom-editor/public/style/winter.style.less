@@ -1,0 +1,265 @@
+@import "common.less";
+
+
+
+.feedback:hover {
+  background-color: @purple;
+  color: @white;
+}
+.feedback{
+  width: 86%;
+  height: 30px;
+  border: 1px solid rgb(89, 89, 90);
+  color: rgb(89, 89, 90);
+  line-height: 30px;
+  text-align: center;
+  margin: 10px auto 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.feedback a{
+  display: inline-block;
+  color: #59595a;
+}
+.feedback a:hover{
+  color: @white;
+}
+
+.modal-right-header .text-right {
+  text-align: right;
+}
+
+.button-upload-local {
+  height: 28px;
+  line-height: 28px;
+  width: 76px;
+  text-align: center;
+  background-color: @purple;
+  color: @white;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 15px;
+
+}
+
+.modal-pic-left .popover-content {
+  background-color: @white;
+}
+
+.modal-pic-left ul li {
+  text-align: left;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.modal-pic-left ul li.active {
+  background-color: @light-grey;
+}
+
+.modal-pic-left ul li:hover {
+  background-color: @light-grey;
+}
+
+.edit-popover-warp {
+  padding: 10px;
+}
+
+.edit-input {
+  width: 170px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  border: 1px solid #e7e7eb;
+  outline: none;
+}
+
+.popover-bar {
+  width: 153px;
+  margin-top: 10px;
+}
+
+.popover-bar .js-canncel-btn {
+  float: right;
+}
+
+.popover-bar a.btn {
+  border-radius: 5px;
+}
+
+.edit-radio-label {
+  display: inline-block;
+  text-align: left;
+  cursor: pointer;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-right: 15px;
+}
+
+
+#checkBrowserModal{
+  .modal-content{
+    width:400px;
+    height: 260px;
+    margin-top: 30%;
+    margin-left: 25%;
+    border-radius:5px;
+    background-color: #f4f5f9;
+
+    .modal-body{
+      padding:0px;
+
+      .alert-warp{
+        width:400px;
+        height: 260px;
+        padding: 15px 20px;
+        .alert-head{
+          text-align: center;
+          span{
+            font-size: 16px;
+          }
+          i{
+            float: right;
+            padding-top: 3px;
+            font-size: 16px;
+          }
+          i:hover{
+            color: #8c8c8c;
+          }
+
+        }
+        .alert-body{
+          .text-tips{
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          .text{
+            .img{
+              width: 30px;
+              height: 30px;
+              margin-right: 5px;
+            }
+            p{
+              display: inline-block;
+              margin: 0;
+              vertical-align: text-top;
+            }
+          }
+          ul{
+            padding: 0;
+            margin-top: 20px;
+            li{
+              border: 1px solid #ccc;
+              display: inline-block;
+              width:45%;
+              text-align: center;
+              height: 36px;
+              line-height: 36px;
+              border-radius: 5px;
+              img{
+                width: 21px;
+                height: 21px;
+              }
+              p{
+                display: inline-block;
+              }
+            }
+            li:hover{
+              border:1px solid @purple;
+              color: @purple;
+
+            }
+            li:first-child{
+              float: left;
+            }
+            li:last-child{
+              float: right;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+}
+
+
+.style-html{
+  position: relative;
+}
+.dynamic-style-btn-insert{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 1px solid @black;
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: none;
+  color: @white;
+  background: @black;
+}
+.dynamic-style-btn-insert:hover{
+  color:#ccc;
+}
+
+.editor-pagination {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  margin-left: -107px;
+}
+
+.editor-pagination > button {
+  width: 80px;
+  height: 32px;
+  border: 1px solid @dark-grey;
+  border-radius: 16px;
+  background-color: transparent;
+  margin-right: 50px;
+  color: @dark-grey;
+  &:hover {
+    background-color:  @purple;
+    border: 1px solid @purple;
+    color: @white;
+  }
+}
+
+
+
+
+/*模版样式*/
+.template-list{
+  width: 320px;
+  margin-bottom: 16px;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height:500px;
+  background-color: @white;
+}
+.template-style{
+  box-sizing: border-box;
+  border: 1px solid #fff;
+
+}
+.template-style:hover{
+  transition: border 200ms;
+  border: 1px dashed @purple
+}
+
+.editor-styles-search .types.template {
+  margin-top: 0;
+}
+
+.editor-styles-search .classify {
+  margin: 12px 0 0 0;
+}
+
+

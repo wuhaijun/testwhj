@@ -1,0 +1,36 @@
+<view class="popup-body" style='top:{{markInfo.touches.pageY - 80}}px;left:30%' id="popup" hidden="{{!isShow}}">
+  <view class='popup-button' catch:tap="onCopy">
+      <image class='popup-button-img' src="/public/icon/article_copy.png"></image>
+      <text class='popup-button-text'>复制</text>
+    </view>
+    <view class='popup-button' catch:tap="showNoteModal">
+      <image class='popup-button-img' src="{{notes[markInfo.index]?'/public/icon/article_delete.png':'/public/icon/article_note.png'}}"></image>
+      <text class='popup-button-text'>{{notes[markInfo.index]?'取消':'笔记'}}</text>
+    </view>
+    <view class='popup-button' catch:tap="onShare">
+      <image class='popup-button-img' src="/public/icon/article_share.png"></image>
+      <text class='popup-button-text'>分享</text> 
+    </view>
+</view>
+<view class='popup-arrow' style='top:{{markInfo.touches.pageY - 30}}px;left:53%' id="popup" hidden="{{!isShow}}"></view>
+<block wx:if="{{isNote}}">
+  <view class='modal-mask' catchtouchmove="preventTouchMove" catch:tap="onNoteCancel"></view>
+  <view class='note-panel'>
+     <view class='note-content'>
+        <textarea id="noteTextArea" 
+        bindinput="onInput" 
+        placeholder="添加笔记" 
+        placeholder-style="color:#bebebe;font-size:30rpx"
+        focus='true' 
+        fixed="true"
+        auto-focus="true"></textarea>
+        <view class='note-operate'>
+          <text class="note-btn save" catch:tap="onNoteSave">保存</text>
+          <text class="note-btn cancel" catch:tap="onNoteCancel">取消</text>
+        </view>
+    </view> 
+  </view>
+</block>
+<block wx:if="{{isShare}}">
+  <snap isShow="{{isShare}}"></snap>
+</block>

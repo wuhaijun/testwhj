@@ -1,0 +1,11 @@
+<view class="modal-mask" bindtap="onCancel" catchtouchmove="preventTouchMove" wx:if="{{ show }}"></view>
+<view animation="{{ animationData }}" class="modal-dialog" wx:if="{{ show }}">
+  <view class="modal-title">{{ title }}</view>
+  <view class="modal-content">
+    <slot />
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>    

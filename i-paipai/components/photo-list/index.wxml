@@ -1,0 +1,19 @@
+<block>
+  <view class="total" wx:if="{{ total != 0 }}">
+    <text>{{ "共" + total + "张" }}</text>
+  </view>
+  <block wx:for="{{ photoList }}" wx:for-item="photoListItem" wx:key="key">
+    <text class="date-text">{{ photoListItem.uploadedFormatDate }}</text>
+    <view class="photo-list">
+      <block wx:for="{{ photoListItem.data }}" wx:for-item="photo" wx:key="key">
+        <view class="img-container">
+          <image bindtap="onImgPreview" data-src="{{ photo.url }}" lazy-load="true" mode="widthFix" src="{{ photo.url }}?imageView2/1/w/300/h/300/q/75"></image>
+        </view>
+      </block>
+    </view>
+  </block>
+  <view wx:if="{{ total == 0 && !loading }}" class="no-content">
+    <image src="/public/icons/no-picture.png"></image>
+    <text>暂无照片</text>
+  </view>
+</block>

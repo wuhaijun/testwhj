@@ -1,0 +1,35 @@
+.label {
+  color: #999;
+}
+.search-label {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.search-label image {
+  float:right;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.search-label-unit {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 82%;
+}
+
+.search-label-txt {
+  border: 1px solid #5F66C0;
+  border-radius: 16rpx;
+  padding: 0rpx 20rpx;
+  font-size: 26rpx;
+  margin-left: 15rpx;
+  margin-bottom: 15rpx;
+  color: #5F66C0;
+  display: inline-block;
+}

@@ -1,0 +1,20 @@
+{
+  "port": "8312",
+  "mongo": {
+    "style": "mongodb://xxxx:0000/style"
+  },
+  "downloader": {
+    "135": {
+      "url": "http://www.135editor.com/editor_styles/styles?inajax=1&page=#PAGE#&free=0&fav=fav",
+      "total": 422
+    },
+    "newrank": {
+      "url": "https://edit.newrank.cn/xdnphb/editor/style/searchStyleLimit"
+    },
+    "96": {
+      "url": "http://bj.96weixin.com/style/1/p/1",
+      "total": 362
+    },
+  }
+  
+}

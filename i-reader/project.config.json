@@ -1,0 +1,74 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wxc8f0fa60acaa416d",
+	"projectname": "i-reader",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/user/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订阅",
+					"pathName": "pages/article/index/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "文章详情",
+					"pathName": "pages/article/detail/index",
+					"query": "scene=58074715041bcea00d9eab78"
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/article/search/index",
+					"query": "id=580506f9041bcea00d97f513"
+				},
+				{
+					"id": -1,
+					"name": "编辑title",
+					"pathName": "pages/article/edit/index",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "主题详情列表",
+					"pathName": "pages/theme/detail/index",
+					"query": "themeId＝5b39a74b9d5150b21d80ddb4&page=1"
+				}
+			]
+		}
+	}
+}

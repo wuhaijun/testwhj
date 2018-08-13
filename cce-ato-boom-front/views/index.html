@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>脑洞 Brain BOOOOOM!</title>
+    <meta name="Author" content="Titan Team"/>
+    <meta name="Copyright" content="Brainboom"/>
+    <meta name="keywords" content="脑洞,Brainboom,脑洞Brainboom,创意,创意发现,微信图文排版,大数据,数据分析,人工智能,CRM,SCRM,微信编辑器,编辑器,微信人群管理"/>
+    <meta name="description" content="脑洞是针对营销创意人群的一体化工具平台,基于大数据技术打通整个创意营销流程,从创意内容采集、内容编辑、粉丝管理、精准投放、到数据监测分析全方位集成, 从营销人的真实需求出发,解决内容营销中的痛点,管理营销数据,提高运营效率,强化运营效果。"/>
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="http://boom-static.static.cceato.com/vendor/fullPage/jquery.fullpage.min.css"
+    />
+    <style type="text/css">
+        body,
+        div,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        form,
+        input,
+        textarea,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p.desc {
+            line-height: 1.5;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 60px;
+            z-index: 70;
+            width: 100%;
+            padding: 6px;
+            margin: 0;
+            background: white;
+        }
+
+        #header .logo {
+            display: inline-block;
+            height: 100%;
+            margin-left: 20px;
+        }
+
+        #header .logo img {
+            height: 100%;
+        }
+
+        #menu {
+            height: 100%;
+            float: right;
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        #menu li {
+            display: inline-block;
+            margin: 10px 20px;
+            color: #000;
+            border-radius: 4px;
+            width: 80px;
+            height: 30px;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        #menu li.login {
+            border-radius: 4px;
+            border: 1px solid rgb(0, 0, 0);
+            margin: 10px
+        }
+
+        #menu li.register {
+            border-radius: 4px;
+            border: 1px solid rgb(178, 100, 154);
+            background-color: rgb(178, 100, 154);
+            margin: 10px
+        }
+
+        #menu li.register a {
+            color: white;
+        }
+
+        #menu li a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+
+        #menu li.active {
+            background: rgba(178, 100, 154, 1);
+        }
+
+        #menu li:hover {
+            background: rgba(178, 100, 154, 0.5);
+        }
+
+        #menu li:hover a,
+        #menu li.active a {
+            color: white;
+        }
+
+        .home {
+            background: url(http://boom-static.static.cceato.com/boom/imgs/index/background-home.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .home .home-content {
+            text-align: center;
+        }
+
+        .home .home-content>h1 {
+            color: white;
+            font-size: 90px;
+            letter-spacing: 6px;
+            margin-bottom: 50px;
+        }
+
+        .home .home-content>div {
+            height: 40px;
+        }
+
+        .home .home-content>div>input {
+            width: 30%;
+            height: 100%;
+            outline: none;
+            border-radius: 4px;
+            border: transparent;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .home .home-content>div>button {
+            height: 100%;
+            width: 100px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(179, 91, 156);
+            outline: none;
+            border: transparent;
+            border-radius: 4px;
+            margin-left: 6px;
+            cursor: pointer;
+        }
+
+        .home .home-content>div>button:hover {
+            background-color: rgb(149, 61, 126);
+        }
+
+        .p0 .p0-content>.icons {
+            margin-top: 5%;
+        }
+
+        .p0 .p0-content>.icons>ul>li {
+            display: inline-block;
+            padding: 0 6%;
+            cursor: pointer;
+        }
+
+        .p0 .p0-content>.icons>ul>li div {
+            height: 30px;
+            width: 30px;
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+
+        .p0 .p0-content>.icons>ul>li.hover {
+            color: rgb(0, 0, 0);
+        }
+
+        .p0 .p0-content>.icons>ul>li.hover div {
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        .p0 .p0-content>.icons>ul>li p {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .p0 .p0-content>.icons>ul>li div img {
+            width: 100%;
+            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+        }
+
+        .p0 {
+            background: rgb(255, 255, 255);
+            color: rgb(93, 92, 92);
+        }
+
+        .p0 .p0-content>.icons a:focus,
+        .p0 .p0-content>.icons a:hover,
+        .p0 .p0-content>.icons a {
+            color: rgb(38, 38, 38);
+        }
+
+        .p .p-content {
+            text-align: center;
+            ;
+        }
+
+        .p .p-content>* {
+            margin: 2% 20%;
+        }
+
+        .p .p-content>.img {
+            width: 20px;
+            height: 20px;
+            padding: 4px;
+            margin: 0;
+            display: inline-block;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+
+        .p .p-content>.img img {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+        }
+
+        .p .p-content>h1 {
+            margin-bottom: 0;
+            font-size: 24px;
+            letter-spacing: 4px;
+        }
+
+        .p .p-content>h4 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .p .p-content>p {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .p .p-content .tips ul>li {
+            display: inline-block;
+            margin: 3% 8%;
+        }
+
+        .p .p-content .tips ul>li img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .p .p-content .tips ul>li p {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+
+        .p1 {
+            background: url(http://boom-static.static.cceato.com/boom/imgs/index/background-p.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .p1 .p1-content {
+            color: white;
+        }
+
+        .p2 {
+            background: rgb(255, 255, 255);
+            color: rgb(93, 92, 92);
+        }
+
+        .p2 .p2-content>.img {
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .p2 .p2-main {
+            margin: 2% 10%;
+            margin-top: 4%;
+        }
+
+        .p2 .p2-main>div {
+            vertical-align: middle;
+            display: inline-block;
+            width: 40%;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+
+        .p2 .big-img img {
+            width: 100%;
+        }
+
+        .p2 .right-content p {
+            text-align: left;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 18%;
+        }
+
+        .p2 .right-content li {
+            text-align: left;
+            font-size: 12px;
+            padding: 8px 0;
+        }
+
+        .p2 .right-content li>img {
+            height: 20px;
+            width: 20px;
+            margin-right: 40px;
+            vertical-align: middle;
+        }
+
+        .p3 {
+            background: rgb(255, 255, 255);
+            color: rgb(93, 92, 92);
+        }
+
+        .p3 .p3-content>.img {
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .p3 .p3-main {
+            margin: 2% 10%;
+            margin-top: 4%;
+        }
+
+        .p3 .p3-main>div {
+            display: inline-block;
+            width: 40%;
+            margin-left: 4%;
+            margin-right: 4%;
+            vertical-align: middle;
+        }
+
+        .p3 .big-img img {
+            width: 100%;
+        }
+
+        .p3 .left-content ul>li {
+            display: inline-block;
+            padding: 10% 6%;
+        }
+
+        .p3 .left-content li>img {
+            height: 20px;
+            width: 20px;
+        }
+
+        .p3 .left-content li>p {
+            font-size: 12px;
+        }
+
+
+        .aboutus {
+            background: rgb(255, 255, 255);
+            color: rgb(93, 92, 92);
+        }
+
+        .aboutus-content {
+            text-align: center;
+        }
+
+        .aboutus-content .aboutus-info h3 {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .aboutus-content .aboutus-info p {
+            display: inline-block;
+            text-align: left;
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            margin-top: 24px;
+        }
+
+        .aboutus-content .concact-us p {
+            margin-top: 20px;
+        }
+
+        .aboutus .footer {
+            background-image: url(http://boom-static.static.cceato.com/boom/imgs/index/background-footer.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+            font-size: 12px;
+            color: white;
+            letter-spacing: 1px;
+            position: absolute;
+            bottom: 0;
+            padding-left: 80px;
+        }
+
+        .logo-plus {
+            display: inline;
+            position: relative;
+            top: -40px;
+            font-size: 12px;
+            color: lightgrey;
+            left: -20px;
+        }
+    </style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-105658469-2', 'auto');
+    </script>
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="logo">
+            <img src="http://boom-static.static.cceato.com/boom/imgs/index/logo.jpg">
+            <p class="logo-plus">beta 2.0</p>
+        </div>
+
+        <ul id="menu">
+            <li data-menuanchor="home">
+                <a href="#home">首页</a>
+            </li>
+            <li data-menuanchor="project" class="active">
+                <a href="#project">产品</a>
+            </li>
+            <li data-menuanchor="aboutus">
+                <a href="#aboutus">关于我们</a>
+            </li>
+
+            <li class="login">
+                <a href="http://account.brainboom.cn/user/login?auth_callback=http://boom.brainboom.cn/api/getToken">登陆</a>
+            </li>
+            <li class="register">
+                <a href="http://account.brainboom.cn/user/register">注册</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="fullpage">
+        <div class="section home">
+            <div class="home-content">
+                <h1>凝聚创意价值</h1>
+                <div>
+                    <input type="text" name="email" placeholder="请输入您的邮箱" />
+                    <button type="button" id="registerBtn">免费注册</button>
+                </div>
+            </div>
+        </div>
+        <div class="section p p0">
+            <div class="p-content p0-content">
+                <img src="http://boom-static.static.cceato.com/boom/imgs/index/logo.png" style="width: 100px; height: 66px;">
+                <h1>什么是脑洞?</h1>
+                <h4>ABOUT BRAIN BOOM</h4>
+                <p class="desc">脑洞是针对营销创意人群的一体化工具平台,基于大数据技术打通整个创意营销流程,
+                    <br/> 从创意内容采集、内容编辑、粉丝管理、精准投放、到数据监测分析全方位集成,
+                    <br/> 从营销人的真实需求出发,解决内容营销中的痛点,管理营销数据,提高运营效率,强化运营效果。
+                </p>
+                <div class="icons">
+                    <ul>
+                        <li>
+                            <a href="#p1">
+                                <div>
+                                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/1发现创意.png" />
+                                </div>
+                                <p>创意发现</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#p2">
+                                <div>
+                                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/2微信图文排版.png" />
+                                </div>
+                                <p>微信图文排版</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#p3">
+                                <div>
+                                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/3数据分析.png" />
+                                </div>
+                                <p>数据分析</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#p4">
+                                <div>
+                                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/4人群管理.png" />
+                                </div>
+                                <p>人群管理</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section p p1">
+            <div class="p-content p1-content">
+                <div class="img">
+                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/5发现创意（白）.png">
+                </div>
+                <h1>创意发现</h1>
+                <h4>CREATIVE DISCOVERY</h4>
+                <p class="desc">
+                    创新的创意资讯平台, 以聚合式订阅的方式搜罗全网的热门创意资讯,让用户实现个性化定制阅读。
+                    <br/> 基于标签系统的强大搜索和收藏功能,让用户高效检索所需的案例,轻松管理自己的创意资讯。
+                </p>
+                <div class="tips">
+                    <ul>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/6每日更新的创意资讯.png" />
+                            <p>每日更新的创意资讯</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/7全球创意案例智库.png" />
+                            <p>全球创意案例智库</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/8一站式订阅多平台内容.png" />
+                            <p>一站式订阅多平台内容</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/9收藏感兴趣的创意资讯.png" />
+                            <p>收藏感兴趣的创意资讯</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/10企业定制订阅功能.png" />
+                            <p>企业定制订阅功能</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/11强大的多维度标签化搜索.png" />
+                            <p>强大的多维度标签化搜索</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section p p2">
+            <div class="p-content p2-content">
+                <div class="img">
+                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/2微信图文排版.png">
+                </div>
+                <h1>微信图文排版</h1>
+                <h4>GRAPHIC LAYOUT</h4>
+                <div class="p2-main">
+                    <div class="big-img">
+                        <img src="http://boom-static.static.cceato.com/boom/imgs/index/微信图文排版.jpg" />
+                    </div>
+                    <div class="right-content">
+                        <p class="desc">脑洞的微信编辑器可以方便、快捷地管理多个账号,
+                            <br/> 编写管理公众号文章,自带多种模版样式轻松打造美感图文。
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/12极简式多账号操作.png">
+                                <span>极简式多账号操作</span>
+                            </li>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/13一键编辑收藏文章.png">
+                                <span>一键编辑收藏文章</span>
+                            </li>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/14多篇图文合并推送.png">
+                                <span>多篇图文合并推送</span>
+                            </li>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/15多种排版样式.png">
+                                <span>多种排版样式/模版/素材</span>
+                            </li>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/16营销日历.png">
+                                <span>营销日历让你不再错过时事热点</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section p p3">
+            <div class="p-content p3-content">
+                <div class="img">
+                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/3数据分析.png">
+                </div>
+                <h1>数据分析</h1>
+                <h4>DATA ANALYSIS</h4>
+                <p class="desc">
+                    为企业提供微信官方后台的运营数据深入分析,多种可视化分析工具。
+                    <br/>以直观方式查看和提炼您的数据,利用大数据能力实现多维度检索。
+                </p>
+                <div class="p3-main">
+                    <div class="left-content">
+                        <ul>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/17微博热点追踪.png">
+                                <p>微博热点追踪</p>
+                            </li>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/18微博数据分析.png">
+                                <p>微博数据分析</p>
+                            </li>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/19公众号图文.png">
+                                <p>公众号图文分析</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/20朋友圈传播路径.png">
+                                <p>朋友圈传播路径分析</p>
+                            </li>
+                            <li>
+                                <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/21公众号粉丝画像分析.png">
+                                <p>公众号粉丝画像分析</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="big-img">
+                        <img src="http://boom-static.static.cceato.com/boom/imgs/index/数据分析.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section p p1">
+            <div class="p-content p1-content p4-content">
+                <div class="img">
+                    <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/22人群管理（白）.png">
+                </div>
+                <h1>人群管理</h1>
+                <h4>AUDIENCE MANAGEMENT</h4>
+                <p class="desc">
+                    精细化粉丝管理功能,按照地区、性别、年龄、标签等多种维度属性对微信公众号粉丝进行分类管理,有效识别粉
+                    <br/>丝的互动操作和行为轨迹,为每位粉丝建立完整的营销档案,针对不同行为、兴趣、消费的群体进行针对性内容的精准推送。
+                </p>
+                <div class="tips">
+                    <ul>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/23粉丝场景应用.png" />
+                            <p>粉丝场景应用</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/24粉丝渠道分析.png" />
+                            <p>粉丝渠道分析</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/25营销规则自动化.png" />
+                            <p>营销规则自动化</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/26标签自动化.png" />
+                            <p>粉丝标签自动化</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/27粉丝精准群发.png" />
+                            <p>粉丝精准群发</p>
+                        </li>
+                        <li>
+                            <img src="http://boom-static.static.cceato.com/boom/imgs/index/icon/28微信粉丝CRM.png" />
+                            <p>微信粉丝CRM系统</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section aboutus">
+            <div class="aboutus-content p">
+                <div class="aboutus-info p-content">
+                    <h1>关于我们</h1>
+                    <h4>ABOUT US</h4>
+                    <p class="desc">
+                        脑洞坐标在上海,是一个凝聚创意价值的互联网平台。
+                        <br/> 我们发现创意,制造创意,传播创意。
+                        <br/> 在脑洞大开的世界里,让灵感互相激荡,让创意流程如行云流水一般,让创意发挥它真正的价值。
+                        <br/> 我们的目标是做一把创意营销的瑞士军刀,简洁而全能。
+                        <br/> 这里没有规则,只有奇思妙想,不拘一格。
+                    </p>
+                </div>
+                <div class="concact-us">
+                    <p style="font-size: 14px;">联系我们</p>
+                    <p style="font-size: 12px;">support@brainboom.cn</p>
+                    <p>
+                        <img width="88px" height="88px" src="http://boom-static.static.cceato.com/boom/imgs/index/微信二维码.jpg">
+                    </p>
+                </div>
+            </div>
+            <div class="footer">Copyright © 2017 Brainboom 沪ICP备10021551号-7</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript" src="http://boom-static.static.cceato.com/vendor/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="http://boom-static.static.cceato.com/vendor/fullPage/jquery.fullpage.min.js"></script>
+<script type="text/javascript">
+        $('#fullpage').fullpage({
+            anchors: ['home', 'project', 'p1', 'p2', 'p3', 'p4', 'aboutus', 'help'],
+            menu: '#menu',
+            css3: true,
+            scrollingSpeed: 800,
+            paddingTop: '40px',
+            // lazyLoading: true
+        });
+
+        $('.p0-content .icons li').hover(function () {
+            $(this).addClass('hover');
+        }, function () {
+            $(this).removeClass('hover');
+        });
+
+        $('#registerBtn').click(function (e) {
+            var val = $('input[name="email"]').val();
+            window.location.href = 'http://account.brainboom.cn/user/register?email=' + val || '';
+        });
+
+        setTimeout(function () {
+            var o = 'script';
+            var a = document.createElement(o);
+            var m = document.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = 'https://www.google-analytics.com/analytics.js';
+            m.parentNode.insertBefore(a, m);
+        }, 0);
+</script>

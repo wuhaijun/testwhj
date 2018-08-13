@@ -1,0 +1,55 @@
+{
+	"miniprogramRoot": "./",
+	"projectname": "%E8%84%91%E6%B4%9E%E8%B5%84%E8%AE%AF3333",
+	"description": "脑洞资讯",
+	"appid": "wxc8f0fa60acaa416d",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.1",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/projects/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "资讯",
+					"pathName": "pages/projects/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "文章详情",
+					"pathName": "pages/projects/detail/detail",
+					"query": "id=58074715041bcea00d9eab78"
+				}
+			]
+		}
+	}
+}

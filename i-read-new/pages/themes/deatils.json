@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "share-bar": "../../components/ShareBar",
+    "poster-card": "../../components/PosterCard",
+    "article-cards": "../../components/ArticleCards"
+  },
+  "navigationBarTitleText": "三千米🐬",
+  "navigationStyle": "custom"
+}

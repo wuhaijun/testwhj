@@ -1,0 +1,96 @@
+.main-content .content-list {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.main-content .channel-filter {
+    margin: 0 15%;
+}
+
+div.project-col {
+    /*max-width: 300px;*/
+    margin: 5px 0 5px 0;
+}
+
+div.project-card {
+    background-color: #fff;
+    -moz-box-shadow: 1px 2px 20px 1px #d3d3d3;
+    -webkit-box-shadow: 1px 2px 20px 1px #d3d3d3;
+    box-shadow: 1px 2px 20px 1px #d3d3d3;
+    -webkit-border-radius: 0;
+    border:2px solid rgba(0, 0, 0, 0);
+    border-radius: 0;
+}
+
+div.project-card:hover {
+    border:2px solid #6164C1;
+}
+
+div.card-simple img.card-img-top {
+    width: 100%;
+}
+div.card-block h4.content-title {
+    height: 40px;
+    overflow-y: hidden;
+}
+
+div.card-block p.content-desc {
+    color:#bcbcbc;
+    height: 60px;
+    overflow-y: hidden;
+}
+
+div.card-block p.content-desc-notitle {
+    height: 114px;
+    margin-top: 8px;
+    overflow-y: hidden;
+}
+
+div.card-block h4.content-title span.highlight, div.card-block p.content-desc span.highlight{
+    background-color: #FFFF88;
+}
+
+div.react-component-card h4 span.highlight, div.card-block p span.highlight{
+    background-color: #FFFF88;
+}
+
+div.download-card h4.content-title {
+    height: 40px;
+    overflow-y: hidden;
+}
+
+div.download-card p.content-desc {
+    color:#bcbcbc;
+    height: 60px;
+    overflow-y: hidden;
+}
+
+div.download-card div.text-center{
+    margin: 20px 0px 15px 0px;
+}
+
+div.download-card div.download-div{
+    margin-bottom: 20px;
+    text-align: center;
+}
+div.download-card div.cover div.hackImg {
+    width: 100%;
+    padding-right: 7px;
+    visibility: hidden;
+}
+div.download-card div.cover div.hackImg img{
+    width: 100%;
+}
+
+div.card-new, div.download-card div.card-new {
+    border-color: #00b3ee;
+}
+
+.project-read-like {
+    color: rgb(188, 188, 188);
+    font-size: 12px;
+}
+
+.project-read-like span:last-child {
+    margin-left: 30px;
+}

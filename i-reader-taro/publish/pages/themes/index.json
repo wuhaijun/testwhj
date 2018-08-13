@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "theme-card": "../../components/ThemeCard"
+  },
+  "navigationBarTitleText": "三千米🐬"
+}

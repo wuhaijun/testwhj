@@ -1,0 +1,18 @@
+
+div.project {
+    background-color: #fff;
+    -moz-box-shadow: 1px 2px 20px 1px #d3d3d3;
+    -webkit-box-shadow: 1px 2px 20px 1px #d3d3d3;
+    box-shadow: 1px 2px 20px 1px #d3d3d3;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+div.project:hover {
+    height:auto;
+    margin:1px;
+    border:2px solid #6164C1;
+    border-radius:0;
+}
+
+

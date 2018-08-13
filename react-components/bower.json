@@ -1,0 +1,20 @@
+{
+  "name": "react-components",
+  "description": "A ui library to react.",
+  "main": "index.js",
+  "authors": [
+    "Boyce"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zhangboyce/react-components",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "unslider": "^2.0.3"
+  }
+}

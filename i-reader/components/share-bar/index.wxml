@@ -1,0 +1,16 @@
+<view class="share-bar">
+  <view class="li-bar-share" catchtap='onMadePoster'>
+    <view class="image-wrap">
+      <image src='/public/icon/icon_haibao.png'></image>
+    </view>
+    <p>生成海报</p>
+  </view>
+  <view class="li-bar-share">
+
+    <button class="share-button" plain="true" open-type="share">
+      <view class="image-wrap">
+        <image src='/public/icon/icon_wechat.png'></image>
+      </view>
+      发送给朋友</button>
+  </view>
+</view>

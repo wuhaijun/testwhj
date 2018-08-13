@@ -1,0 +1,70 @@
+<block>
+    <view>
+        <view class="poster-mask">
+            <view class="modal-poster" id="modal-poster">
+                <view class="modal-body-poster">
+                    <view class="header">
+                        <view class="box-date">
+                            <text class="day">{{anonymousState__temp}}</text>
+                            <text class="month">{{anonymousState__temp2}}</text>
+                            <view class="line"></view>
+                        </view>
+                        <view class="date-time">
+                            <text>{{arrDate[2]}}/{{arrDate[1]}}/{{arrDate[0]}}</text>
+                        </view>
+                        <view class="header-text">
+                            <text class="nickname">{{nickName}}</text>
+                            <block>
+                                <block wx:if="{{coverImage}}">
+                                    <text class="read-from">正在阅读这篇文章</text>
+                                </block>
+                                <text class="read-from" wx:else>在 {{appName}} 上分享了一段文字</text>
+                            </block>
+                        </view>
+                        <block>
+                            <block wx:if="{{coverImage}}">
+                                <view class="cover-image">
+                                    <image src="{{coverImage}}" />
+                                </view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{coverImage}}">
+                                <view class="title-content" bindtap="onEditTitle" data-text="{{textContent}}"
+                                data-limit="50">
+                                    <text decode="true" space="{{true}}">{{textContent}}</text>
+                                    <block wx:if="{{showTips}}">
+                                        <view class="tips-box">
+                                            <view class="tips">点击文字可进行编辑哦</view>
+                                            <view class="arrow"></view>
+                                        </view>
+                                    </block>
+                                </view>
+                            </block>
+                            <view class="note-content" catchtap="onEditTitle" data-text="{{textContent}}"
+                            data-limit="140" wx:else>
+                                <text decode="true" space="{{true}}">{{textContent}}</text>
+                                <block wx:if="{{showTips}}">
+                                    <view class="tips-box">
+                                        <view class="tips">点击文字可进行编辑哦</view>
+                                        <view class="arrow"></view>
+                                    </view>
+                                </block>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="modal-footer-poster">
+                    <image class="qrcode-image" src="{{qrImage}}" />
+                    <text class="text-top">长按小程序码</text>
+                    <text class="name-top">进入{{appName}} 阅读全文</text>
+                </view>
+            </view>
+            <view class="modal-save">
+                <view class="save-btn" bindtap="onSavePoster">保存相册，分享到朋友圈</view>
+            </view>
+        </view>
+        <canvas canvas-id="posterImg" __triggerObserer="{{ _triggerObserer }}"
+        style="{{anonymousState__temp3}}"></canvas>
+    </view>
+</block>

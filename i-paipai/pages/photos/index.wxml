@@ -1,0 +1,11 @@
+<view>
+  <view class="search-input">
+    <image class="search-img" src="/public/icons/search.png"></image>
+    <input type='text' disabled value="{{ location || tag || keyword }}" maxlength="20" bindtap="reloadInput"></input>
+    <image bindtap="closeInput" class="close-img" src="/public/icons/close.png"></image>
+  </view>
+  <view style="padding-bottom:80rpx;">
+    <photo-list tag="{{ tag }}" location="{{ location }}" keyword="{{ keyword }}"/>
+  </view>
+   <footer-bar />
+</view>

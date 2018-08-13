@@ -1,0 +1,1 @@
+define({  "name": "winter-editor-api",  "version": "0.1.0",  "description": "编辑器相关的公用接口",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2017-11-09T08:41:00.536Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }});

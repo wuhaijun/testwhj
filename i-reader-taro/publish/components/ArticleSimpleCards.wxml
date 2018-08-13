@@ -1,0 +1,22 @@
+<block>
+    <scroll-view scroll-y="{{true}}" style="height: 100%;box-sizing: border-box;margin: 0 32rpx;width: auto"
+    bindscrolltolower="onScrolltolower">
+        <view wx:key="{{index}}" data-id="{{item.id}}" class="theme theme-nav"
+        bindtap="onHandleDeatils" bindlongpress="onHandleLongpress" wx:for="{{projectList || []}}"
+        wx:for-item="item" wx:for-index="index" data-e-onHandleDeatils-so="this"
+        data-e-onHandleDeatils-a-a="{{item._id}}">
+            <view class="theme-each">
+                <image class="theme-img" src="{{item.coverImg.url}}" />
+                <view class="theme-name">
+                    <view class="theme-txt">
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="theme-title">
+                        <view data-theme-list="{themeList}" data-theme="{item.themeId}" bindtap="onHandleNavigateTotheme">{{themeMapping[item.themeId].name}}</view>
+                        <view>{{item.datePublished}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</block>

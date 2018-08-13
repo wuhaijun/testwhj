@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "photo-list": "../../components/photo-list/index",
+    "footer-bar": "../../components/footer-bar/index"
+  }
+}

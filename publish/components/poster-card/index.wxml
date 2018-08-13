@@ -1,0 +1,53 @@
+<view class="poster-mask">
+  <view class="modal-poster" id='modal-poster'>
+    <view class="modal-body-poster">
+      <view class="header">
+        <view class="box-date">
+          <text class="day">{{ arrDate[2] }}</text>
+          <text class="month">{{ arrDate[1] }}</text>
+          <view class="line"></view>
+        </view>
+        <view class="date-time">
+          <text>{{ arrDate[2] }}/{{ arrDate[1] }}/{{ arrDate[0] }}</text>
+        </view>
+        <view class="header-text">
+          <text class="nickname">{{ nickName }}</text>
+          <text wx:if="{{ coverImage }}" class="read-from">正在阅读这篇文章</text>
+          <text wx:if="{{ !coverImage }}" class="read-from">在{{ appName }}上分享了一段文字</text>
+        </view>
+      </view>
+      <view wx:if="{{ coverImage }}" class="cover-image">
+        <image src="{{ coverImage }}"></image>
+      </view>
+      <view wx:if="{{ coverImage }}" class="title-content" catchtap='onEditTitle' data-text="{{ title }}" data-limit="50">
+        <text decode="{{ true }}" space="{{ true }}">{{ title }}</text>
+        <view class="tips-box" wx:if="{{ showTips }}">
+          <view class="tips">
+            点击文字可进行编辑哦
+          </view>
+          <view class="arrow"></view>
+        </view>
+      </view>
+      <view wx:if="{{ !coverImage }}" class="note-content" catchtap='onEditTitle' data-text="{{ title }}" data-limit="140">
+        <text decode="{{ true }}" space="{{ true }}">{{ title }}</text>
+        <view class="tips-box" wx:if="{{ showTips }}">
+          <view class="tips">
+            点击文字可进行编辑哦
+          </view>
+          <view class="arrow"></view>
+        </view>
+
+      </view>
+      <!-- <view class="lunar-calendar">/农历 {{ lunarDate }}</view> -->
+    </view>
+    <view class="modal-footer-poster">
+      <image class="qrcode-image" src="{{ qrImage }}"></image>
+      <text class="text-top">长按小程序码</text>
+      <text class="name-top">进入{{ appName }} 阅读全文</text>
+    </view>
+  </view>
+  <view class="modal-save">
+    <view class="save-btn" catchtap='onSavePoster'>保存相册，分享到朋友圈</view>
+  </view>
+</view>
+<canvas canvas-id="posterImg" style="width:{{ canvasWidth }}px;height:{{canvasHeight}}px;"></canvas>

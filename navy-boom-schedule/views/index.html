@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排期工具</title>
+
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/webfont.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/bootstrap-datetime/bootstrap-datetimepicker.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/app.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/fonts/climacons-font.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/fonts/sli.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/boom/css/content.css"/>
+</head>
+<body>
+    <div id="navy-boom-schedule">
+
+    </div>
+</body>
+</html>
+
+<script>
+    config = {% autoescape false %} {{ config|json }} {% endautoescape %};
+    account = {% autoescape false %} {{ account|json }} {% endautoescape %};
+    modules = {% autoescape false %} {{ modules|json }} {% endautoescape %};
+</script>
+<script src="http://boom-static.static.cceato.com/vendor/jquery/dist/jquery.js"></script>
+<script src="http://boom-static.static.cceato.com/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/static/bootstrap-datetime/bootstrap-datetimepicker.js"></script>
+
+<script src="/static/bundle/bundle.min.js"></script>

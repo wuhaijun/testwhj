@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>脑洞 Brain BOOOOOM!</title>
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- plugin -->
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/chosen_v1.6.2/chosen.min.css">
+    <!-- end plugin -->
+
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/main-styles-06414d28b1.min.css"/>
+
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/font-awesome/4.6.3-2/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/fonts/main-fonts-886769f8e0.min.css"/>
+
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/boom/main-boom-15e0523c60.min.css"/>
+    <link rel="stylesheet" class="tmp" href="/static/mobile.css">
+    <link rel="stylesheet" class="tmp" href="/static/guide.css">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-105658469-1', {'userId': '{{ accountId }}'});
+    </script>
+    <!-- End Google Analytics -->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body class="page-loading">
+<!-- page loading spinner -->
+<div class="pageload">
+    <div class="pageload-inner">
+        <div class="sk-rotating-plane"></div>
+    </div>
+</div>
+
+<div id="app" class="app layout-fixed-header">
+    {% autoescape false %} {{ html }} {% endautoescape %}
+</div>
+
+<!-- init data -->
+<script type="text/javascript">
+    BOOM_INIT_DATA = {% autoescape false %} {{ initData|json }} {% endautoescape %};
+    BOOM_INIT_CONFIG = {% autoescape false %} {{ initConfig|json }} {% endautoescape %};
+    BOOM_INIT_MODULES = {% autoescape false %} {{ modulesConfig|json }} {% endautoescape %};
+    BOOM_INIT_CLIENT_AUTH = {% autoescape false %} {{ clientAuthConfig|json }} {% endautoescape %};
+    STATIC_SERVER = 'http://boom-static-dev';
+</script>
+
+<script src="http://boom-static.static.cceato.com/static/main-7ff1b2d9d2.min.js"></script>
+</body>
+</html>
+<script>
+    setTimeout(function () {
+        var o = 'script';
+        var a = document.createElement(o);
+        var m = document.getElementsByTagName(o)[0];
+        a.async=1;
+        a.src='https://www.google-analytics.com/analytics.js';
+        m.parentNode.insertBefore(a,m);
+    }, 0);
+</script>

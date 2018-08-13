@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .texttips{
+            animation-duration:1.2s;
+            padding-left: 50%;
+            -webkit-animation-duration: 1.2s;
+            -moz-animation-duration: 1.2s;
+            -webkit-animation-name: slidein;
+            -moz-animation-name: slidein;
+            padding-top:20%;
+            font-size: 20px;
+        }
+
+        @-webkit-keyframes slidein {
+            from {
+                padding-left: 100%;
+                width: 300%;
+                font-size: 12px;
+                padding-top: 0;
+            }
+
+            to {
+                padding-left: 50%;
+                width: 100%;
+                font-size: 20px;
+                padding-top:20%;
+            }
+        }
+
+        @-moz-keyframes slidein {
+            from {
+                padding-left: 100%;
+                width: 300%;
+                font-size: 12px;
+                padding-top: 0;
+            }
+
+            to {
+                padding-left: 50%;
+                width: 100%;
+                font-size: 20px;
+                padding-top:20%;;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+       <div class="texttips">授权成功</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    setTimeout(function(){
+        window.top.document.getElementById('closeBtn').click();
+    },1800)
+
+    setTimeout(function(){
+        parent.window.location.href="/userCenter/bindWeChat";
+    },1500)
+
+</script>

@@ -1,0 +1,7 @@
+dist/
+.temp/
+node_modules/
+.idea/
+package-lock.json
+yarn.lock
+.DS_Store

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "snap":"../snap/index"
+  }
+}

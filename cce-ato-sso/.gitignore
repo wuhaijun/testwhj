@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+*.iml
+node_modules/
+npm-debug.log
+.env
+/public/build/bundle.js*
+/config/default.json
+/.env
+/public/build/
+/temp/
+cce-ato-sso.js

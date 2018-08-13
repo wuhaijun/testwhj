@@ -1,0 +1,39 @@
+<!--pages/subscribe/index/index.wxml-->
+<view class="information">
+  <block>
+    <view class="information-news">
+      <view class="myinformation-block">
+        <block>
+          <view data-type='information' bindtap='toggleTab' class="information-featured {{ isSubscribed ? '' : 'information-w' }}">资讯站精选</view>
+         <view  wx:if="{{ hasSubscribed }}" data-type='myinformation' bindtap='toggleTab' class="information-featured {{ isRecommended ? '' : 'information-w' }}">我订阅的</view> 
+        </block>
+      </view>
+      <navigator class="theme-nav" hover-class="none" url='/pages/article/search/index'>
+        <view class="search-input">
+          <image class="search-img" src="/public/icon/icon_search.png"></image>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <view wx:if="{{ isRecommended }}">
+    <article-cards id="article-cards" bind:onShareBox="onShareBox" isClick="{{ true }}"/>
+  </view>
+  <view wx:if="{{ isSubscribed }}">
+    <article-cards id="article-cards" themeId="subscribe" bindloaded="onLoaded"  bind:onShareBox="onShareBox" isClick="{{ true }}"/>
+  </view>
+</view>
+
+
+<view class="mask" wx:if="{{ showShareBar }}" catchtap='onClickMask'>
+</view>
+<view wx:if="{{ showShareBar }}">
+  <share-bar bind:madePoster="onMadePoster" />
+</view>
+
+
+<view class="mask" wx:if="{{ showPosterMask }}" catchtap='hidePoster'>
+</view>
+<view wx:if="{{ showPosterMask }}">
+    <poster-card bind:saveSuccessPoster="saveSuccessPoster" coverImage="{{ shareImg }}" shareArticleId="{{ shareArticleId }}" title="{{ shareContent }} "/>
+</view>
+

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "article-cards": "../../../components/article-cards/index",
+    "article-card":"../../../components/article-card/index",
+    "poster-card": "../../../components/poster-card/index",
+    "share-bar": "../../../components/share-bar/index"
+  }
+}

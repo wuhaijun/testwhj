@@ -1,0 +1,596 @@
+/*remove header css hear*/
+#container {
+    height: calc(100% - 40px);
+    width: 100%;
+}
+
+#header {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(96, 102, 190);
+}
+
+#header img.avatar {
+    width: 30px;
+    height: 30px;
+}
+
+#header .nav {
+    padding: 0;
+    margin-right: 35px;
+}
+
+#header .nav > li > a {
+    padding: 0;
+    margin: 5px;
+}
+
+#header .dropdown-menu {
+    background-color: rgb(96, 102, 190);
+}
+
+#header .dropdown-menu > li > a {
+    color: rgb(254, 254, 254);
+}
+
+#header .dropdown-menu > li > a:hover {
+    color: rgb(1, 1, 1);
+}
+
+#header .nav > li > a:hover, #header .nav > li > a:focus {
+    background-color: #6164C1;
+    color: #fff;
+}
+
+ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.go-bind-container {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    background-color: #f9fafb;
+    position: relative;
+}
+
+.go-bind-container .closealertBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.go-bind-container .box-img {
+    height: 70px;
+    width: 80px;
+    margin-top: 60px;
+}
+
+.go-bind-container .tips-text {
+    color: #585858;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#goAddBind {
+    display: inline-block;
+    cursor: pointer;
+    margin: auto;
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #5559b9;
+    color: #5559b9;
+    border-radius: 3px;
+    text-align: center
+}
+
+#completeAdd {
+    display: none;
+    cursor: pointer;
+    margin: auto;
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #5559b9;
+    color: #5559b9;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.go-sync-container {
+    height: 500px;
+    width: 600px;
+    text-align: center;
+    background-color: #f9fafb;
+    position: relative;
+}
+
+.go-sync-container .closealertBtn {
+    float: left;
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.go-sync-container .closealertBtn1 {
+    float: left;
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 15px;
+    display: none;
+}
+
+.go-sync-container h6 {
+    text-align: left;
+    font-size: 14px;
+}
+
+#lastPagination {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #5559b9;
+    color: #5559b9;
+    display: none;
+    margin-right: 20px;
+}
+
+#nextPagination {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #5559b9;
+    color: #5559b9;
+    display: inline-block;
+}
+
+.wechat-selector-warp {
+    text-align: left;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wechat-select-show {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-top: 1px #bcbdbe solid;
+    border-bottom: 1px #bcbdbe solid;
+    cursor: pointer;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.wechat-select-show > span {
+    float: left;
+    width: 70%;
+    height: 60px;
+    font-size: 12px;
+    line-height: 60px;
+    color: #666;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+.wechat-select-show > em {
+    position: absolute;
+    right: 40%;
+    width: 20px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+.wechat-select-list {
+    overflow: scroll;
+    height: 100px;
+    width: 60%;
+    position: absolute;
+    left: 0;
+    top: 59px;
+    z-index: 9;
+    display: none;
+    background-color: #fff;
+    padding: 0;
+    border: 1px #D9D9D9 solid;
+    border-radius: 2px;
+}
+
+.wechat-select-list > li {
+    list-style: none;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 5px;
+}
+
+.wechat-select-list > li:hover {
+    border: 1px solid #5559b9;
+    color: #333;
+    width: 100%;
+}
+
+#goBindMore {
+    cursor: pointer;
+    float: left;
+    border-radius: 3px;
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #5559b9;
+    color: #5559b9;
+    margin-top: 35px;
+}
+
+#beginClickSync {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+    border-radius: 3px;
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #4ec37a;
+    color: #fff;
+    margin-top: 35px;
+}
+
+.wechat-li-article {
+    float: left;
+    width: 32% !important;
+    height: 100%;
+    border: 1px solid #dfe0e1;
+    cursor: pointer;
+}
+
+.wechat-li-article .bgimg {
+    width: 100%;
+    height: 100px;
+}
+
+.wechat-li-article .article-title {
+    margin-top: 5px;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+}
+
+.wechat-li-article .update-time {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #333;
+    height: 20px;
+    line-height: 20px;
+}
+
+.wechat-up-icon {
+    animation: rotatete 0.3s linear forwards;
+}
+
+.wechat-down-icon {
+    animation: rotatete2 0.3s linear forwards;
+}
+
+@-moz-keyframes rotatete {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotatete {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@-moz-keyframes rotatete2 {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotatete2 {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.choseIcon {
+    width: 400px;
+    margin: 0px auto;
+    border: 1px solid #5559b9 !important;
+}
+
+.choseIcon::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 5px;
+    border: 2px solid #5559b9;
+    border-top: none;
+    border-right: none;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: relative;
+    top: -14px;
+    right: -133px;
+}
+
+.choseArticle li:first-child {
+    margin-right: 2%;
+}
+
+.choseArticle li:nth-child(2) {
+    margin-right: 2%;
+}
+
+.btn-sky {
+    background-color: #999988 !important;
+    color: #fff;
+}
+
+.tipSmallAlert {
+    height: 40px;
+    line-height: 40px;
+    width: 170px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #efefef;
+}
+
+div.editor-container {
+    height: 100%;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+div.editor-container > div {
+    height: 100%;
+    float: left;
+}
+
+div.editor-module {
+    height: 100%;
+    float: left;
+    background-color: #feffff;
+}
+
+div.editor-module-left {
+    float: left;
+    height: 100%;
+    width: 46px;
+}
+
+button.editor-module-button {
+    font-size: 18px;
+    height: 46px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+button.editor-module-button > i {
+    color: #ffffff;
+    line-height: 46px !important;
+}
+
+div.editor-module-left-content {
+}
+
+div.editor-module-right {
+    position: relative;
+    float: left;
+    height: 100%;
+    border-right: 1px solid #eeeff0;
+    overflow: hidden;
+}
+
+div.editor-module-right > div.header-content {
+    height: 46px;
+    width: 100%;
+    background-color: #eeeff0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(194, 194, 194);
+    line-height: 46px;
+}
+
+div.editor-module-right > div.body-content {
+    position: absolute;
+    top: 46px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    padding: 5px;
+}
+
+div.editor-module div.close-title {
+    display: none;
+}
+
+div.editor-module-close {
+    width: 46px;
+    cursor: pointer;
+}
+
+div.editor-module-close > div.editor-module-right {
+    display: none;
+}
+
+div.editor-module-close div.close-title {
+    display: block;
+}
+
+div.editor-module-close div.module-sidebar {
+    display: none;
+}
+
+div.editor-module-close div.close-title > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* summernote editor */
+div.editor-module-right div.note-editable img {
+    max-width: 100%;
+}
+
+/**************    editor  style tool  begin   **************/
+
+/* section tool border */
+.note-placeholder {
+    line-height: 38px;
+    padding-left: 5px;
+}
+
+div.editor-module-right div.note-editable section.winter-section-active {
+    position: relative;
+    clear: both;
+}
+
+.winter-section {
+    box-sizing: content-box;
+    display: block;
+    clear: both;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 5px;
+}
+
+.winter-section > p {
+    margin: 0;
+
+}
+
+.note-editable section.winter-section-active:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 2px dashed #3875d7;
+}
+
+.note-editing-area {
+    padding: 0 50px;
+}
+
+.style-tool-warpper {
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+.style-tool-btngroup-left {
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    width: 80px;
+}
+
+.style-delete-btn {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    background-color: rgba(176, 180, 185, 0.8);
+    overflow: hidden;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.style-delete-btn:hover {
+    background-color: rgba(56, 117, 215, 0.8);
+}
+
+.style-tool-btngroup-right {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    width: 60px;
+    height: 150px;
+}
+
+.style-up-btn, .style-down-btn, .style-add-new-block-btn, .style-copy-btn {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    background-color: rgba(176, 180, 185, 0.8);
+    overflow: hidden;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.note-editor {
+    padding-top: 20px;
+}
+
+.style-up-btn:hover, .style-down-btn:hover, .style-add-new-block-btn:hover, .style-copy-btn:hover {
+    background-color: rgba(56, 117, 215, 0.8);
+}
+
+/**************    editor  style tool  end   **************/
+
+
+

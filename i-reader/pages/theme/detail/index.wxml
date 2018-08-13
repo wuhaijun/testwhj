@@ -1,0 +1,55 @@
+<!--pages/home/motif/index.wxml-->
+<!-- 主题文章 -->
+<view class="theme-articles">
+  <view class="articles-img {{ scroll ? 'articles-img-scroll' : '' }}" style="background-image: url({{ imageHost }}theme/{{ theme._id }}_l.jpg)">
+    <view class="{{ scroll ? 'articles-img-scroll-view' : '' }}">{{ theme.desc }}</view>
+  </view>
+  <view class="articles {{ scroll ? 'articles-scroll' : '' }}">
+    <view class="articles-title {{ scroll ? 'articles-title-scroll' : '' }} ">
+      <view>
+        <text class="articles-txt">{{ theme.title }}</text>
+        <text class="articles-desc">{{ theme.count }}人订阅</text>
+      </view>
+      <view data-_id="{{ theme._id }}" class="subscribe {{ theme.isCollect  ? 'no' : '' }}" bindtap="onSubscribe">
+        <view wx:if="{{ theme.isCollect }}">
+            <text>已订阅</text>
+        </view>
+        <view wx:else>
+          <image src="/public/icon/icon_follow.png"></image>
+          <text>订阅</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="articles-arrow {{ scroll ? 'articles-img-scroll-view' : '' }}">
+    <image src="/public/icon/icon_arrow.png"></image>
+  </view>
+  <view class="information">
+    <view class="information-news">
+      <view class="myinformation-block">
+        <block>
+          <view data-type='information' class="information-txt">精选推荐</view>
+        </block>
+      </view>
+    </view>
+    <view class="articles-arrow {{ scroll ? 'articles-img-scroll-view' : '' }}">
+        <image src="/public/icon/icon_arrow.png"></image>
+    </view>
+    <article-cards id="article-cards" themeId="{{ theme._id }}" bind:onShareBox="onShareBox" isClick="{{ false }}"/>
+  </view>
+</view>
+
+
+
+<view class="mask" wx:if="{{ showShareBar }}" catchtap='onClickMask'>
+</view>
+<view wx:if="{{ showShareBar }}">
+  <share-bar bind:madePoster="onMadePoster" />
+</view>
+
+
+<view class="mask" wx:if="{{ showPosterMask }}" catchtap='hidePoster'>
+</view>
+<view wx:if="{{ showPosterMask }}">
+    <poster-card bind:saveSuccessPoster="saveSuccessPoster" coverImage="{{ shareImg }}" shareArticleId="{{ shareArticleId }}" title="{{ shareContent }}"/>
+</view>

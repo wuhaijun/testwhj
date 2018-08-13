@@ -1,0 +1,32 @@
+<block>
+    <scroll-view scroll-y="{{true}}" style="height: 100%;box-sizing: border-box;margin: 0 32rpx;width: auto">
+        <view class="theme" wx:key="{{index}}" wx:for="{{loopArray0}}" wx:for-item="item"
+        wx:for-index="index">
+            <navigator class="theme-nav" hover-class="none" url="{{item.$loopState__temp2}}">
+                <view class="theme-each">
+                    <image class="theme-img" src="{{item.$loopState__temp4}}" />
+                    <view class="theme-txt">
+                        <text>{{item.name}}</text>
+                        <text class="theme-count">{{item.count}}人订阅</text>
+                    </view>
+                </view>
+            </navigator>
+            <view data-index="{{index}}" data-id="{{item._id}}" class="{{item.isCollect ? 'subscribe no' : 'subscribe'}}"
+            bindtap="onHandleSubscribe">
+                <block>
+                    <block wx:if="{{!item.isCollect}}">
+                        <view>
+                            <image src="{{follow}}" />
+                            <text>订阅</text>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view>
+                            <text>已订阅</text>
+                        </view>
+                    </block>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+</block>

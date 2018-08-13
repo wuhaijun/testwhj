@@ -1,0 +1,129 @@
+/* pages/home/motif/index.wxss */
+.theme-articles {
+  position: relative;
+}
+.articles-img {
+  height: 942rpx;
+  transition: height 1s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.articles-img image{
+  width: 100%;
+  height: 1020rpx;
+  vertical-align: middle;
+}
+.articles-img view{
+  position: absolute;
+  left: 32rpx;
+  bottom: 24rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.articles {
+  background-color: #fff;
+}
+.articles-title {
+  margin: 24rpx 34rpx 0rpx 34rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx;
+  height: 162rpx;
+  background-color: #fff;
+}
+.articles-txt {
+  font-size: 36rpx;
+  color: #000;
+  display: block;
+  margin-bottom: 24rpx;
+}
+.articles-desc {
+  font-size: 24rpx;
+  color: #8a8a8a;
+  display: block;
+}
+.articles-title text {
+  flex: 1;
+}
+.articles-title image {
+  width: 50rpx;
+  height: 50rpx;
+}
+/*订阅  */
+.subscribe {
+  width: 108rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #ffda72;
+}
+.subscribe.no {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+.subscribe image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}
+.subscribe text {
+  font-size: 28rpx;
+  color: #000;
+}
+.articles-arrow {
+  width: 20rpx;
+  height: 12rpx;
+  text-align: center; 
+  margin-bottom: 48rpx;
+  margin: auto;
+  overflow: visible;
+}
+.articles-arrow image {
+  width: 20rpx;
+  height: 12rpx;
+  vertical-align: top;
+}
+/*滚动  */
+.articles-scroll {
+  margin-bottom: 210rpx;
+}
+.articles-img-scroll {
+  height: 270rpx;
+  margin-bottom: -118rpx;
+}
+.articles-img-scroll-view {
+  display: none;
+}
+.articles-title-scroll {
+  box-shadow: 0 0 5px -1px #ccc;
+  position: absolute;
+  z-index: 99; 
+  width: calc(100% - 64rpx);
+  box-sizing: border-box;
+  transform: translate(0 0);
+}
+.information {
+  padding: 0 32rpx;
+}
+.information-txt {
+  font-size: 40rpx;
+  color: #000;
+  padding: 32rpx 0 48rpx 0;
+  font-weight: 700;
+  margin-right: 32rpx;
+}
+
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 1);
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: 9997;
+}

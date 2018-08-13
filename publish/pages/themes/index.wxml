@@ -1,0 +1,31 @@
+<block>
+    <view class="themehome">
+        <block>
+            <block wx:if="{{subscibeList.length != 0}}">
+                <view class="greatest">
+                    <text>我的主题站</text>
+                </view>
+                <view class="greatest-scroll">
+                    <scroll-view class="my-greatest" __triggerObserer="{{ _triggerObserer }}"
+                    scroll-x="true" style="width: 100%;margin:0">
+                        <view wx:key="{{index}}" class="my-greatest-view" wx:for="{{loopArray0}}"
+                        wx:for-item="item" wx:for-index="index">
+                            <navigator class="theme-nav" hover-class="none" url="{{item.$loopState__temp2}}">
+                                <view class="subscription-bgimage" style="{{item.$loopState__temp4}}">
+                                    <view class="mytheme">
+                                        <text>{{item.name}}</text>
+                                    </view>
+                                </view>
+                            </navigator>
+                        </view>
+                    </scroll-view>
+                </view>
+            </block>
+        </block>
+        <view class="greatest">
+            <text>主题站精选</text>
+        </view>
+        <theme-card themeList="{{themeList}}" __triggerObserer="{{ _triggerObserer }}"
+        userInfo="{{userInfo}}"></theme-card>
+    </view>
+</block>

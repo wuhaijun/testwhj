@@ -1,0 +1,199 @@
+.guide-modal  {
+    min-width: 1243px;
+}
+
+.guide-content {
+    overflow-y: hidden !important;
+}
+
+.guide-interest-container {
+    margin-bottom: 20px;
+    margin-right: 15px;
+    width: 80px;
+    display: inline-table;
+}
+
+.guide-img-btn {
+    background: white;
+    border: 1px solid grey;
+}
+.guide-img-btn:hover {
+    background: white;
+    position: relative;
+    top:-2px;
+    right:-2px;
+    border: 1px solid #6164C1;
+    
+}
+
+.guide-img-btn-selected {
+    background: white;
+    border: 1px solid grey;
+}
+.guide-img-btn-selected:hover {
+    background: white;
+    border: 1px solid grey;
+    position: relative;
+    top:-2px;
+    right:-2px;
+}
+
+.guide-img-btn-selected::before {
+    content: url(/static/icons/对勾.png);
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 25px;
+}
+
+.guide-label {
+    margin-bottom: 25px;
+}
+
+
+.guide-img  {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 5px 5px 15px 5px;
+}
+
+.guide-btn {
+    background: white;
+    border: 1px solid grey;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.guide-btn:hover {
+    background: white;
+    border: 1px solid grey;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+    top:-2px;
+    right:-2px;
+}
+
+.guide-btn-selected {
+    background: #6164C1;
+    border: 1px solid #6164C1;
+    margin-right: 20px;
+    margin-bottom: 20px;    
+    color:white !important;
+    border-radius: 5px;
+}
+
+.guide-btn-selected:hover {
+    background: #6164C1;
+    border: 1px solid #6164C1;
+    margin-right: 20px;
+    margin-bottom: 20px;    
+    color:white !important;
+    border-radius: 5px;
+    position: relative;
+    top:-2px;
+    right:-2px;
+}
+
+.guide-btn-selected:hover {
+    color: white;
+}
+
+.guide-title {
+    margin: 80px auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.guide-option {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.guide-btn-back {
+    background: white;
+    border: 1px solid grey;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.guide-option-btn {
+    width: 120px;
+    border-radius: 5px;
+}
+
+.guide-btn-skip {
+    background: white;
+    color: lightgrey;
+}
+
+.guide-body {
+    padding-left: 50px;
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+}
+
+.guide-feeds-content {
+    padding-right: 50px;
+}
+
+.guide-item {
+    margin-bottom: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+.guide-subscribe-card {
+    float: left;
+}
+
+
+
+.tool-tip-header{
+    font-size: 23px;
+    position: relative;
+    top: -22px;
+}
+
+.tool-tip-close-btn {
+    float: right;
+    font-size: 23px;
+}
+
+.tool-tip-img {
+    width: 25px;
+    height: 25px;
+    display: inline;
+}
+
+.exchange {
+    height: 30px;
+    margin: 4px;
+}
+
+.exchange span {
+    cursor: pointer;
+    color: rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 12px;
+    padding: 4px;
+    float: right;
+    border-radius: 3px;
+}
+
+.exchange span:hover {
+    color: rgb(114, 118, 195);
+    border: 1px solid rgb(114, 118, 195);
+}
+
+@media (min-width: 768px){
+    /*#boom-sidebar {*/
+        /*overflow: initial !important;*/
+    /*}*/
+}
+
+

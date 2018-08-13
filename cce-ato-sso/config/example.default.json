@@ -1,0 +1,39 @@
+{
+  "host":"localhost:8888",
+  "port": 8888,
+  "mongo": {
+    "boom":"mongodb://localhost:27017/boom",
+    "receivedb":"mongodb://localhost:27017/receivedb",
+    "account":"mongodb://localhost:27017/account"
+  },
+  "redis": {
+    "host":"127.0.0.1",
+    "port":6379
+  },
+  "sso": {
+    "default_system": "http://localhost:8888/welcome"
+  },
+  "weixin": {
+    "appId": "wx430024c98b2e1f6b",
+    "appSecret": "a2bc3d2fe513d3355710da9aea9db16a",
+    "oauth2": {
+      "code":"https://open.weixin.qq.com/connect/qrconnect?appid=#APPID#&redirect_uri=#REDIRECT_URI#&response_type=code&scope=snsapi_login&state=#STATE##wechat_redirect",
+      "accessToken":"https://api.weixin.qq.com/sns/oauth2/access_token?appid=#APPID#&secret=#SECRET#&code=#CODE#&grant_type=authorization_code",
+      "userinfo":"https://api.weixin.qq.com/sns/userinfo?access_token=#ACCESS_TOKEN#&openid=#OPENID#",
+      "appId": "wxb3ac797fcae4a30a",
+      "appSecret": "xxx",
+      "redirectUrl":"xxxx"
+    }
+  },
+  "email": {
+    "host": "mail.ccegroup.cn",
+    "port": 25,
+    "secure": false,
+    "auth": {
+      "user": "username",
+      "username": "username",
+      "pass": "password"
+    },
+    "tls": { "rejectUnauthorized": false }
+  }
+}

@@ -1,0 +1,41 @@
+<view>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <scroll-view class="scroll-container" scroll-y bindscrolltolower="onLoadMore" style="height:{{ scrollHeight }}rpx">
+    <view class="around-list">
+      <ul wx:if="{{ arroundList.length > 0 }}">
+        <block wx:for="{{ arroundList }}" wx:for-item="arroundListItem" wx:key="key">
+          <li catchtap="chooseLocation" data-checkedlocation="{{ arroundListItem }}" class="{{ arroundListItem.title == location.title ?'active':'' }}">
+            <text class="title-text"> {{ arroundListItem.title }}
+            <text class="address-text"> {{ arroundListItem.address }} </text>
+            </text>
+            <image class="checked" src="/public/icons/checked.svg"></image>
+          </li>
+        </block>
+      </ul>
+      <block wx:else>
+        <text class="no-result"> 没有结果 </text>
+      </block>
+    </view>
+
+  </scroll-view>
+
+  <view hidden="{{ !(total > (page_index - 1) * page_size) }}" class="weui-loadmore">
+    <view class="weui-loading" />
+    <view class="weui-loadmore__tips">正在加载...</view>
+  </view>
+</view>

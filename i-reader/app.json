@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/article/index/index",
+    "pages/theme/index/index",
+    "pages/article/detail/index",
+    "pages/article/search/index",
+    "pages/article/edit/index",
+    "pages/user/index/index",
+    "pages/theme/detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F7F7F7",
+    "navigationBarTitleText": "脑洞阅读",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "position": "bottom",
+    "color": "#b8b8b8",
+    "selectedColor": "#ffda72",
+    "backgroundColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/theme/index/index",
+        "text": "订阅",
+        "iconPath": "public/icon/toolbar_follow_nor.png",
+        "selectedIconPath": "public/icon/toolbar_follow_pre.png"
+      },
+      {
+        "pagePath": "pages/article/index/index",
+        "text": "资讯",
+        "iconPath": "public/icon/toolbar_news_nor.png",
+        "selectedIconPath": "public/icon/toolbar_news_pre.png"
+      },
+      {
+        "pagePath": "pages/user/index/index",
+        "text": "个人",
+        "iconPath": "public/icon/toolbar_profile_nor.png",
+        "selectedIconPath": "public/icon/toolbar_profile_pre.png"
+      }
+    ]
+  },
+  "debug": true
+}

@@ -1,0 +1,76 @@
+@import "../../public/css/main.less";
+.circle(@color) {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: @color;
+}
+
+.progress-bar-container {
+    margin: 0;
+    padding: 0;
+    width: 94%;
+}
+
+.progress-bar-container > ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    border: 0;
+}
+
+.progress-bar-container > ul > li {
+    position: relative;
+    display: inline-block;
+}
+
+.progress-bar-container > ul > li > div {
+    text-align: center;
+    position: relative;
+    float: left;
+    min-width: 56px;
+    height: 50px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.progress-bar-container > ul > li > div > i {
+    display: inline-block;
+    font-size: 14px;
+    font-style: inherit;
+    line-height: 28px;
+    color: @white;
+    .circle(@light-gray);
+}
+
+.progress-bar-container > ul > li.active > div > i,
+.progress-bar-container > ul > li.passed > div > i {
+    .circle(@purple);
+}
+
+.progress-bar-container > ul > li > div > p {
+    position: relative;
+    top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: -8px;
+    color: @gray;
+}
+
+.progress-bar-container > ul > li > i {
+    float: left;
+    width: 150px;
+    height: 2px;
+    margin-top: 14px;
+    vertical-align: middle;
+    background-color: @light-gray;
+}
+
+.progress-bar-container > ul > li.passed > i {
+    background-color: @purple;
+}
+
+.progress-bar-container > ul > li.active > i {
+    background: linear-gradient(to right, @purple, @light-gray);
+    background: -prefix-linear-gradient(right, @purple, @light-gray);
+}

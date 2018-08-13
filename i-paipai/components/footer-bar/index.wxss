@@ -1,0 +1,30 @@
+.home-bar-warp {
+  position: fixed;
+  bottom: 0;
+  height: 80rpx;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e1e1e1;
+  padding: 2rpx
+}
+
+.home-bar-width {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.bar-bottom-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.icon-home-photo {
+  width: 80rpx;
+  height: 80rpx;
+}

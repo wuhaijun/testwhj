@@ -1,0 +1,86 @@
+@import "common.less";
+
+
+body, html{
+  background-color: rgb(240, 240, 240);
+}
+
+.page-title {
+  color: @dark-grey;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+
+#navy-boom-schedule{
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  background: rgb(240, 240, 240);
+}
+#app-schedule {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  .left-side-bar {
+    width: 12.5rem;
+    height: 100%;
+    padding:0;
+    margin:0;
+    background-color:#161525;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+  }
+
+  .schedule-header{
+    background-color: @purple;
+    color: @dark-grey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 51px;
+    line-height: 51px;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+    border-bottom: 1px solid rgb(234, 234, 234);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .06);
+    transition: top 0.5s ease-in-out;
+    .ripple{
+       background-color:@purple ;
+       &:hover{
+          background-color:#C6C8E7;
+       }
+    }
+    .img-warp{
+        color:#fff;
+    }
+  }
+
+  .schedule-main-panel {
+    margin-left: 12.5rem;
+    height: 100%;
+    padding: 0;
+    max-width: 100%;
+    position: relative;
+
+    .main-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding-top: 51px;
+      background-color: #fff;
+    }
+
+  }
+
+}
+
+
+

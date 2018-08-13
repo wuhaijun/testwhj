@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>脑洞编辑器</title>
+    <link rel="icon" href="http://boom-static.static.cceato.com/boom/imgs/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/webfont.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/app.css"/>
+    <!--<link rel="stylesheet" href="http://boom-static.static.cceato.com/styles/app.skins.css"/>-->
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/fonts/climacons-font.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/fonts/sli.css"/>
+    <link rel="stylesheet" href="http://boom-static.static.cceato.com/boom/css/content.css"/>
+</head>
+<body>
+<div id="header">
+    <ul class="nav navbar-nav navbar-right hidden-xs" style="margin-right: 30px">
+        <li class="">
+            <a data-toggle="dropdown" class="ripple" href="javascript:;" aria-expanded="false">
+                <span style="color: #ffffff;">
+                    <img class="avatar" src="{{ 'http://boom-static.static.cceato.com/boom/imgs/avatars/' + (account.avatar || '01.png') }}"/>
+                    &nbsp;{{account.nickname||account.username}}
+                </span>
+            </a>
+            <ul class="dropdown-menu">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" class="dropdown-menu-list" href="{{ config['SSO_SERVER'] + '/userCenter/info' }}" target="_blank">
+                        <i class="fa icon-users"></i>
+                        个人设置
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" class="dropdown-menu-list" href="{{ config['SSO_SERVER'] + '/userCenter/account' }}" target="_blank">
+                        <i class="fa fa-gear"></i>
+                        修改密码
+                    </a>
+                </li>
+
+                <li class="divider"></li>
+
+                {% for m in modules %}
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" class="dropdown-menu-list" href="http://{{ m.host }}" target="_blank">
+                        <i class="{{ m.icon }}"></i>
+                        {{ m.name }}
+                    </a>
+                </li>
+                {% endfor %}
+
+                <li class="divider"></li>
+                <li role="presentation">
+                    <a id="quit" role="menuitem" tabindex="-1" class="dropdown-menu-list">
+                        <i class="fa icon-logout"></i>
+                        退出
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="container">
+
+</div>
+
+</body>
+</html>
+
+<script src="http://boom-static.static.cceato.com/vendor/jquery/dist/jquery.js"></script>
+<script src="http://boom-static.static.cceato.com/vendor/jquery-lazyload/jquery.lazyload.js"></script>
+<script src="http://boom-static.static.cceato.com/vendor/bootstrap/dist/js/bootstrap.js"></script>
+
+<link href="/static/summernote/summernote.css" rel="stylesheet"/>
+<script src="/static/summernote/summernote.js"></script>
+<script src="/static/clipboardjs/clipboard.min.js"></script>
+
+<link href="/static/style/winter.editor.css" rel="stylesheet"/>
+<link href="/static/style/winter.module.style.css" rel="stylesheet"/>
+<script src="/static/bundle/bundle.min.js"></script>
+
+<script>
+    config = {% autoescape false %} {{ config|json }} {% endautoescape %};
+    // 退出
+    $('#quit').click(function () {
+        if (window.confirm("确定退出编辑器?")) {
+            let auth_callback = encodeURIComponent(config['SSO_CLIENT'] + '/api/getToken');
+            window.location.href =  config['SSO_SERVER'] + '/api/user/logout?auth_callback=' + auth_callback;
+        }
+    });
+</script>

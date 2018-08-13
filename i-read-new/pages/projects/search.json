@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "article-simple-cards": "../../components/ArticleSimpleCards"
+  },
+  "navigationBarTitleText": "search"
+}

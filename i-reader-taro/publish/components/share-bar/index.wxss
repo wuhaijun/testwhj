@@ -1,0 +1,37 @@
+.share-bar {
+  height: 240rpx;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+.li-bar-share {
+  width: 49%;
+  float: left;
+  text-align: center;
+  font-size: 24rpx;
+  padding-top: 70rpx;
+  padding-bottom: 60rpx;
+}
+
+.li-bar-share .image-wrap {
+  width: 100%;
+}
+
+.li-bar-share .image-wrap image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.li-bar-share .share-button {
+  border: 0 none !important;
+  color: #000;
+  font-size: 24rpx;
+  line-height: normal;
+}
+

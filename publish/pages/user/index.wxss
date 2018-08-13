@@ -1,0 +1,424 @@
+/* pages/mine/index/index.wxss */
+/*授权部分  */
+.empower {
+  text-align: center;
+}
+.empower-img {
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 150rpx;
+  margin-bottom: 90rpx;
+}
+.empower-txt {
+  text-align: center;
+  font-size: 30rpx;
+  color: #000;
+  margin-bottom: 48rpx;
+}
+.empower-btn {
+  width: 210rpx;
+  height: 72rpx;
+  background-color: #ffda72;
+  text-align: center;
+  line-height: 72rpx;
+  font-size: 32rpx;
+  color: #000;
+  border-radius: 0;
+  border: none;
+}
+button[class="empower-btn"]::after {
+  border: 0;
+}
+.userinfo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 60rpx 0 24rpx 0;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  font-size: 24rpx;
+  margin-bottom: 60rpx;
+  color: #000;
+}
+.swiper-tab {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding: 0 120rpx;
+}
+.swiper-tab-list {
+  font-size: 36rpx;
+  color: #464646;
+}
+.swiper-tab-list text {
+  display: block;
+}
+.on {
+  color: #000;
+  font-weight: 700;
+}
+.collect-txt.none {
+  visibility: visible;
+}
+.swiper-scroll {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50rpx;
+}
+.swiper-toggle {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top: 1rpx solid #f1f1f1;
+  background-color: #f7f7f7;
+}
+.swiper-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+  height: 70%;
+}
+.collect-txt {
+  width: 0;
+  height: 0;
+  border: 10rpx solid;
+  margin: auto;
+  border-color: transparent transparent #000 transparent;
+  visibility: hidden;
+}
+/*笔记部分  */
+.note {
+  background-color: #fff;
+  padding: 24rpx;
+  margin: 0 36rpx;
+  margin-bottom: 24rpx;
+}
+.note-text {
+  margin-left: 24rpx;
+}
+.note-book {
+  font-size: 32rpx;
+  color: #000;
+  margin-bottom: 48rpx;
+}
+.note-title {
+  font-size: 30rpx;
+  color: #8a8a8a;
+  margin-bottom: 36rpx;
+}
+.article-title {
+  font-size: 24rpx;
+  color: #000;
+  margin-bottom: 48rpx;
+}
+.note-time {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 20rpx;
+  color: #8a8a8a;
+}
+.note-time image {
+  width: 46rpx;
+  height: 46rpx;
+}
+.showmodal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+.modal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 72rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.modal view {
+  font-size: 32rpx;
+  color: #000;
+}
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #000000;
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: 9997;
+}
+scroll-view {
+  width: auto;
+}
+scroll-view .note:nth-child(1) {
+  margin-top: 36rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.empty-view {
+  text-align: center;
+}
+.empty-view image {
+  width: 300rpx;
+  height: 300rpx;
+  margin: auto;
+  margin-top: 120rpx;
+  margin-bottom: 48rpx;
+  display: block;
+}
+.empty-view text {
+  font-size: 30rpx;
+  color: #000;
+}
+.theme-each {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.theme-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 24rpx;
+}
+.theme-title view:nth-child(1) {
+  padding: 4rpx;
+  border: 1rpx solid #aaa;
+  margin-right: 48rpx;
+}
+.theme-title view {
+  font-size: 20rpx;
+  color: #aaa;
+}
+.theme {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  padding: 24rpx;
+  margin: 1rpx;
+  margin-bottom: 24rpx;
+}
+.theme-img {
+  width: 156rpx;
+  height: 156rpx;
+  margin-right: 12rpx;
+}
+.theme-txt {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 30rpx;
+  color: #000;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+}
+.theme-name {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+scroll-view {
+  width: auto;
+}
+scroll-view .theme:nth-child(1) {
+  margin-top: 36rpx;
+}
+.theme-each {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.theme {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24rpx;
+}
+.theme-img {
+  width: 156rpx;
+  height: 156rpx;
+  margin-right: 12rpx;
+}
+.theme-txt {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.theme-txt text {
+  display: block;
+}
+.theme-count {
+  font-size: 24rpx;
+  color: #8a8a8a;
+  margin-top: 24rpx;
+}
+.subscribe {
+  width: 108rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #ffda72;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+.subscribe.no {
+  border: 1rpx solid #000;
+  background-color: #fff;
+}
+.subscribe.no text {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.subscribe image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}
+.subscribe text {
+  font-size: 28rpx;
+  color: #000;
+}
+.theme-nav {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+scroll-view .theme:nth-child(1) {
+  margin-top: 36rpx;
+}
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #000000;
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: 9997;
+}

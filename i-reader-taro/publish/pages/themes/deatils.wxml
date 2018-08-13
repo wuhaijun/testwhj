@@ -1,0 +1,72 @@
+<block>
+    <view class="theme-articles">
+        <view class="{{scroll ? 'articles-img articles-img-scroll' : 'articles-img'}}"
+        style="{{anonymousState__temp}}">
+            <view class="{{scroll ? 'articles-img-scroll-view' : ''}}">{{theme.desc}}</view>
+        </view>
+        <view class="{{scroll ? 'articles articles-scroll' : 'articles'}}">
+            <view class="{{scroll ? 'articles-title articles-title-scroll' : 'articles-title'}}">
+                <view>
+                    <text class="articles-txt">{{theme.name}}</text>
+                    <text class="articles-desc">{{theme.count}}人订阅</text>
+                </view>
+                <view data-_id="{{theme._id}}" class="{{theme.isCollect ? 'subscribe no' : 'subscribe'}}"
+                bindtap="onHandleSubscribe">
+                    <block>
+                        <block wx:if="{{theme.isCollect}}">
+                            <view>
+                                <text>已订阅</text>
+                            </view>
+                        </block>
+                        <block wx:else>
+                            <view>
+                                <image src="/public/icon/icon_follow.png" />
+                                <text>订阅</text>
+                            </view>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="{{scroll ? 'articles-arrow articles-img-scroll-view' : 'articles-arrow'}}">
+            <image src="{{arrow}}" />
+        </view>
+        <view class="information">
+            <view class="information-news">
+                <view class="myinformation-block">
+                    <view data-type="information" class="information-txt">精选推荐</view>
+                </view>
+            </view>
+            <article-cards bindonhandleshare="onHandleShare" __triggerObserer="{{ _triggerObserer }}"
+            isClick="{{false}}" projectList="{{projectList}}" themeMapping="{{themeMapping}}"
+            __fn_onHandleShare="{{true}}"></article-cards>
+        </view>
+        <view>
+            <block>
+                <block wx:if="{{isClickShare}}">
+                    <share-bar bindonmadeposter="onMadePoster" __triggerObserer="{{ _triggerObserer }}"
+                    __fn_onMadePoster="{{true}}"></share-bar>
+                </block>
+            </block>
+            <block>
+                <block wx:if="{{isClickShare}}">
+                    <view class="mask" bindtap="onClickMask"></view>
+                </block>
+            </block>
+            <block>
+                <block wx:if="{{showPosterMask}}">
+                    <view class="mask" bindtap="onHidePoster"></view>
+                </block>
+            </block>
+        </view>
+        <view>
+            <block>
+                <block wx:if="{{showPosterMask}}">
+                    <poster-card bindonhandhide="onHandHide" __triggerObserer="{{ _triggerObserer }}"
+                    coverImage="{{shareImg}}" shareArticleId="{{shareArticleId}}" title="{{shareContent}}"
+                    __fn_onHandHide="{{true}}"></poster-card>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>

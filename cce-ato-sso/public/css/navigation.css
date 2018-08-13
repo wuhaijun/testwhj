@@ -1,0 +1,128 @@
+body{
+    font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    color: #314659;
+    font-size: 14px;
+    background: #fff;
+    -webkit-transition: background 1s cubic-bezier(.075,.82,.165,1);
+    transition: background 1s cubic-bezier(.075,.82,.165,1);
+    overflow-x: hidden;
+}
+
+.box-wrapper {
+    margin-bottom: 62px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.box-wrapper li {
+    width: 33.33%;
+    display: inline-block;
+    will-change: transform;
+}
+
+.box-wrapper li .box {
+    width: 194px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.box-wrapper li .box .image {
+    box-shadow: rgba(19, 194, 194, 0.12) 0px 6px 12px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 20px auto 32px;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #fff;
+    -webkit-transition: box-shadow .3s ease-out,-webkit-transform .3s ease-out;
+    transition: box-shadow .3s ease-out,-webkit-transform .3s ease-out;
+    transition: box-shadow .3s ease-out,transform .3s ease-out;
+    transition: box-shadow .3s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out;
+}
+
+.box-wrapper li .box:hover .image {
+    box-shadow: rgba(19, 194, 194, 0.12) 0px 12px 24px;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+}
+
+.box-wrapper li .box a {
+    text-decoration: none;
+    color: black;
+}
+
+.box-wrapper li p {
+    color: #697b8c;
+}
+
+img {
+    height: 30px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.point-wrapper {
+    position: absolute;
+    width: 0;
+    left: 50%;
+    top: 0;
+}
+
+.box .point-wrapper li.ball1 {
+    width: 3px;
+    height: 3px;
+    border-radius: 50px;
+    background: rgb(96, 102, 190);
+    border: 1px solid rgb(96, 102, 190);
+    position: absolute;
+    top: 5px;
+}
+
+.box .point-wrapper li.ball {
+    background-color: rgb(96, 102, 190);
+    border-radius: 50px;
+}
+
+.box .point-wrapper li.ball2 {
+    width: 6px;height: 6px;opacity: 0.5;position: absolute;top: 5px;
+}
+.box .point-wrapper li.ball3 {
+    width: 9px;height: 9px;border: 1px solid rgb(96, 102, 190);position: absolute;top: 5px;
+}
+.box .point-wrapper li.ball4 {
+    width: 12px;height: 12px;border-radius: 50px;opacity: 0.5;position: absolute;top: 5px;border: 1px solid rgb(96, 102, 190);
+}
+.box .point-wrapper li.ball5 {
+    width: 13px;height: 13px;position: absolute;top: 5px;opacity: 0.5;
+}
+.box .point-wrapper li.ball6 {
+    width: 15px;height: 15px;opacity: 0.5;position: absolute;top: 5px;
+}
+
+@keyframes ballFloat {
+    from{ left: -40px; top: -7px }
+    to{ left: -40px; top: -10px }
+}
+

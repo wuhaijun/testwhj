@@ -1,0 +1,69 @@
+body {
+    font-family: Verdana, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+    font-size: 0.8125rem;
+    margin: 0;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#content {
+    margin-top: 10px;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+div.content p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.main {
+    padding: 25px;
+    /* padding-top: 4.188rem; */
+    max-height: 100%;
+}
+
+#header {
+    background: rgb(96, 102, 190);
+    color: white;
+    height: 3.438rem;
+    z-index: 1020;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    /* position: fixed; */
+    /* top: 0; */
+    width: 100%;
+}
+
+.header-name {
+    position: relative;
+    top: 40%;
+    margin-left: 15px;
+}
+
+.operator-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.operator {
+    display: inline-block;
+    margin: 0 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.operator-container span {
+    display: block;
+}
+
+.viewOrigin {
+    font-size: 12px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,15 @@
+{
+    "port": 2018,
+    "mongo": {
+      "paipai":"mongodb://192.168.100.83:27017/paipai"
+    },
+    "redis": {
+      "host":"192.168.100.83",
+      "port":6379
+    },
+    "weixin": {
+      "appId": "appId",
+      "appSecret": "appSecret",
+      "api":"localhost:10001"
+    }
+  }

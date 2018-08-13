@@ -1,0 +1,5 @@
+{
+  "server": "https://ireader.brainboom.cn",
+  "qiniu_imageHost": "http://boom-static.static.cceato.com/",
+  "appName": "脑洞阅读"
+}
